@@ -1,7 +1,7 @@
 export const languages = {
-	en: "English",
-	lv: "Latvian",
-	ru: "Russian",
+	en: "EN",
+	lv: "LV",
+	ru: "RU",
 }
 
 export const defaultLang = "lv"

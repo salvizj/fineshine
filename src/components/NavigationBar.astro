@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import LanguagePicker from './LanguagePicker.astro';
+import ThemeIcon from './ThemeIcon.astro'
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -10,6 +11,7 @@ const t = useTranslations(lang);
         <a href={`/${lang}`}>
           {t('nav.home')}
         </a>
-    </li>
     <LanguagePicker />
+    <ThemeIcon />
+    </li>
 </ul>
