@@ -11,3 +11,8 @@ export function useTranslations(lang: keyof typeof ui) {
 		return ui[lang][key] || ui[defaultLang][key]
 	}
 }
+export function useServiceTranslations(lang: keyof typeof ui) {
+	return function getService(id: 1 | 2 | 3 | 4) {
+		return ui[lang].services[id] || ui[defaultLang].services[id]
+	}
+}

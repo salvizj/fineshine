@@ -1,5 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
+import { languages } from "../i18n/ui"
+
+const lang = localStorage.getItem("lang")
+window.location.href = (lang || languages.lv) + "/"
 ---
-<Layout>
-</Layout>
+
+<Layout />

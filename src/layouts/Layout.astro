@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 import { getLangFromUrl } from '../i18n/utils';
 import "../styles/global.css"
@@ -11,9 +12,12 @@ const lang = getLangFromUrl(Astro.url);
         <meta name="viewport" content="width=device-width" />
         <title>Fineshine</title>
     </head>
-    <body>
+    <body class="min-h-screen">
 		<NavigationBar />
-        <slot />
+        <main class="max-w-7xl mx-auto">
+            <slot />
+        </main>
+        <Footer />
     </body>
 </html>
 
