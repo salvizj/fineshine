@@ -1,18 +1,25 @@
-import { ui, defaultLang } from "./ui"
+import { ui, defaultLanguageCode, languageOptions } from "./ui"
 
-export function getLangFromUrl(url: URL) {
+type LanguageCode = keyof typeof languageOptions
+type TranslationKeys = keyof (typeof ui)[typeof defaultLanguageCode]
+
+export function getLanguageCodeFromUrl(url: URL): LanguageCode | undefined {
 	const [, lang] = url.pathname.split("/")
-	if (lang in ui) return lang as keyof typeof ui
-	return defaultLang
+	if (lang && lang in languageOptions) {
+		return lang as LanguageCode
+	}
+	return undefined
 }
 
-export function useTranslations(lang: keyof typeof ui) {
-	return function t(key: keyof (typeof ui)[typeof defaultLang]) {
-		return ui[lang][key] || ui[defaultLang][key]
+export function useTranslations(languageCode: LanguageCode) {
+	return function t(key: TranslationKeys): string {
+		if (ui[languageCode] && ui[languageCode][key] !== undefined) {
+			return ui[languageCode][key] as string
+		}
+		return ui[defaultLanguageCode][key] as string
 	}
 }
-export function useServiceTranslations(lang: keyof typeof ui) {
-	return function getService(id: 1 | 2 | 3 | 4) {
-		return ui[lang].services[id] || ui[defaultLang].services[id]
-	}
+
+export function useServiceTranslations(languageCode: LanguageCode) {
+	return ui[languageCode]?.services ?? ui[defaultLanguageCode].services
 }

@@ -1,40 +1,41 @@
 ---
-import { languages } from "../i18n/ui"
-import { getLangFromUrl } from "../i18n/utils"
-const lang = getLangFromUrl(Astro.url)
-const otherLangs = Object.entries(languages).filter(([code]) => code !== lang)
+import { defaultLanguageCode, languageOptions } from "../i18n/ui"
+import { getLanguageCodeFromUrl } from "../i18n/utils"
+const languageCode = getLanguageCodeFromUrl(Astro.url) || defaultLanguageCode
+const otherLanguageCodes = Object.keys(languageOptions).filter(
+	(code) => code !== languageCode
+)
 ---
 
-<script is:inline>
-	document.addEventListener("DOMContentLoaded", () => {
-		const langLinks = document.querySelectorAll("ul > li > a")
-
-		langLinks.forEach((link) => {
-			link.addEventListener("click", (event) => {
-				event.preventDefault()
-
-				const url = link.getAttribute("href")
-				const lang = url.replace(/\//g, "")
-
-				localStorage.setItem("lang", lang)
-
-				window.location.href = url
-			})
-		})
-	})
-</script>
-
 <div class="relative inline-block">
-	<details class="cursor-pointer">
-		<summary class="list-none">
-			{languages[lang]}
+	<details class="cursor-pointer language-selector">
+		<summary class="list-none flex items-center gap-1">
+			<span>{languageCode.toUpperCase()}</span>
+			<svg
+				width="10"
+				height="6"
+				viewBox="0 0 10 6"
+				class="dropdown-arrow"
+			>
+				<path
+					d="M1 1L5 5L9 1"
+					stroke="currentColor"
+					stroke-width="1.5"
+					fill="none"></path>
+			</svg>
 		</summary>
-		<ul class="absolute mt-2 left-0 flex flex-col gap-1 z-10">
+		<ul
+			class="absolute mt-2 left-0 bg-white dark:bg-gray-800 shadow-lg rounded py-1 min-w-[100px] z-10"
+		>
 			{
-				otherLangs.map(([code, label]) => (
+				otherLanguageCodes.map((code) => (
 					<li>
-						<a href={`/${code}/`} class="block px-2 py-1">
-							{label}
+						<a
+							href={`/${code}/`}
+							class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+							data-lang-code={code}
+						>
+							{code.toUpperCase()}
 						</a>
 					</li>
 				))
@@ -42,3 +43,39 @@ const otherLangs = Object.entries(languages).filter(([code]) => code !== lang)
 		</ul>
 	</details>
 </div>
+
+<script>
+	import { setCookie } from "../utils/cookie"
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const langSelector = document.querySelector(".language-selector")
+		const langLinks = document.querySelectorAll("[data-lang-code]")
+
+		if (langSelector) {
+			document.addEventListener("click", (event) => {
+				if (
+					!(event.target instanceof Node) ||
+					!langSelector.contains(event.target)
+				) {
+					langSelector.removeAttribute("open")
+				}
+			})
+		}
+
+		langLinks.forEach((link) => {
+			const element = link as HTMLElement
+			element.addEventListener("click", (event) => {
+				event.preventDefault()
+
+				const url = element.getAttribute("href") || "/"
+				const langCode = element.dataset.langCode
+
+				if (langCode) {
+					setCookie("lang", langCode)
+					document.documentElement.lang = langCode
+					window.location.href = url
+				}
+			})
+		})
+	})
+</script>

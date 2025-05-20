@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config"
 
 import tailwindcss from "@tailwindcss/vite"
+import { languageOptions, defaultLanguageCode } from "./src/i18n/ui"
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,8 +10,8 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	i18n: {
-		locales: ["lv", "en", "ru"],
-		defaultLocale: "lv",
+		locales: Object.keys(languageOptions),
+		defaultLocale: defaultLanguageCode,
 		routing: {
 			prefixDefaultLocale: false,
 		},

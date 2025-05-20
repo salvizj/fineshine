@@ -1,14 +1,11 @@
 ---
-import { getLangFromUrl } from "../i18n/utils"
 import LanguagePicker from "./LanguagePicker.astro"
 import ThemeIcon from "./ThemeIcon.astro"
-
-const lang = getLangFromUrl(Astro.url)
 ---
 
 <ul class="flex items-center justify-between px-4 py-2">
 	<li class="flex items-center gap-4">
-		<a href={`/${lang}/`}>
+		<a href={`/`}>
 			<svg
 				class="h-8 w-auto text-blue-600"
 				xmlns="http://www.w3.org/2000/svg"

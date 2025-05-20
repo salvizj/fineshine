@@ -1,9 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import { languages } from "../i18n/ui"
 
-const lang = localStorage.getItem("lang")
-window.location.href = (lang || languages.lv) + "/"
 ---
 
-<Layout />
+<script>
+	import { getLanguageCodeFromUrl } from "../i18n/utils"
+	import { getCookie } from "../utils/cookie"
+	document.addEventListener("DOMContentLoaded", () => {
+		const languageCode = getLanguageCodeFromUrl(
+			new URL(window.location.href)
+		)
+		const savedLanguageCode = getCookie("lang")
+
+		if (languageCode === undefined && savedLanguageCode) {
+			window.location.href = `/${savedLanguageCode}/`
+		} else if (languageCode != undefined) {
+			return
+		}
+	})
+</script>
