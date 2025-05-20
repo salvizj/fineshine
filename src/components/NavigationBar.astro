@@ -3,7 +3,7 @@ import LanguagePicker from "./LanguagePicker.astro"
 import ThemeIcon from "./ThemeIcon.astro"
 ---
 
-<ul class="flex items-center justify-between px-4 py-2">
+<ul class="flex items-center justify-between px-4 py-2 ml-2 mr-2">
 	<li class="flex items-center gap-4">
 		<a href={`/`}>
 			<svg
@@ -18,8 +18,8 @@ import ThemeIcon from "./ThemeIcon.astro"
 			</svg>
 		</a>
 	</li>
-	<li class="flex items-center gap-2">
-		<LanguagePicker />
+	<li class="flex items-center gap-4">
 		<ThemeIcon />
+		<LanguagePicker />
 	</li>
 </ul>

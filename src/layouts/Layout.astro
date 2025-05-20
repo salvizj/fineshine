@@ -19,14 +19,16 @@ import "../styles/global.css"
 		<meta name="author" content="Fineshine Car Detailing" />
 		<title>Fineshine | Professional Car Detailing Services</title>
 	</head>
-	<body class="min-h-screen">
-		<NavigationBar />
-		<main class="max-w-7xl mx-auto">
-			<slot />
-		</main>
-		<Footer />
-	</body>
 </html>
+<body
+	class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+>
+	<NavigationBar />
+	<main class="max-w-7xl mx-auto">
+		<slot />
+	</main>
+	<Footer />
+</body>
 
 <script is:inline>
 	function getCookie(name) {
@@ -39,5 +41,10 @@ import "../styles/global.css"
 	const languageCode = getCookie("lang") || "lv"
 
 	document.documentElement.setAttribute("lang", languageCode)
-	document.documentElement.classList.toggle("dark", currentTheme === "dark")
+
+	if (currentTheme === "dark") {
+		document.documentElement.classList.add("dark")
+	} else {
+		document.documentElement.classList.remove("dark")
+	}
 </script>
