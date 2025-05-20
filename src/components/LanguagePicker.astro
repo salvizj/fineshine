@@ -25,14 +25,14 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 			</svg>
 		</summary>
 		<ul
-			class="absolute mt-2 left-0 bg-white dark:bg-gray-800 shadow-lg rounded py-1 min-w-[100px] z-10"
+			class="absolute mt-2 left-0 bg-whiterounded py-1 min-w-[100px] z-10"
 		>
 			{
 				otherLanguageCodes.map((code) => (
 					<li>
 						<a
 							href={`/${code}/`}
-							class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+							class="block px-4 py-2 transition"
 							data-lang-code={code}
 						>
 							{code.toUpperCase()}
@@ -45,35 +45,32 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 </div>
 
 <script>
-	import { setCookie } from "../utils/cookie"
+	import type { LanguageCode } from "../i18n/utils"
+	import { setCookie } from "../utils/cookie.js"
+
+	function onLanguageSelected(
+		languageCode: LanguageCode,
+		redirectLink: string
+	) {
+		setCookie("lang", languageCode)
+		window.location.href = redirectLink
+	}
 
 	document.addEventListener("DOMContentLoaded", () => {
-		const langSelector = document.querySelector(".language-selector")
 		const langLinks = document.querySelectorAll("[data-lang-code]")
 
-		if (langSelector) {
-			document.addEventListener("click", (event) => {
-				if (
-					!(event.target instanceof Node) ||
-					!langSelector.contains(event.target)
-				) {
-					langSelector.removeAttribute("open")
-				}
-			})
-		}
-
 		langLinks.forEach((link) => {
-			const element = link as HTMLElement
-			element.addEventListener("click", (event) => {
+			link.addEventListener("click", (event) => {
 				event.preventDefault()
 
-				const url = element.getAttribute("href") || "/"
-				const langCode = element.dataset.langCode
+				const target = event.target
+				if (!(target instanceof HTMLElement)) return
 
-				if (langCode) {
-					setCookie("lang", langCode)
-					document.documentElement.lang = langCode
-					window.location.href = url
+				const languageCode = target.dataset.langCode as LanguageCode
+				const redirectLink = link.getAttribute("href") || "/"
+
+				if (languageCode) {
+					onLanguageSelected(languageCode, redirectLink)
 				}
 			})
 		})

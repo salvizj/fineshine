@@ -39,9 +39,23 @@
 <script>
 	import { setCookie } from "../utils/cookie"
 
-	const toggleButton = document.getElementById("themeToggle")
-	toggleButton?.addEventListener("click", () => {
-		const darkMode = document.documentElement.classList.toggle("dark")
-		setCookie("theme", darkMode ? "dark" : "light")
+	document.addEventListener("DOMContentLoaded", () => {
+		const themeToggleButton = document.getElementById("themeToggle")
+
+		if (!themeToggleButton) {
+			console.warn("Theme toggle button not found")
+			return
+		}
+
+		const toggleTheme = () => {
+			const isDarkModeEnabled =
+				document.documentElement.classList.toggle("dark")
+			const theme = isDarkModeEnabled ? "dark" : "light"
+			setCookie("theme", theme)
+		}
+
+		themeToggleButton.addEventListener("click", toggleTheme, {
+			passive: true,
+		})
 	})
 </script>

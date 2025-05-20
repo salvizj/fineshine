@@ -1,7 +1,7 @@
 import { ui, defaultLanguageCode, languageOptions } from "./ui"
 
-type LanguageCode = keyof typeof languageOptions
-type TranslationKeys = keyof (typeof ui)[typeof defaultLanguageCode]
+export type LanguageCode = keyof typeof languageOptions
+export type TranslationKeys = keyof (typeof ui)[typeof defaultLanguageCode]
 
 export function getLanguageCodeFromUrl(url: URL): LanguageCode | undefined {
 	const [, lang] = url.pathname.split("/")
