@@ -4,6 +4,7 @@ import { languageOptions, defaultLanguageCode } from "./src/i18n/ui"
 
 export default defineConfig({
 	vite: { plugins: [tailwindcss()] },
+
 	i18n: {
 		locales: Object.keys(languageOptions),
 		defaultLocale: defaultLanguageCode,

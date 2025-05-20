@@ -17,7 +17,7 @@ export const ui = {
 		gallery_title: "Our Work",
 		gallery_image_alt: "Before and After",
 		pricing_title: "Services & Pricing",
-		services: [
+		service_list: [
 			{
 				name: "Exterior Cleaning",
 				description:
@@ -39,6 +39,10 @@ export const ui = {
 					"Remove grime and improve engine appearance safely.",
 			},
 		],
+		social: "Social",
+		contacts: "Contacts",
+		location: "Location",
+		services: "Services",
 	},
 	lv: {
 		nav: {
@@ -50,7 +54,7 @@ export const ui = {
 		gallery_title: "Mūsu darbi",
 		gallery_image_alt: "Pirms un pēc",
 		pricing_title: "Pakalpojumi un cenas",
-		services: [
+		service_list: [
 			{
 				name: "Eksterjera tīrīšana",
 				description:
@@ -72,6 +76,10 @@ export const ui = {
 					"Noņemiet netīrumus un uzlabojiet dzinēja izskatu droši.",
 			},
 		],
+		social: "Sociālie tīkli",
+		contacts: "Kontakti",
+		location: "Atrašanās vieta",
+		services: "Pakalpojumi",
 	},
 	ru: {
 		nav: {
@@ -83,7 +91,7 @@ export const ui = {
 		gallery_title: "Наши работы",
 		gallery_image_alt: "До и после",
 		pricing_title: "Услуги и цены",
-		services: [
+		service_list: [
 			{
 				name: "Внешняя мойка",
 				description:
@@ -105,5 +113,9 @@ export const ui = {
 					"Удаление грязи и улучшение внешнего вида двигателя.",
 			},
 		],
+		social: "Социальные сети",
+		contacts: "Контакты",
+		location: "Местоположение",
+		services: "Услуги",
 	},
 } as const

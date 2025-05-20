@@ -1,9 +1,15 @@
 ---
+import { type LanguageCode, useTranslations } from "../i18n/utils"
 import LanguagePicker from "./LanguagePicker.astro"
-import ThemeIcon from "./ThemeIcon.astro"
+import ThemePicker from "./ThemePicker.astro"
+
+const { languageCode } = Astro.props as { languageCode: LanguageCode }
+const t = useTranslations(languageCode)
 ---
 
-<ul class="flex items-center justify-between px-4 py-2 ml-2 mr-2">
+<ul
+	class="w-full max-w-7xl px-4 py-2 mx-auto flex items-center justify-between"
+>
 	<li class="flex items-center gap-4">
 		<a href={`/`}>
 			<svg
@@ -18,8 +24,16 @@ import ThemeIcon from "./ThemeIcon.astro"
 			</svg>
 		</a>
 	</li>
+	<div class="flex flex-row gap-4">
+		<li class="flex items-center gap-4">
+			<a href={`#contacts`}> {t("contacts")}</a>
+		</li>
+		<li class="flex items-center gap-4">
+			<a href={`#services`}> {t("services")}</a>
+		</li>
+	</div>
 	<li class="flex items-center gap-4">
-		<ThemeIcon />
-		<LanguagePicker />
+		<ThemePicker />
+		<LanguagePicker languageCode={languageCode} />
 	</li>
 </ul>
