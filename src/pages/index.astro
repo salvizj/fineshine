@@ -3,18 +3,23 @@
 ---
 
 <script>
+	import { defaultLanguageCode } from "../i18n/ui"
 	import { getLanguageCodeFromUrl } from "../i18n/utils"
 	import { getCookie } from "../utils/cookie"
+
 	document.addEventListener("DOMContentLoaded", () => {
 		const languageCode = getLanguageCodeFromUrl(
 			new URL(window.location.href)
 		)
+
+		if (languageCode) return
+
 		const savedLanguageCode = getCookie("lang")
 
-		if (languageCode === undefined && savedLanguageCode) {
+		if (savedLanguageCode) {
 			window.location.href = `/${savedLanguageCode}/`
-		} else if (languageCode != undefined) {
-			return
+		} else {
+			window.location.href = `/${defaultLanguageCode}/`
 		}
 	})
 </script>
