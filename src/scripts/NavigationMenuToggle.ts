@@ -28,5 +28,10 @@ export default function NavigationMenuToggle() {
 				navOpenBtn.classList.remove("hidden")
 			}
 		})
+		window.addEventListener("hashchange", function () {
+			navOpen.classList.add("hidden")
+			navCollapsed.classList.remove("hidden")
+			navOpenBtn.classList.remove("hidden")
+		})
 	})
 }
