@@ -1,13 +1,16 @@
 ---
-import { useTranslations, type LanguageCode } from "../i18n/utils"
-const { languageCode } = Astro.props as { languageCode: LanguageCode }
-const t = useTranslations(languageCode)
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
 
 const iconSizeClasses = "w-5 h-5"
 ---
 
 <section
 	class="flex flex-col items-center sm:items-start text-center sm:text-left"
+	id="socials"
 >
 	<h4 class="mb-4 text-lg font-semibold">{t("social")}</h4>
 	<nav class="flex justify-center gap-6" aria-label="Social media links">

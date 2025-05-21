@@ -1,6 +1,6 @@
 import type { LanguageCode } from "../i18n/utils.js"
 import { setCookie } from "../utils/cookie.js"
-export default function LanguageSwitcher() {
+export default function LanguageDropdown() {
 	function onLanguageSelected(
 		languageCode: LanguageCode,
 		redirectLink: string

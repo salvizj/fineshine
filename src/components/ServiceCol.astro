@@ -1,10 +1,5 @@
 ---
-import {
-	useServiceTranslations,
-	useTranslations,
-	type LanguageCode,
-	type Service,
-} from "../i18n/utils"
+import { type Service } from "../i18n/utils"
 
 interface Props {
 	t: (key: string) => string
@@ -14,7 +9,7 @@ interface Props {
 const { t, serviceList } = Astro.props as Props
 ---
 
-<section class="mt-12 max-w-4xl mx-auto px-6">
+<section class="mt-12 max-w-4xl mx-auto px-6" id="services">
 	<h2
 		class="text-4xl font-extrabold mb-8 text-center text-gray-900 dark:text-white"
 	>

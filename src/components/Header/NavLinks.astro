@@ -1,0 +1,42 @@
+---
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
+---
+
+<ul class="flex flex-row gap-4">
+	<li class="flex items-center">
+		<a
+			href="#contacts"
+			class="px-2 py-1 rounded-md text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-300"
+		>
+			{t("contacts")}
+		</a>
+	</li>
+	<li class="flex items-center">
+		<a
+			href="#services"
+			class="px-2 py-1 rounded-md text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-300"
+		>
+			{t("services")}
+		</a>
+	</li>
+	<li class="flex items-center">
+		<a
+			href="#location"
+			class="px-2 py-1 rounded-md text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-300"
+		>
+			{t("location")}
+		</a>
+	</li>
+	<li class="flex items-center">
+		<a
+			href="#socials"
+			class="px-2 py-1 rounded-md text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-300"
+		>
+			{t("socials")}
+		</a>
+	</li>
+</ul>

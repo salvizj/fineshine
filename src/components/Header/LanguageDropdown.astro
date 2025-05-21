@@ -1,0 +1,59 @@
+---
+import { languageOptions } from "../../i18n/ui"
+import type { LanguageCode } from "../../i18n/utils"
+
+interface Props {
+	languageCode: LanguageCode
+}
+
+const { languageCode } = Astro.props as Props
+
+const otherLanguageCodes = Object.keys(languageOptions).filter(
+	(code) => code !== languageCode
+)
+---
+
+<div class="relative inline-block">
+	<details class="relative cursor-pointer language-selector">
+		<summary
+			class="list-none flex items-center justify-between gap-2 bg-white dark:bg-gray-900 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 shadow-sm transition-colors duration-200 text-sm font-medium text-gray-800 dark:text-gray-100"
+		>
+			<span>{languageCode.toUpperCase()}</span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-4 w-4 text-gray-500 dark:text-gray-400"
+				viewBox="0 0 20 20"
+				fill="currentColor"
+				aria-hidden="true"
+			>
+				<path
+					d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.657a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+				></path>
+			</svg>
+		</summary>
+
+		<ul
+			class="absolute mt-2 left-0 w-full rounded-lg py-1.5 z-20 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl backdrop-blur-sm"
+		>
+			{
+				otherLanguageCodes.map((code) => (
+					<li>
+						<a
+							href={`/${code}/`}
+							class="block px-4 py-2 text-sm font-medium rounded-md text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+							data-lang-code={code}
+						>
+							{code.toUpperCase()}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</details>
+</div>
+
+<script>
+	import LanguageDropdown from "../../scripts/LanguageDropdown"
+
+	LanguageDropdown()
+</script>

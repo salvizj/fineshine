@@ -1,0 +1,47 @@
+---
+import ThemeToggle from "./ThemeToggle.astro"
+import NavLinks from "./NavLinks.astro"
+import type { LanguageCode } from "../../i18n/utils"
+import LanguageDropdown from "./LanguageDropdown.astro"
+
+interface Props {
+	t: (key: string) => string
+	languageCode: LanguageCode
+}
+const { t, languageCode } = Astro.props as Props
+---
+
+<div
+	class="nav-open hidden fixed inset-0 z-5 bg-white dark:bg-gray-900 md:hidden pointer-events-auto"
+>
+	<!-- Open Button -->
+	<div class="h-full shadow-lg flex flex-col p-4 gap-6 relative">
+		<div class="flex justify-end">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="36"
+				height="36"
+				fill="currentColor"
+				class="bi bi-x cursor-pointer"
+				id="nav-collapse-btn"
+				viewBox="0 0 16 16"
+			>
+				<path
+					fill-rule="evenodd"
+					d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+				></path>
+			</svg>
+		</div>
+
+		<div class="relative w-3/4 ml-auto">
+			<ul class="flex flex-col gap-4 justify-center">
+				<NavLinks t={t} />
+			</ul>
+
+			<div class="flex items-center gap-4 mt-8 relative z-10">
+				<ThemeToggle />
+				<LanguageDropdown languageCode={languageCode} />
+			</div>
+		</div>
+	</div>
+</div>

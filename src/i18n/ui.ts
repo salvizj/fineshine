@@ -44,10 +44,11 @@ export const ui = {
 					"Remove grime and improve engine appearance safely.",
 			},
 		],
-		social: "Social",
+		socials: "Socials",
 		contacts: "Contacts",
 		location: "Location",
 		services: "Services",
+		location_header: "Our Location",
 	},
 	lv: {
 		nav: {
@@ -86,10 +87,11 @@ export const ui = {
 					"Noņemiet netīrumus un uzlabojiet dzinēja izskatu droši.",
 			},
 		],
-		social: "Sociālie tīkli",
+		socials: "Sociālie tīkli",
 		contacts: "Kontakti",
 		location: "Atrašanās vieta",
 		services: "Pakalpojumi",
+		location_header: "Mūsu atrašanās vieta",
 	},
 	ru: {
 		nav: {
@@ -128,9 +130,10 @@ export const ui = {
 					"Удаление грязи и улучшение внешнего вида двигателя.",
 			},
 		],
-		social: "Социальные сети",
+		socials: "Социальные сети",
 		contacts: "Контакты",
 		location: "Местоположение",
 		services: "Услуги",
+		location_header: "Наше местоположение",
 	},
 } as const

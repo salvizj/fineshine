@@ -1,0 +1,24 @@
+---
+import Logo from "./Logo.astro"
+import MobileMenu from "./MobileMenu.astro"
+import type { LanguageCode } from "../../i18n/utils"
+import DefaultMenu from "./DefaultMenu.astro"
+
+interface Props {
+	t: (key: string) => string
+	languageCode: LanguageCode
+}
+
+const { t, languageCode } = Astro.props as Props
+---
+
+<ul class="w-full md:max-w-7xl max-w-screen px-4 py-2 mx-auto">
+	<DefaultMenu t={t} languageCode={languageCode} />
+	<MobileMenu t={t} languageCode={languageCode} />
+
+	<script>
+		import NavigationMenuToggle from "../../scripts/NavigationMenuToggle"
+
+		NavigationMenuToggle()
+	</script>
+</ul>
