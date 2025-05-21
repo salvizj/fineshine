@@ -11,9 +11,14 @@ export const ui = {
 		nav: {
 			home: "Home",
 		},
-		hero_title: "Professional Car Detailing Services",
-		hero_subtitle:
-			"Make your car look brand new with our expert cleaning, waxing, and polishing services.",
+		hero: {
+			title: "Professional Car Detailing Services",
+			subtitle:
+				"Make your car look brand new with our expert cleaning, waxing, and polishing services.",
+			description:
+				"Our experienced team uses top-quality products to restore your vehicle's shine and protect its finish.",
+			cta: "Get Started",
+		},
 		gallery_title: "Our Work",
 		gallery_image_alt: "Before and After",
 		pricing_title: "Services & Pricing",
@@ -48,9 +53,14 @@ export const ui = {
 		nav: {
 			home: "Mājas",
 		},
-		hero_title: "Profesionāli auto detaļu tīrīšanas pakalpojumi",
-		hero_subtitle:
-			"Padariet savu auto kā jaunu ar mūsu ekspertu tīrīšanu, vaskošanu un pulēšanu.",
+		hero: {
+			title: "Profesionālas automašīnu detalizēšanas pakalpojumi",
+			subtitle:
+				"Padariet savu automašīnu kā jaunu ar mūsu eksperta tīrīšanas, vaskošanas un pulēšanas pakalpojumiem.",
+			description:
+				"Mūsu pieredzējusī komanda izmanto augstākās kvalitātes produktus, lai atjaunotu jūsu transportlīdzekļa spīdumu un aizsargātu tā virsmu.",
+			cta: "Sākt",
+		},
 		gallery_title: "Mūsu darbi",
 		gallery_image_alt: "Pirms un pēc",
 		pricing_title: "Pakalpojumi un cenas",
@@ -85,9 +95,14 @@ export const ui = {
 		nav: {
 			home: "Дом",
 		},
-		hero_title: "Профессиональная мойка и детейлинг автомобилей",
-		hero_subtitle:
-			"Сделайте ваш автомобиль как новый с помощью нашей чистки, воска и полировки.",
+		hero: {
+			title: "Профессиональные услуги по детализированной уборке автомобилей",
+			subtitle:
+				"Сделайте вашу машину как новую с помощью наших экспертов по чистке, восковой обработке и полировке.",
+			description:
+				"Наша опытная команда использует высококачественные продукты для восстановления блеска вашего автомобиля и защиты его поверхности.",
+			cta: "Начать",
+		},
 		gallery_title: "Наши работы",
 		gallery_image_alt: "До и после",
 		pricing_title: "Услуги и цены",

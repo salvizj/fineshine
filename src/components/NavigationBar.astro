@@ -1,10 +1,14 @@
 ---
-import { type LanguageCode, useTranslations } from "../i18n/utils"
+import type { LanguageCode } from "../i18n/utils"
 import LanguageSwitcher from "./LanguageSwitcher.astro"
 import ThemeToggle from "./ThemeToggle.astro"
 
-const { languageCode } = Astro.props as { languageCode: LanguageCode }
-const t = useTranslations(languageCode)
+interface Props {
+	t: (key: string) => string
+	languageCode: LanguageCode
+}
+
+const { t, languageCode } = Astro.props as Props
 ---
 
 <ul

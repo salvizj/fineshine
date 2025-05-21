@@ -1,7 +1,9 @@
 ---
 import Footer from "../../components/Footer.astro"
+import HeroHeader from "../../components/HeroHeader.astro"
+import IframeMap from "../../components/IframeMap.astro"
 import NavigationBar from "../../components/NavigationBar.astro"
-import ServiceGrid from "../../components/ServiceGrid.astro"
+import ServiceCol from "../../components/ServiceCol.astro"
 import { languageOptions } from "../../i18n/ui"
 import {
 	useServiceTranslations,
@@ -11,80 +13,22 @@ import {
 } from "../../i18n/utils"
 
 import Layout from "../../layouts/Layout.astro"
+
 export function getStaticPaths() {
 	return Object.keys(languageOptions).map((lang) => ({ params: { lang } }))
 }
 const languageCode = Astro.params.lang as LanguageCode
 const t = useTranslations(languageCode)
-
-const service_list = useServiceTranslations(
-	languageCode
-) as unknown as Service[]
+const serviceList = useServiceTranslations(languageCode) as unknown as Service[]
 ---
 
 <Layout>
-	<NavigationBar languageCode={languageCode} />
-	<header class="mt-6 p-6 flex flex-col items-center gap-8 text-center">
-		<h1
-			class="text-3xl sm:text-4xl md:text-5xl font-bold text-center sm:text-left sm:max-w-2xl px-4 break-words"
-		>
-			{t("hero_title")}
-		</h1>
-		<h3
-			class="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-left max-w-sm sm:max-w-xl px-4 break-words"
-		>
-			{t("hero_subtitle")}
-		</h3>
+	<NavigationBar t={t} languageCode={languageCode} />
+	<section class="mt-6 p-6 flex flex-col items-center gap-8 text-center">
+		<HeroHeader t={t} />
+		<ServiceCol serviceList={serviceList} t={t} />
+	</section>
 
-		<ServiceGrid service_list={service_list} />
-
-		<section class="mt-12 max-w-6xl mx-auto px-6">
-			<h2 class="text-3xl font-semibold mb-6 text-center">
-				{t("gallery_title")}
-			</h2>
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-				{
-					Array.from({ length: 3 }).map((_, i) => (
-						<img
-							src="/images/placeholder.svg"
-							alt={`${t("gallery_image_alt")} ${i + 1}`}
-							class="rounded shadow"
-						/>
-					))
-				}
-			</div>
-		</section>
-
-		<section class="mt-12 max-w-4xl mx-auto px-6">
-			<h2 class="text-3xl font-semibold mb-6 text-center">
-				{t("pricing_title")}
-			</h2>
-			<div class="space-y-6">
-				{
-					service_list.map((service) => (
-						<div class="p-4 rounded shadow">
-							<h3 class="text-xl font-semibold">
-								{service.name}
-							</h3>
-							<p class="mt-1 text-gray-700">
-								{service.description}
-							</p>
-							<p class="mt-1 font-bold">
-								${Math.floor(Math.random() * 100 + 60)}
-							</p>
-						</div>
-					))
-				}
-			</div>
-		</section>
-	</header>
-	<div class="flex justify-center w-full">
-		<iframe
-			src="https://www.openstreetmap.org/export/embed.html?bbox=24.111229777336124%2C56.95085934693926%2C24.11477029323578%2C56.95213193033522&layer=mapnik&marker=56.95149564406772%2C24.11300003528595"
-			class="w-full"
-			style="height: 350px; border: 1px solid black;"
-			loading="lazy"
-			allowfullscreen></iframe>
-	</div>
-	<Footer languageCode={languageCode} />
+	<IframeMap />
+	<Footer t={t} />
 </Layout>

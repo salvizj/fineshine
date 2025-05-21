@@ -1,33 +1,35 @@
 ---
-import { useTranslations, type LanguageCode } from "../i18n/utils"
-import Contacts from "./Contacts.astro"
-import Socials from "./Socials.astro"
+import SocialLinks from "./SocialLinks.astro"
+import LocationInfo from "./LocationInfo.astro"
+import ContactInfo from "./ContactInfo.astro"
 
-const { languageCode } = Astro.props as { languageCode: LanguageCode }
-const t = useTranslations(languageCode)
+interface Props {
+	t: (key: string) => string
+}
+const { t } = Astro.props as Props
+
+const phoneNumber = "+371 1234 1234"
 ---
 
-<footer class="mt-12 text-center w-full" aria-label="Site footer">
-	<hr class="mb-6 border-gray-300" />
+<footer
+	class="mt-12 w-full bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300"
+	aria-label="Site footer"
+>
+	<hr class="mb-6 border-gray-300 dark:border-gray-700" />
 
-	<div class="flex flex-wrap justify-center gap-16">
-		<div class="flex flex-col items-center">
-			<h4 class="mb-4 text-lg font-semibold">{t("social")}</h4>
-			<Socials />
-		</div>
-
-		<div class="flex flex-col items-center">
-			<h4 class="mb-4 text-lg font-semibold">{t("location")}</h4>
-			<p>Raiņa bulvāris 11, Centra rajons, Rīga</p>
-		</div>
-
-		<div class="flex flex-col items-center">
-			<h4 class="mb-4 text-lg font-semibold">{t("contacts")}</h4>
-			<Contacts />
+	<div class="flex justify-center items-center">
+		<div
+			class="flex flex-col sm:flex-row justify-center gap-16 px-6 max-w-5xl mx-auto"
+		>
+			<SocialLinks />
+			<LocationInfo t={t} />
+			<ContactInfo phoneNumber={phoneNumber} t={t} />
 		</div>
 	</div>
 
-	<div class="mt-8 text-sm text-gray-500">
+	<div
+		class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400 select-none"
+	>
 		&copy; 2025 Fineshine. All rights reserved.
 	</div>
 </footer>

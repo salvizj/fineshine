@@ -1,0 +1,16 @@
+---
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
+---
+
+<ul class="flex flex-row gap-4">
+	<li class="flex items-center gap-4">
+		<a href="#contacts">{t("contacts")}</a>
+	</li>
+	<li class="flex items-center gap-4">
+		<a href="#services">{t("services")}</a>
+	</li>
+</ul>

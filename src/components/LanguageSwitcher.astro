@@ -2,7 +2,12 @@
 import { languageOptions } from "../i18n/ui"
 import type { LanguageCode } from "../i18n/utils"
 
-const { languageCode } = Astro.props as { languageCode: LanguageCode }
+interface Props {
+	languageCode: LanguageCode
+}
+
+const { languageCode } = Astro.props as Props
+
 const otherLanguageCodes = Object.keys(languageOptions).filter(
 	(code) => code !== languageCode
 )

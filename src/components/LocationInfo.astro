@@ -1,0 +1,16 @@
+---
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
+---
+
+<section
+	class="flex flex-col items-center sm:items-start text-center sm:text-left max-w-xs px-2"
+>
+	<h4 class="mb-4 text-lg font-semibold">{t("location")}</h4>
+	<address class="not-italic text-sm leading-relaxed break-normal">
+		Raiņa bulvāris 11,<br />Centra rajons,<br />Rīga
+	</address>
+</section>
