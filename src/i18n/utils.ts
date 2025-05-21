@@ -28,6 +28,12 @@ export function useTranslations(languageCode: LanguageCode) {
 	}
 }
 // TOOD: remove later
+
+export type Service = {
+	name: string
+	description?: string
+}
+
 export function useServiceTranslations(languageCode: LanguageCode) {
 	return (
 		ui[languageCode]?.service_list ?? ui[defaultLanguageCode].service_list

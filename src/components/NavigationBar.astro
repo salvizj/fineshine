@@ -1,14 +1,14 @@
 ---
 import { type LanguageCode, useTranslations } from "../i18n/utils"
-import LanguagePicker from "./LanguagePicker.astro"
-import ThemePicker from "./ThemePicker.astro"
+import LanguageSwitcher from "./LanguageSwitcher.astro"
+import ThemeToggle from "./ThemeToggle.astro"
 
 const { languageCode } = Astro.props as { languageCode: LanguageCode }
 const t = useTranslations(languageCode)
 ---
 
 <ul
-	class="w-full max-w-7xl px-4 py-2 mx-auto flex items-center justify-between"
+	class="w-full md:max-w-7xl max-w-screen px-4 py-2 mx-auto flex items-center justify-between"
 >
 	<li class="flex items-center gap-4">
 		<a href={`/`}>
@@ -35,8 +35,8 @@ const t = useTranslations(languageCode)
 			</li>
 		</div>
 		<li class="flex items-center gap-4">
-			<ThemePicker />
-			<LanguagePicker languageCode={languageCode} />
+			<ThemeToggle />
+			<LanguageSwitcher languageCode={languageCode} />
 		</li>
 	</div>
 	<!-- Open Button -->
@@ -57,11 +57,9 @@ const t = useTranslations(languageCode)
 
 	<!-- Fullscreen Overlay + Right Menu -->
 	<div
-		class="nav-open hidden fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden"
+		class="nav-open hidden fixed inset-0 z-5 bg-white dark:bg-gray-900 md:hidden pointer-events-auto"
 	>
-		<div
-			class="absolute top-0 right-0 w-3/4 h-full shadow-lg flex flex-col p-4 gap-6"
-		>
+		<div class="h-full shadow-lg flex flex-col p-4 gap-6 relative">
 			<!-- Close Button -->
 			<div class="flex justify-end">
 				<svg
@@ -79,68 +77,32 @@ const t = useTranslations(languageCode)
 				</svg>
 			</div>
 
-			<!-- Navigation Menu -->
-			<ul class="flex flex-col gap-4 mb-6">
-				<li>
-					<a href="#contacts" class="text-lg font-semibold"
-						>{t("contacts")}</a
-					>
-				</li>
-				<li>
-					<a href="#services" class="text-lg font-semibold"
-						>{t("services")}</a
-					>
-				</li>
-			</ul>
+			<div class="relative w-3/4 ml-auto">
+				<!-- Navigation Menu -->
+				<ul class="flex flex-col gap-4 justify-center">
+					<li>
+						<a href="#contacts" class="text-lg font-semibold"
+							>{t("contacts")}</a
+						>
+					</li>
+					<li>
+						<a href="#services" class="text-lg font-semibold"
+							>{t("services")}</a
+						>
+					</li>
+				</ul>
 
-			<!-- Utility Controls -->
-			<div class="flex gap-4 mt-4">
-				<ThemePicker />
-				<LanguagePicker languageCode={languageCode} />
+				<!-- Utility Controls -->
+				<div class="flex items-center gap-4 mt-8 relative z-10">
+					<ThemeToggle />
+					<LanguageSwitcher languageCode={languageCode} />
+				</div>
 			</div>
 		</div>
 	</div>
 </ul>
 
 <script>
-	let navOpenBtn: HTMLElement | null = null
-	let navCollapseBtn: HTMLElement | null = null
-	let navOpen: HTMLElement | null = null
-	let navCollapsed: HTMLElement | null = null
-
-	const resetNavIfHidden = () => {
-		if (!navOpenBtn || !navOpen || !navCollapsed) return
-
-		const navOpenBtnIsVisible =
-			window.getComputedStyle(navOpenBtn).display !== "none"
-
-		if (!navOpenBtnIsVisible) {
-			navOpen.classList.add("hidden")
-			navCollapsed.classList.remove("hidden")
-			navOpenBtn.classList.remove("hidden")
-		}
-	}
-
-	document.addEventListener("DOMContentLoaded", () => {
-		navOpenBtn = document.getElementById("nav-open-btn")
-		navCollapseBtn = document.getElementById("nav-collapse-btn")
-		navOpen = document.querySelector(".nav-open")
-		navCollapsed = document.querySelector(".nav-collapsed")
-
-		if (navOpenBtn && navCollapseBtn && navOpen && navCollapsed) {
-			navOpenBtn.addEventListener("click", () => {
-				navOpen!.classList.remove("hidden")
-				navCollapsed!.classList.add("hidden")
-				navOpenBtn!.classList.add("hidden")
-			})
-
-			navCollapseBtn.addEventListener("click", () => {
-				navOpen!.classList.add("hidden")
-				navCollapsed!.classList.remove("hidden")
-				navOpenBtn!.classList.remove("hidden")
-			})
-		}
-	})
-
-	window.addEventListener("resize", resetNavIfHidden)
+	import NavigationMenuToggle from "../scripts/NavigationMenuToggle"
+	NavigationMenuToggle()
 </script>

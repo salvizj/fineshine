@@ -1,13 +1,8 @@
----
-
----
-
 <button
-	id="themeToggle"
-	class="w-8 h-8 flex items-center justify-center"
+	class="w-8 h-8 flex items-center justify-center cursor-pointer theme-toggle"
 	aria-label="Toggle theme"
 >
-	<!-- Sun Icon (Heroicons) -->
+	<!-- Sun Icon -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hidden dark:block"
@@ -25,10 +20,10 @@
 		></path>
 	</svg>
 
-	<!-- Moon Icon (Heroicons) -->
+	<!-- Moon Icon -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		class="block dark:hidden"
+		class="block dark:hidden z-20"
 		fill="none"
 		viewBox="0 0 24 24"
 		stroke="currentColor"
@@ -44,23 +39,7 @@
 </button>
 
 <script>
-	import { setCookie } from "../utils/cookie"
+	import ThemeToggle from "../scripts/ThemeToggle"
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const themeToggleButton = document.getElementById("themeToggle")
-
-		if (!themeToggleButton) {
-			console.warn("Theme toggle button not found")
-			return
-		}
-
-		const toggleTheme = () => {
-			const isDarkModeEnabled =
-				document.documentElement.classList.toggle("dark")
-			const theme = isDarkModeEnabled ? "dark" : "light"
-			setCookie("theme", theme)
-		}
-
-		themeToggleButton.addEventListener("click", toggleTheme)
-	})
+	ThemeToggle()
 </script>

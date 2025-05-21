@@ -1,12 +1,15 @@
 ---
 import Footer from "../../components/Footer.astro"
 import NavigationBar from "../../components/NavigationBar.astro"
+import ServiceGrid from "../../components/ServiceGrid.astro"
 import { languageOptions } from "../../i18n/ui"
 import {
 	useServiceTranslations,
 	useTranslations,
 	type LanguageCode,
+	type Service,
 } from "../../i18n/utils"
+
 import Layout from "../../layouts/Layout.astro"
 export function getStaticPaths() {
 	return Object.keys(languageOptions).map((lang) => ({ params: { lang } }))
@@ -14,7 +17,9 @@ export function getStaticPaths() {
 const languageCode = Astro.params.lang as LanguageCode
 const t = useTranslations(languageCode)
 
-const service_list = useServiceTranslations(languageCode)
+const service_list = useServiceTranslations(
+	languageCode
+) as unknown as Service[]
 ---
 
 <Layout>
@@ -31,20 +36,7 @@ const service_list = useServiceTranslations(languageCode)
 			{t("hero_subtitle")}
 		</h3>
 
-		<div class="grid grid-cols-4 gap-6 w-full max-w-md">
-			{
-				service_list.map((service) => (
-					<div class="flex flex-col items-center space-y-2">
-						<img
-							src="/images/placeholder.svg"
-							alt={service.name}
-							class="rounded w-24 h-24 object-cover"
-						/>
-						<p class="text-sm font-medium">{service.name}</p>
-					</div>
-				))
-			}
-		</div>
+		<ServiceGrid service_list={service_list} />
 
 		<section class="mt-12 max-w-6xl mx-auto px-6">
 			<h2 class="text-3xl font-semibold mb-6 text-center">

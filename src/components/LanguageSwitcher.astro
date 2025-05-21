@@ -28,7 +28,7 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 			</svg>
 		</summary>
 		<ul
-			class="absolute mt-2 left-0 w-full rounded py-1 z-10 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
+			class="absolute mt-2 left-0 w-full rounded py-1 z-15 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
 		>
 			{
 				otherLanguageCodes.map((code) => (
@@ -48,34 +48,7 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 </div>
 
 <script>
-	import type { LanguageCode } from "../i18n/utils"
-	import { setCookie } from "../utils/cookie.js"
+	import LanguageSwitcher from "../scripts/LanguageSwitcher"
 
-	function onLanguageSelected(
-		languageCode: LanguageCode,
-		redirectLink: string
-	) {
-		setCookie("lang", languageCode)
-		window.location.href = redirectLink
-	}
-
-	document.addEventListener("DOMContentLoaded", () => {
-		const langLinks = document.querySelectorAll("[data-lang-code]")
-
-		langLinks.forEach((link) => {
-			link.addEventListener("click", (event) => {
-				event.preventDefault()
-
-				const target = event.target
-				if (!(target instanceof HTMLElement)) return
-
-				const languageCode = target.dataset.langCode as LanguageCode
-				const redirectLink = link.getAttribute("href") || "/"
-
-				if (languageCode) {
-					onLanguageSelected(languageCode, redirectLink)
-				}
-			})
-		})
-	})
+	LanguageSwitcher()
 </script>
