@@ -58,12 +58,9 @@
 			const isDarkModeEnabled =
 				document.documentElement.classList.toggle("dark")
 			const theme = isDarkModeEnabled ? "dark" : "light"
-			console.log("Toggling theme. Dark mode enabled:", isDarkModeEnabled)
-			console.log("Setting cookie theme to:", theme)
 			setCookie("theme", theme)
 		}
 
-		console.log("Theme toggle button found, attaching click listener")
 		themeToggleButton.addEventListener("click", toggleTheme)
 	})
 </script>
