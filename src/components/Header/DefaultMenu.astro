@@ -12,7 +12,9 @@ interface Props {
 const { t, languageCode } = Astro.props as Props
 ---
 
-<div class="flex items-center justify-between w-full px-4 py-2">
+<div
+	class="flex items-center justify-between w-full px-4 py-2 border dark:border-gray-800 border-gray-200"
+>
 	<Logo />
 
 	<div class="hidden md:flex">
@@ -27,10 +29,10 @@ const { t, languageCode } = Astro.props as Props
 	<!-- Mobile open button  -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="35"
+		width="36"
 		height="36"
 		fill="currentColor"
-		class="bi bi-list nav-collapsed md:hidden"
+		class="bi bi-list nav-collapsed md:hidden cursor-pointer"
 		id="nav-open-btn"
 		viewBox="0 0 16 16"
 	>
