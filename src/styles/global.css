@@ -1,3 +1,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.footer-section {
+	@apply flex flex-col items-center sm:items-start text-center sm:text-left max-w-xs px-2;
+}

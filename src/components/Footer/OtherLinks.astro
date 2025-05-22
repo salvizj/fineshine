@@ -8,14 +8,11 @@ interface Props {
 const { t, languageCode } = Astro.props as Props
 ---
 
-<div class="flex flex-col space-y-2">
-	<h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+<section class="footer-section">
+	<h4 class="mb-4 text-lg font-semibold">
 		{t("footer.other_links")}
 	</h4>
-	<a
-		href={`/${languageCode}/cookie-policy`}
-		class="hover:underline text-gray-700 dark:text-gray-300"
-	>
+	<a href={`/${languageCode}/cookie-policy`} class="hover:underline">
 		{t("footer.cookie_policy")}
 	</a>
-</div>
+</section>

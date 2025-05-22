@@ -6,10 +6,7 @@ interface Props {
 const { t, phoneNumber } = Astro.props as Props
 ---
 
-<section
-	class="flex flex-col items-center sm:items-start text-center sm:text-left"
-	id="contacts"
->
+<section class="footer-section" id="contacts">
 	<h4 class="mb-4 text-lg font-semibold">{t("footer.contacts")}</h4>
 	<div class="flex items-center gap-2 text-gray-900 dark:text-gray-200">
 		<svg
