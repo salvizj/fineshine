@@ -1,0 +1,50 @@
+---
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
+---
+
+<section class="space-y-6 text-sm text-gray-800">
+	<h2 class="text-xl font-semibold">{t("cookie_policy.title")}</h2>
+
+	<div>
+		<h3 class="font-medium">{t("cookie_policy.what_are_cookies.title")}</h3>
+		<p>{t("cookie_policy.what_are_cookies.description")}</p>
+	</div>
+
+	<div>
+		<h3 class="font-medium">{t("cookie_policy.cookies_used.title")}</h3>
+		<p>{t("cookie_policy.cookies_used.description")}</p>
+
+		<ul class="mt-2 space-y-2">
+			<li class="bg-gray-100 p-4 rounded-md">
+				<p class="font-medium">theme</p>
+				<p class="text-gray-600">
+					{t("cookie_policy.table.theme_purpose")} — 1 year — {
+						t("cookie_policy.table.functional")
+					}
+				</p>
+			</li>
+			<li class="bg-gray-100 p-4 rounded-md">
+				<p class="font-medium">language</p>
+				<p class="text-gray-600">
+					{t("cookie_policy.table.language_purpose")} — 1 year — {
+						t("cookie_policy.table.functional")
+					}
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<div>
+		<h3 class="font-medium">{t("cookie_policy.third_party.title")}</h3>
+		<p>{t("cookie_policy.third_party.description")}</p>
+	</div>
+
+	<div>
+		<h3 class="font-medium">{t("cookie_policy.personal_data.title")}</h3>
+		<p>{t("cookie_policy.personal_data.description")}</p>
+	</div>
+</section>

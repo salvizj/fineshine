@@ -1,4 +1,5 @@
 ---
+import CookieBanner from "../../components/cookies/CookieBanner.astro"
 import Footer from "../../components/Footer/Footer.astro"
 import Header from "../../components/Header/Header.astro"
 import HeroHeader from "../../components/HeroHeader.astro"
@@ -46,4 +47,5 @@ const serviceList = useServiceTranslations(languageCode) as unknown as Service[]
 
 	<IframeMap />
 	<Footer t={t} />
+	<CookieBanner t={t} />
 </Layout>
