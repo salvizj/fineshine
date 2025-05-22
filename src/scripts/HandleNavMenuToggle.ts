@@ -1,4 +1,4 @@
-export default function NavigationMenuToggle() {
+export default function HandleNavMenuToggle() {
 	document.addEventListener("DOMContentLoaded", () => {
 		const navOpenBtn = document.querySelector<HTMLElement>("#nav-open-btn")
 		const navCollapseBtn =

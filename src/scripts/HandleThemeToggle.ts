@@ -1,6 +1,6 @@
 import { setCookie } from "../utils/cookie"
 
-export default function ThemeToggle() {
+export default function HandleThemeToggle() {
 	document.addEventListener("DOMContentLoaded", () => {
 		const themeToggleButtons = document.querySelectorAll(".theme-toggle")
 

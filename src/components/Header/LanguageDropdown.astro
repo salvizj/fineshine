@@ -16,7 +16,7 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 <div class="relative inline-block">
 	<details class="relative cursor-pointer language-selector">
 		<summary
-			class="list-none flex items-center justify-between gap-2 bg-white dark:bg-gray-900 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 shadow-sm transition-colors duration-200 text-sm font-medium text-gray-800 dark:text-gray-100"
+			class="list-none flex items-center justify-between gap-2 bg-gray-100 dark:bg-gray-900 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 shadow-sm transition-colors duration-200 text-sm font-medium text-gray-800 dark:text-gray-100"
 		>
 			<span>{languageCode.toUpperCase()}</span>
 			<svg
@@ -33,14 +33,14 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 		</summary>
 
 		<ul
-			class="absolute mt-2 left-0 w-full rounded-lg py-1.5 z-20 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl backdrop-blur-sm"
+			class="absolute mt-2 left-0 w-full rounded-lg py-1.5 z-20 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 shadow-xl backdrop-blur-sm"
 		>
 			{
 				otherLanguageCodes.map((code) => (
 					<li>
 						<a
 							href={`/${code}/`}
-							class="block px-4 py-2 text-sm font-medium rounded-md text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+							class="block px-4 py-2 text-sm font-medium rounded-md text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
 							data-lang-code={code}
 						>
 							{code.toUpperCase()}
@@ -53,7 +53,7 @@ const otherLanguageCodes = Object.keys(languageOptions).filter(
 </div>
 
 <script>
-	import LanguageDropdown from "../../scripts/LanguageDropdown"
+	import HandleLanguageSelection from "../../scripts/HandleLanguageSelection"
 
-	LanguageDropdown()
+	HandleLanguageSelection()
 </script>

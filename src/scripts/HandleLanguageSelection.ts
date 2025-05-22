@@ -1,14 +1,7 @@
 import type { LanguageCode } from "../i18n/utils.js"
 import { setCookie } from "../utils/cookie.js"
-export default function LanguageDropdown() {
-	function onLanguageSelected(
-		languageCode: LanguageCode,
-		redirectLink: string
-	) {
-		setCookie("lang", languageCode)
-		window.location.href = redirectLink
-	}
 
+export default function HandleLanguageSelection() {
 	document.addEventListener("DOMContentLoaded", () => {
 		const langLinks = document.querySelectorAll("[data-lang-code]")
 
@@ -23,7 +16,8 @@ export default function LanguageDropdown() {
 				const redirectLink = link.getAttribute("href") || "/"
 
 				if (languageCode) {
-					onLanguageSelected(languageCode, redirectLink)
+					setCookie("lang", languageCode)
+					window.location.href = redirectLink
 				}
 			})
 		})

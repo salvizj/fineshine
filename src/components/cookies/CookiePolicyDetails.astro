@@ -6,30 +6,50 @@ interface Props {
 const { t } = Astro.props as Props
 ---
 
-<section class="space-y-6 text-sm text-gray-800">
-	<h2 class="text-xl font-semibold">{t("cookie_policy.title")}</h2>
+<section
+	class="space-y-8 text-sm leading-relaxed text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-900 p-6 rounded-lg max-w-3xl mx-auto"
+>
+	<h2 class="text-2xl font-bold tracking-tight mb-4">
+		{t("cookie_policy.title")}
+	</h2>
 
 	<div>
-		<h3 class="font-medium">{t("cookie_policy.what_are_cookies.title")}</h3>
-		<p>{t("cookie_policy.what_are_cookies.description")}</p>
+		<h3 class="font-semibold text-lg mb-2">
+			{t("cookie_policy.what_are_cookies.title")}
+		</h3>
+		<p class="text-gray-700 dark:text-gray-300">
+			{t("cookie_policy.what_are_cookies.description")}
+		</p>
 	</div>
 
 	<div>
-		<h3 class="font-medium">{t("cookie_policy.cookies_used.title")}</h3>
-		<p>{t("cookie_policy.cookies_used.description")}</p>
+		<h3 class="font-semibold text-lg mb-3">
+			{t("cookie_policy.cookies_used.title")}
+		</h3>
+		<p class="text-gray-700 dark:text-gray-300 mb-4">
+			{t("cookie_policy.cookies_used.description")}
+		</p>
 
-		<ul class="mt-2 space-y-2">
-			<li class="bg-gray-100 p-4 rounded-md">
-				<p class="font-medium">theme</p>
-				<p class="text-gray-600">
+		<ul class="space-y-4">
+			<li
+				class="bg-gray-200 dark:bg-gray-800 p-5 rounded-lg border border-gray-400 dark:border-gray-700"
+			>
+				<p class="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+					theme
+				</p>
+				<p class="text-gray-600 dark:text-gray-400 leading-snug">
 					{t("cookie_policy.table.theme_purpose")} — 1 year — {
 						t("cookie_policy.table.functional")
 					}
 				</p>
 			</li>
-			<li class="bg-gray-100 p-4 rounded-md">
-				<p class="font-medium">language</p>
-				<p class="text-gray-600">
+			<li
+				class="bg-gray-200 dark:bg-gray-800 p-5 rounded-lg border border-gray-400 dark:border-gray-700"
+			>
+				<p class="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+					language
+				</p>
+				<p class="text-gray-600 dark:text-gray-400 leading-snug">
 					{t("cookie_policy.table.language_purpose")} — 1 year — {
 						t("cookie_policy.table.functional")
 					}
@@ -39,12 +59,20 @@ const { t } = Astro.props as Props
 	</div>
 
 	<div>
-		<h3 class="font-medium">{t("cookie_policy.third_party.title")}</h3>
-		<p>{t("cookie_policy.third_party.description")}</p>
+		<h3 class="font-semibold text-lg mb-2">
+			{t("cookie_policy.third_party.title")}
+		</h3>
+		<p class="text-gray-700 dark:text-gray-300">
+			{t("cookie_policy.third_party.description")}
+		</p>
 	</div>
 
 	<div>
-		<h3 class="font-medium">{t("cookie_policy.personal_data.title")}</h3>
-		<p>{t("cookie_policy.personal_data.description")}</p>
+		<h3 class="font-semibold text-lg mb-2">
+			{t("cookie_policy.personal_data.title")}
+		</h3>
+		<p class="text-gray-700 dark:text-gray-300">
+			{t("cookie_policy.personal_data.description")}
+		</p>
 	</div>
 </section>

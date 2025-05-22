@@ -1,4 +1,4 @@
-export default function CookieBanner() {
+export default function HandleCookieBanner() {
 	document.addEventListener("DOMContentLoaded", () => {
 		function getCookie(name: string) {
 			const value = `; ${document.cookie}`
