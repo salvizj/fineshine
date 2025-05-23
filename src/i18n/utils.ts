@@ -3,14 +3,6 @@ import { ui, defaultLanguageCode, languageOptions } from "./ui"
 export type LanguageCode = keyof typeof languageOptions
 export type TranslationKeys = keyof (typeof ui)[typeof defaultLanguageCode]
 
-export function getLanguageCodeFromUrl(url: URL): LanguageCode | undefined {
-	const [, lang] = url.pathname.split("/")
-	if (lang && lang in languageOptions) {
-		return lang as LanguageCode
-	}
-	return undefined
-}
-
 export function useTranslations(languageCode: LanguageCode) {
 	return function t(key: string): string {
 		const keys = key.split(".")

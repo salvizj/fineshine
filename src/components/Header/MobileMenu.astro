@@ -1,9 +1,9 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
 import NavLinks from "./NavLinks.astro"
 import type { LanguageCode } from "../../i18n/utils"
-import LanguageDropdown from "./LanguageDropdown.astro"
 import Logo from "./Logo.astro"
+import LanguageSelector from "./LanguageSelector.astro"
+import ThemeToggler from "./ThemeToggler.astro"
 
 interface Props {
 	t: (key: string) => string
@@ -41,8 +41,8 @@ const { t, languageCode } = Astro.props as Props
 		</nav>
 
 		<div class="flex items-center justify-start gap-4 w-full">
-			<ThemeToggle />
-			<LanguageDropdown languageCode={languageCode} />
+			<ThemeToggler />
+			<LanguageSelector languageCode={languageCode} />
 		</div>
 	</div>
 </div>

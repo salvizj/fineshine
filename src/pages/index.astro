@@ -3,23 +3,7 @@
 ---
 
 <script>
-	import { defaultLanguageCode } from "../i18n/ui"
-	import { getLanguageCodeFromUrl } from "../i18n/utils"
-	import { getCookie } from "../utils/cookie"
+	import HandleMissingAnchorRedirects from "../scripts/HandleMissingAnchorRedirects"
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const languageCode = getLanguageCodeFromUrl(
-			new URL(window.location.href)
-		)
-
-		if (languageCode) return
-
-		const savedLanguageCode = getCookie("lang")
-
-		if (savedLanguageCode) {
-			window.location.href = `/${savedLanguageCode}/`
-		} else {
-			window.location.href = `/${defaultLanguageCode}/`
-		}
-	})
+	HandleMissingAnchorRedirects()
 </script>
