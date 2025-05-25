@@ -23,14 +23,13 @@ import "../styles/global.css"
 		<meta name="author" content="Fineshine Car Detailing" />
 		<title>Fineshine | Professional Car Detailing Services</title>
 	</head>
+
+	<body class="min-h-screen bg-bg-default text-text-primary">
+		<main>
+			<slot />
+		</main>
+	</body>
 </html>
-<body
-	class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white"
->
-	<main>
-		<slot />
-	</main>
-</body>
 
 <script is:inline>
 	function getCookie(name) {

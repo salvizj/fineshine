@@ -6,6 +6,26 @@ export default {
 			fontFamily: {
 				montserrat: ["Montserrat", "sans-serif"],
 			},
+			colors: {
+				text: {
+					primary: "var(--color-text-primary)",
+					secondary: "var(--color-text-secondary)",
+					tertiary: "var(--color-text-tertiary)",
+				},
+				bg: {
+					default: "var(--color-bg-default)",
+					muted: "var(--color-bg-muted)",
+					card: "var(--color-bg-card)",
+				},
+				border: {
+					default: "var(--color-border-default)",
+					muted: "var(--color-border-muted)",
+				},
+				hover: {
+					primary: "var(--color-hover-primary)",
+					muted: "var(--color-hover-muted)",
+				},
+			},
 		},
 	},
 	plugins: [],

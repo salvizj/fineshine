@@ -2,6 +2,47 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.footer-section {
+	@apply flex flex-col items-start text-left px-2 w-54 lg:w-auto;
+}
+.footer-title {
+	@apply mb-4 text-lg font-semibold;
+}
+
+@theme {
+	--color-text-primary: #1f2937;
+	--color-text-secondary: #4b5563;
+	--color-text-tertiary: #6b7280;
+
+	--color-bg-default: #ffffff;
+	--color-bg-muted: #fafafa;
+	--color-bg-card: #f3f4f6;
+
+	--color-border-default: #e5e7eb;
+	--color-border-muted: #e5e7eb;
+
+	--color-hover-primary: #3b82f6;
+	--color-hover-muted: #93c5fd;
+}
+
+@layer base {
+	@variant dark {
+		--color-text-primary: #f3f4f6;
+		--color-text-secondary: #d1d5db;
+		--color-text-tertiary: #9ca3af;
+
+		--color-bg-default: #111827;
+		--color-bg-muted: #1f2937;
+		--color-bg-card: #1c1f24;
+
+		--color-border-default: #374151;
+		--color-border-muted: #4b5563;
+
+		--color-hover-primary: #60a5fa;
+		--color-hover-muted: #3b82f6;
+	}
+}
+
 :root {
 	font-family:
 		"Montserrat",
@@ -19,12 +60,6 @@
 	line-height: 1.5;
 	font-weight: 400;
 	letter-spacing: 0.02em;
-	color: var(--color-foreground);
-	background-color: var(--color-background);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.footer-section {
-	@apply flex flex-col items-center sm:items-start text-center sm:text-left max-w-xs px-2;
 }

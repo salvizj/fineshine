@@ -16,10 +16,10 @@ const links = ["#contacts", "#services", "#location", "#socials"]
 			return (
 				<a
 					href={link}
-					class="group relative px-2 py-1 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-300"
+					class="group relative px-2 py-1 text-text-primary focus:outline-none focus:ring-2 focus:ring-hover-primary"
 				>
 					<span class="relative z-10">{t("nav." + key)}</span>
-					<span class="absolute left-0 bottom-0 h-0.5 w-0 bg-indigo-500 transition-all duration-300 group-hover:w-full" />
+					<span class="absolute left-0 bottom-0 h-0.5 w-0 bg-hover-primary transition-all duration-300 group-hover:w-full" />
 				</a>
 			)
 		})

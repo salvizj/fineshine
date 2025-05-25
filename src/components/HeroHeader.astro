@@ -11,21 +11,22 @@ const { t } = Astro.props as Props
 >
 	<div class="flex-1">
 		<h1
-			class="text-[clamp(2rem,6vw,4rem)] font-extrabold leading-tight text-left max-w-full sm:max-w-3xl px-2 sm:px-4 break-words hyphens-auto text-gray-900 dark:text-white animate-fadeInUp"
+			class="text-[clamp(2rem,6vw,4rem)] font-extrabold leading-tight text-left max-w-full sm:max-w-3xl px-2 sm:px-4 break-words hyphens-auto text-text-primary animate-fadeInUp"
 		>
 			{t("hero.title")}
 		</h1>
 
-		<div class="mt-2 w-20 h-1 bg-indigo-600 rounded animate-fadeInUp"></div>
+		<div class="mt-2 w-20 h-1 bg-hover-primary rounded animate-fadeInUp">
+		</div>
 
 		<h3
-			class="text-[clamp(1rem,4vw,2rem)] font-semibold leading-snug max-w-md sm:max-w-xl px-4 text-left text-gray-700 dark:text-gray-300 animate-fadeInUp"
+			class="text-[clamp(1rem,4vw,2rem)] font-semibold leading-snug max-w-md sm:max-w-xl px-4 text-left text-text-secondary animate-fadeInUp"
 		>
 			{t("hero.subtitle")}
 		</h3>
 
 		<p
-			class="mt-6 max-w-xl text-left text-gray-600 dark:text-gray-400 leading-relaxed px-4 animate-fadeInUp"
+			class="mt-6 max-w-xl text-left text-text-tertiary leading-relaxed px-4 animate-fadeInUp"
 		>
 			{t("hero.description")}
 		</p>

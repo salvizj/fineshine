@@ -15,25 +15,29 @@ const phoneNumber = "+371 1234 1234"
 ---
 
 <footer
-	class="w-full bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300"
+	class="w-full bg-bg-default text-text-secondary"
 	aria-label="Site footer"
 >
-	<hr class="mb-6 border-gray-300 dark:border-gray-700" />
+	<hr class="mb-6 border-border-muted" />
 
-	<div class="flex justify-center items-center">
+	<div class="flex justify-center px-4">
 		<div
-			class="flex flex-col sm:flex-row justify-center gap-16 max-w-5xl mx-auto"
+			class="flex flex-col items-center justify-center gap-2 max-w-7xl w-full mx-auto sm:gap-4 md:gap-8 lg:flex-row lg:gap-12"
 		>
-			<LocationInfo t={t} />
-			<ContactInfo phoneNumber={phoneNumber} t={t} />
-			<OtherLinks t={t} languageCode={languageCode} />
-			<SocialLinks t={t} />
+			<div class="flex flex-row gap-2 md:gap-8 sm:gap-4 lg:gap-12">
+				<LocationInfo t={t} />
+				<ContactInfo phoneNumber={phoneNumber} t={t} />
+			</div>
+			<div class="flex flex-row gap-2 md:gap-8 sm:gap-4 lg:gap-12">
+				<OtherLinks t={t} languageCode={languageCode} />
+				<SocialLinks t={t} />
+			</div>
 		</div>
 	</div>
 
 	<div
-		class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400 select-none space-y-2"
+		class="mt-6 text-center text-sm text-text-tertiary select-none space-y-2"
 	>
-		<div>&copy; 2025 Fineshine. All rights reserved.</div>
+		<div>&copy; 2025</div>
 	</div>
 </footer>
