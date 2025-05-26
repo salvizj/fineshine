@@ -14,10 +14,9 @@ const { t, languageCode } = Astro.props as Props
 <ul class="w-full md:max-w-7xl max-w-screen px-4 py-2 mx-auto">
 	<DefaultMenu t={t} languageCode={languageCode} />
 	<MobileMenu t={t} languageCode={languageCode} />
-
-	<script>
-		import HandleNavMenuToggle from "../../scripts/HandleNavMenuToggle"
-
-		HandleNavMenuToggle()
-	</script>
 </ul>
+<script>
+	import HandleNavMenuToggle from "../../scripts/HandleNavMenuToggle"
+
+	HandleNavMenuToggle()
+</script>
