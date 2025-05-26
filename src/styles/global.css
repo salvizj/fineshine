@@ -3,47 +3,47 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .footer-section {
-	@apply flex flex-col items-start text-left px-2 w-auto md:w-80 lg:w-md xl:w-auto;
+	@apply flex flex-col items-start text-left px-2 w-auto md:w-80 lg:w-md xl:w-auto text-text-secondary;
 }
 .footer-title {
-	@apply mb-4 font-semibold text-base sm:text-lg lg:text-xl;
+	@apply mb-4 font-semibold text-sm sm:text-base lg:text-lg;
 }
 
 .footer-description {
-	@apply text-sm sm:text-base lg:text-lg;
+	@apply font-medium text-xs sm:text-sm lg:text-base;
 }
 
 @theme {
-	--color-text-primary: #1f2937;
-	--color-text-secondary: #4b5563;
-	--color-text-tertiary: #6b7280;
+	--color-text-primary: #1e293b;
+	--color-text-secondary: #475569;
+	--color-text-tertiary: #64748b;
 
-	--color-bg-default: #ffffff;
-	--color-bg-muted: #fafafa;
-	--color-bg-card: #f3f4f6;
+	--color-bg-default: #f0f4f8;
+	--color-bg-muted: #d9e2ec;
+	--color-bg-card: #ffffff;
 
-	--color-border-default: #e5e7eb;
-	--color-border-muted: #e5e7eb;
+	--color-border-default: #cbd5e1;
+	--color-border-muted: #94a3b8;
 
-	--color-hover-primary: #3b82f6;
+	--color-hover-primary: #2563eb;
 	--color-hover-muted: #93c5fd;
 }
 
 @layer base {
 	@variant dark {
-		--color-text-primary: #f3f4f6;
-		--color-text-secondary: #d1d5db;
-		--color-text-tertiary: #9ca3af;
+		--color-text-primary: #e5e7eb;
+		--color-text-secondary: #9ca3af;
+		--color-text-tertiary: #6b7280;
 
-		--color-bg-default: #111827;
-		--color-bg-muted: #1f2937;
-		--color-bg-card: #1c1f24;
+		--color-bg-default: #0f172a;
+		--color-bg-muted: #1e293b;
+		--color-bg-card: #1e293b;
 
-		--color-border-default: #374151;
-		--color-border-muted: #4b5563;
+		--color-border-default: #334155;
+		--color-border-muted: #475569;
 
-		--color-hover-primary: #60a5fa;
-		--color-hover-muted: #3b82f6;
+		--color-hover-primary: #3b82f6;
+		--color-hover-muted: #60a5fa;
 	}
 }
 
