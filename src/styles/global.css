@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .footer-section {
-	@apply flex flex-col items-start text-left px-2 w-54 lg:w-auto;
+	@apply flex flex-col items-start text-left px-2 w-80 lg:w-auto;
 }
 .footer-title {
 	@apply mb-4 text-lg font-semibold;
