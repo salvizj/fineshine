@@ -3,10 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .footer-section {
-	@apply flex flex-col items-start text-left px-2 w-80 lg:w-auto;
+	@apply flex flex-col items-start text-left px-2 w-112 md:w-84 lg:w-112 xl:w-auto;
 }
 .footer-title {
-	@apply mb-4 text-lg font-semibold;
+	@apply mb-4 font-semibold text-base sm:text-lg lg:text-xl;
+}
+
+.footer-description {
+	@apply text-sm sm:text-base lg:text-lg;
 }
 
 @theme {

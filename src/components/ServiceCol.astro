@@ -10,7 +10,9 @@ const { t, serviceList } = Astro.props as Props
 ---
 
 <section class="mt-12 max-w-6xl mx-auto px-6" id="services">
-	<h2 class="text-4xl font-extrabold mb-12 text-center text-text-primary">
+	<h2
+		class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-12 text-center text-text-primary"
+	>
 		{t("pricing_title")}
 	</h2>
 
@@ -18,13 +20,15 @@ const { t, serviceList } = Astro.props as Props
 		{
 			serviceList.map((service) => (
 				<div class="group p-6 rounded-2xl border border-border-default bg-bg-default shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
-					<h3 class="text-xl font-semibold text-text-primary mb-2">
+					<h3 class="text-base sm:text-lg md:text-xl font-semibold text-text-primary mb-2">
 						{service.name}
 					</h3>
-					<p class="text-sm text-text-tertiary mb-4 leading-relaxed line-clamp-4">
+
+					<p class="text-sm sm:text-base text-text-tertiary mb-4 leading-relaxed line-clamp-4">
 						{service.description}
 					</p>
-					<p class="text-lg font-bold text-hover-primary">
+
+					<p class="text-base sm:text-lg md:text-xl font-bold text-hover-primary">
 						${Math.floor(Math.random() * 100 + 60)}
 					</p>
 				</div>
