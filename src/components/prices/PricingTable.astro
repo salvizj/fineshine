@@ -1,0 +1,30 @@
+---
+import PriceSection from "./PriceSection.astro"
+import PricePackage from "./PricePackage.astro"
+import {
+	type PackagesContainer,
+	type PriceSection as PriceSectionType,
+} from "~/utils/types"
+
+interface Props {
+	t: (key: string) => string
+	tObj: (key: string) => Object
+}
+
+const { t, tObj } = Astro.props as Props
+
+const interiorAndBody = tObj("prices.interior_and_body") as PriceSectionType
+const polishing = tObj("prices.polishing") as PriceSectionType
+const protectionAndExtras = tObj(
+	"prices.protection_and_extras"
+) as PriceSectionType
+const completePackages = tObj("prices.packages") as PackagesContainer
+---
+
+<section class="max-w-screen-lg w-full mx-auto px-4 py-8">
+	<h2 class="text-3xl font-bold mb-6">{t("prices.price_title")}</h2>
+	<PriceSection priceSection={interiorAndBody} />
+	<PriceSection priceSection={polishing} />
+	<PriceSection priceSection={protectionAndExtras} />
+	<PricePackage pricePackagesContainer={completePackages} />
+</section>

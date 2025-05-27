@@ -1,0 +1,37 @@
+---
+import BodyConditionRisks from "~/components/info/BodyConditionRisks.astro"
+import CookieBanner from "../../components/cookies/CookieBanner.astro"
+import Footer from "../../components/Footer/Footer.astro"
+import Header from "../../components/Header/Header.astro"
+import DetailingBenefits from "../../components/info/DetailingBenefits.astro"
+import DetailingExterior from "../../components/info/DetailingExterior.astro"
+import DetailingInterior from "../../components/info/DetailingInterior.astro"
+import WhatIsDetailing from "../../components/info/WhatIsDetailing.astro"
+import { languageOptions } from "../../i18n/ui"
+
+import Layout from "../../layouts/Layout.astro"
+import { useTranslate, type LanguageCode } from "~/i18n/utils"
+
+export function getStaticPaths() {
+	return Object.keys(languageOptions).map((lang) => ({ params: { lang } }))
+}
+const languageCode = Astro.params.lang as LanguageCode
+const t = useTranslate(languageCode)
+---
+
+<Layout>
+	<Header t={t} languageCode={languageCode} />
+
+	<section
+		class="max-w-screen xl:w-7xl w-full mx-auto px-4 sm:px-6 py-16 flex flex-col justify-center items-center gap-12"
+	>
+		<WhatIsDetailing t={t} />
+		<DetailingExterior t={t} />
+		<DetailingInterior t={t} />
+		<DetailingBenefits t={t} />
+		<BodyConditionRisks t={t} />
+	</section>
+
+	<Footer t={t} languageCode={languageCode} />
+	<CookieBanner t={t} />
+</Layout>

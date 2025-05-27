@@ -1,16 +1,20 @@
 import { ui, defaultLanguageCode, languageOptions } from "./ui"
 
 export type LanguageCode = keyof typeof languageOptions
-export type TranslationKeys = keyof (typeof ui)[typeof defaultLanguageCode]
+export type TranslateKeys = keyof (typeof ui)[typeof defaultLanguageCode]
 
-export function useTranslations(languageCode: LanguageCode) {
+export function useTranslate(languageCode: LanguageCode) {
 	return function t(key: string): string {
 		const keys = key.split(".")
-		let result: any = ui[languageCode] ?? ui[defaultLanguageCode]
+		let result: unknown = ui[languageCode] ?? ui[defaultLanguageCode]
 
 		for (const k of keys) {
-			if (result && k in result) {
-				result = result[k]
+			if (
+				result !== null &&
+				typeof result === "object" &&
+				Object.prototype.hasOwnProperty.call(result, k)
+			) {
+				result = (result as Record<string, unknown>)[k]
 			} else {
 				return key
 			}
@@ -19,15 +23,27 @@ export function useTranslations(languageCode: LanguageCode) {
 		return typeof result === "string" ? result : key
 	}
 }
-// TOOD: remove later
+export function useTranslateObject(languageCode: LanguageCode) {
+	return function tObj(key: string): unknown {
+		const keys = key.split(".")
 
-export type Service = {
-	name: string
-	description?: string
-}
+		// Use fallback language if ui[languageCode] is missing
+		let result: unknown = ui[languageCode] ?? ui[defaultLanguageCode]
 
-export function useServiceTranslations(languageCode: LanguageCode) {
-	return (
-		ui[languageCode]?.service_list ?? ui[defaultLanguageCode].service_list
-	)
+		for (const k of keys) {
+			// Check that result is an object and has own property k
+			if (
+				result !== null &&
+				typeof result === "object" &&
+				Object.prototype.hasOwnProperty.call(result, k)
+			) {
+				result = (result as Record<string, unknown>)[k]
+			} else {
+				// Return undefined if key path is invalid
+				return undefined
+			}
+		}
+
+		return result
+	}
 }

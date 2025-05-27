@@ -1,16 +1,15 @@
 ---
+import PricingTable from "~/components/prices/PricingTable.astro"
 import CookieBanner from "../../components/cookies/CookieBanner.astro"
 import Footer from "../../components/Footer/Footer.astro"
 import Header from "../../components/Header/Header.astro"
 import HeroHeader from "../../components/HeroHeader.astro"
 import IframeMap from "../../components/IframeMap.astro"
-import ServiceCol from "../../components/ServiceCol.astro"
 import { languageOptions } from "../../i18n/ui"
 import {
-	useServiceTranslations,
-	useTranslations,
+	useTranslate,
+	useTranslateObject,
 	type LanguageCode,
-	type Service,
 } from "../../i18n/utils"
 
 import Layout from "../../layouts/Layout.astro"
@@ -19,17 +18,17 @@ export function getStaticPaths() {
 	return Object.keys(languageOptions).map((lang) => ({ params: { lang } }))
 }
 const languageCode = Astro.params.lang as LanguageCode
-const t = useTranslations(languageCode)
-const serviceList = useServiceTranslations(languageCode) as unknown as Service[]
+const t = useTranslate(languageCode)
+const tObj: (key: string) => unknown = useTranslateObject(languageCode)
 ---
 
 <Layout>
 	<Header t={t} languageCode={languageCode} />
 	<section class="mt-6 p-6 flex flex-col items-center gap-8 text-center">
 		<HeroHeader t={t} />
-		<ServiceCol serviceList={serviceList} t={t} />
 	</section>
 
+	<PricingTable t={t} tObj={tObj} />
 	<div
 		class="flex flex-col items-center justify-center px-4 mt-8 max-w-xl mx-auto text-center mb-8"
 	>

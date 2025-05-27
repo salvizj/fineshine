@@ -1,0 +1,28 @@
+---
+interface Props {
+	t: (key: string) => string
+}
+const { t } = Astro.props as Props
+---
+
+<section>
+	<h2 class="text-2xl md:text-3xl font-semibold mb-4 text-text-primary">
+		{t("auto_detailing.interior.interior_title")}
+	</h2>
+
+	<p class="mb-6 text-base md:text-lg text-text-primary">
+		{t("auto_detailing.interior.description")}
+	</p>
+
+	<ul
+		class="list-disc list-inside space-y-2 text-base md:text-lg text-text-secondary"
+	>
+		<li>{t("auto_detailing.interior.steps.deep_cleaning")}</li>
+		<li>{t("auto_detailing.interior.steps.bacteria_removal")}</li>
+		<li>{t("auto_detailing.interior.steps.protective_coatings")}</li>
+		<li>{t("auto_detailing.interior.steps.restoration")}</li>
+	</ul>
+	<p class="mb-6 text-base md:text-lg text-text-secondary">
+		{t("auto_detailing.interior.client_approach")}
+	</p>
+</section>
