@@ -17,9 +17,39 @@ export function getStaticPaths() {
 }
 const languageCode = Astro.params.lang as LanguageCode
 const t = useTranslate(languageCode)
+
+const metaData = {
+	lv: {
+		title: "fineshine auto detalizācijas Studija",
+		description:
+			"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
+		keywords:
+			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija",
+	},
+	en: {
+		title: "Fineshine Auto Detailing Studio",
+		description:
+			"Certified auto detailing services in Latvia: chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, and ozone treatment.",
+		keywords:
+			"auto detailing, car cleaning, polishing, protective coatings, headlight polishing, leather restoration, ozone treatment, car interior, detailing Latvia",
+	},
+	ru: {
+		title: "Студия авто детайлинга Fineshine",
+		description:
+			"Сертифицированные услуги авто детайлинга в Латвии: химчистка, полировка, защитные покрытия, восстановление фар, окраска кожи и озонирование.",
+		keywords:
+			"авто детайлинг, химчистка авто, полировка авто, защитные покрытия, полировка фар, реставрация кожи, озонирование, салон авто, детайлинг Латвия",
+	},
+}
+const meta = metaData[languageCode]
 ---
 
-<Layout>
+<Layout
+	languageCode={languageCode}
+	title={meta.title}
+	description={meta.description}
+	keywords={meta.keywords}
+>
 	<Header t={t} languageCode={languageCode} />
 
 	<section class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8">

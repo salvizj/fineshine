@@ -1,8 +1,25 @@
 ---
 import "../styles/global.css"
+interface LayoutProps {
+	languageCode?: string
+	title?: string
+	description?: string
+	keywords?: string
+}
+
+const props = Astro.props as LayoutProps
+
+const languageCode = props.languageCode ?? "lv"
+const title = props.title ?? "fineshine auto detalizācijas Studija"
+const description =
+	props.description ??
+	"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana."
+const keywords =
+	props.keywords ??
+	"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija"
 ---
 
-<html class="dark">
+<html class="dark" lang={languageCode}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
@@ -10,23 +27,13 @@ import "../styles/global.css"
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Sertificēta Detailera Pakalpojumi" />
 
-		<title>
-			Sertificēta Detailera Pakalpojumi – Auto Tīrīšana, Pulēšana,
-			Restaurācija
-		</title>
-		<meta
-			name="description"
-			content="Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana."
-		/>
-
-		<meta
-			name="keywords"
-			content="auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<title>{title}</title>
 	</head>
 
 	<body class="min-h-screen bg-bg-default text-text-primary">
@@ -44,9 +51,6 @@ import "../styles/global.css"
 		return null
 	}
 	const currentTheme = getCookie("theme")
-	const languageCode = getCookie("lang") || "lv"
-
-	document.documentElement.setAttribute("lang", languageCode)
 
 	if (currentTheme === "light") {
 		document.documentElement.classList.remove("dark")
