@@ -22,9 +22,7 @@ const t = useTranslate(languageCode)
 <Layout>
 	<Header t={t} languageCode={languageCode} />
 
-	<section
-		class="max-w-screen xl:w-7xl w-full mx-auto px-4 sm:px-6 py-16 flex flex-col justify-center items-center gap-12"
-	>
+	<section class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8">
 		<WhatIsDetailing t={t} />
 		<DetailingExterior t={t} />
 		<DetailingInterior t={t} />
@@ -33,5 +31,5 @@ const t = useTranslate(languageCode)
 	</section>
 
 	<Footer t={t} languageCode={languageCode} />
-	<CookieBanner t={t} />
+	<CookieBanner t={t} languageCode={languageCode} />
 </Layout>

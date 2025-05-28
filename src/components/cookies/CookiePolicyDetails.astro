@@ -6,65 +6,65 @@ interface Props {
 const { t } = Astro.props as Props
 ---
 
-<section
-	class="space-y-8 text-sm leading-relaxed text-text-primary bg-bg-default p-6 rounded-lg max-w-3xl mx-auto"
->
-	<h2 class="text-2xl font-bold tracking-tight mb-4">
+<section class="max-w-screen-md w-full mx-auto px-8 sm:px-4 py-8">
+	<h3 class="mb-6">
 		{t("cookie_policy.title")}
-	</h2>
+	</h3>
 
-	<div>
-		<h3 class="font-semibold text-lg mb-2">
-			{t("cookie_policy.what_are_cookies.title")}
-		</h3>
-		<p class="text-text-secondary">
-			{t("cookie_policy.what_are_cookies.description")}
-		</p>
-	</div>
+	<div class="space-y-4">
+		<div>
+			<h5 class="mb-2">
+				{t("cookie_policy.what_are_cookies.title")}
+			</h5>
+			<p>
+				{t("cookie_policy.what_are_cookies.description")}
+			</p>
+		</div>
 
-	<div>
-		<h3 class="font-semibold text-lg mb-3">
-			{t("cookie_policy.cookies_used.title")}
-		</h3>
-		<p class="text-text-secondary mb-4">
-			{t("cookie_policy.cookies_used.description")}
-		</p>
+		<div>
+			<h5 class="mb-2">
+				{t("cookie_policy.cookies_used.title")}
+			</h5>
+			<p class="mb-4">
+				{t("cookie_policy.cookies_used.description")}
+			</p>
 
-		<ul class="space-y-4">
-			<li class="bg-bg-muted p-5 rounded-lg border border-border-muted">
-				<p class="font-semibold text-text-primary mb-1">theme</p>
-				<p class="text-text-tertiary leading-snug">
-					{t("cookie_policy.table.theme_purpose")} — 1 year — {
-						t("cookie_policy.table.functional")
-					}
-				</p>
-			</li>
-			<li class="bg-bg-muted p-5 rounded-lg border border-border-muted">
-				<p class="font-semibold text-text-primary mb-1">language</p>
-				<p class="text-text-tertiary leading-snug">
-					{t("cookie_policy.table.language_purpose")} — 1 year — {
-						t("cookie_policy.table.functional")
-					}
-				</p>
-			</li>
-		</ul>
-	</div>
+			<ul class="space-y-4">
+				<li class="p-4 rounded-lg bg-bg-card">
+					<p class="mb-1 text-text-primary">theme</p>
+					<p>
+						{t("cookie_policy.table.theme_purpose")} — {
+							t("cookie_policy.table.functional")
+						}
+					</p>
+				</li>
+				<li class="p-4 rounded-lg bg-bg-card">
+					<p class="mb-1 text-text-primary">lang</p>
+					<p>
+						{t("cookie_policy.table.language_purpose")} — {
+							t("cookie_policy.table.functional")
+						}
+					</p>
+				</li>
+			</ul>
+		</div>
 
-	<div>
-		<h3 class="font-semibold text-lg mb-2">
-			{t("cookie_policy.third_party.title")}
-		</h3>
-		<p class="text-text-secondary">
-			{t("cookie_policy.third_party.description")}
-		</p>
-	</div>
+		<div>
+			<h5 class="mb-2">
+				{t("cookie_policy.third_party.title")}
+			</h5>
+			<p>
+				{t("cookie_policy.third_party.description")}
+			</p>
+		</div>
 
-	<div>
-		<h3 class="font-semibold text-lg mb-2">
-			{t("cookie_policy.personal_data.title")}
-		</h3>
-		<p class="text-text-secondary">
-			{t("cookie_policy.personal_data.description")}
-		</p>
+		<div>
+			<h5 class="mb-2">
+				{t("cookie_policy.personal_data.title")}
+			</h5>
+			<p>
+				{t("cookie_policy.personal_data.description")}
+			</p>
+		</div>
 	</div>
 </section>

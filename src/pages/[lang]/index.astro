@@ -3,7 +3,6 @@ import PricingTable from "~/components/prices/PricingTable.astro"
 import CookieBanner from "../../components/cookies/CookieBanner.astro"
 import Footer from "../../components/Footer/Footer.astro"
 import Header from "../../components/Header/Header.astro"
-import HeroHeader from "../../components/HeroHeader.astro"
 import IframeMap from "../../components/IframeMap.astro"
 import { languageOptions } from "../../i18n/ui"
 import {
@@ -24,28 +23,9 @@ const tObj: (key: string) => unknown = useTranslateObject(languageCode)
 
 <Layout>
 	<Header t={t} languageCode={languageCode} />
-	<section class="mt-6 p-6 flex flex-col items-center gap-8 text-center">
-		<HeroHeader t={t} />
-	</section>
-
 	<PricingTable t={t} tObj={tObj} />
-	<div
-		class="flex flex-col items-center justify-center px-4 mt-8 max-w-xl mx-auto text-center mb-8"
-	>
-		<h3
-			class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-primary animate-fadeInUp"
-		>
-			{t("location_header")}
-		</h3>
 
-		<address
-			class="mt-3 not-italic text-sm sm:text-base md:text-lg text-text-secondary"
-		>
-			Raiņa bulvāris 11, Centra rajons, Rīga
-		</address>
-	</div>
-
-	<IframeMap />
+	<IframeMap t={t} />
 	<Footer t={t} languageCode={languageCode} />
-	<CookieBanner t={t} />
+	<CookieBanner t={t} languageCode={languageCode} />
 </Layout>

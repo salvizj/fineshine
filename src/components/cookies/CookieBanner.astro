@@ -1,14 +1,18 @@
 ---
+import type { LanguageCode } from "~/i18n/utils"
+
 interface Props {
 	t: (key: string) => string
+	languageCode: LanguageCode
 }
 
-const { t } = Astro.props as Props
+const { t, languageCode } = Astro.props as Props
+const cookiePolicyLink = "sīkdatņu-politika"
 ---
 
 <div
 	id="cookie-banner"
-	class="hidden fixed bottom-0 w-screen bg-bg-muted text-text-primary text-sm px-4 py-4 z-50 shadow-lg border-t border-border-muted"
+	class="hidden fixed bottom-0 w-screen bg-bg-muted text-sm px-4 py-4 z-50 shadow-lg border-t border-border-muted"
 >
 	<div
 		class="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4"
@@ -16,19 +20,17 @@ const { t } = Astro.props as Props
 		<span class="mb-2 sm:mb-0">
 			{t("cookie.description")}
 		</span>
-		<div class="flex gap-2">
-			<button
-				id="cookie-banner-btn"
-				class="bg-bg-card text-text-primary font-semibold px-4 py-2 rounded hover:bg-hover-muted transition-colors cursor-pointer"
-			>
+		<div class="flex items-center space-x-4">
+			<button id="cookie-banner-btn">
 				{t("cookie.btn_description")}
 			</button>
-			<button
-				id="cookie-read-more-btn"
-				class="bg-transparent underline text-hover-primary font-semibold px-4 py-2 rounded hover:text-hover-secondary transition-colors cursor-pointer"
+
+			<a
+				href={`/${languageCode}/${cookiePolicyLink}`}
+				class="text-sm text-text-secondary hover:text-text-primary transition-colors hover:underline"
 			>
 				{t("cookie.read_more")}
-			</button>
+			</a>
 		</div>
 	</div>
 </div>

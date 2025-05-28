@@ -17,12 +17,7 @@ const t = useTranslate(languageCode)
 
 <Layout>
 	<Header t={t} languageCode={languageCode} />
-	<div
-		class="flex flex-col items-center justify-center px-4 mt-8 max-w-xl mx-auto text-left mb-8 border border-border-default"
-	>
-		<CookiePolicyDetails t={t} />
-	</div>
+	<CookiePolicyDetails t={t} />
 	<Footer t={t} languageCode={languageCode} />
-
-	<CookieBanner t={t} />
+	<CookieBanner t={t} languageCode={languageCode} />
 </Layout>

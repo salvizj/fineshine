@@ -2,7 +2,7 @@
 import "../styles/global.css"
 ---
 
-<html>
+<html class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
@@ -12,7 +12,21 @@ import "../styles/global.css"
 		/>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fineshine</title>
+		<meta name="author" content="Sertificēta Detailera Pakalpojumi" />
+
+		<title>
+			Sertificēta Detailera Pakalpojumi – Auto Tīrīšana, Pulēšana,
+			Restaurācija
+		</title>
+		<meta
+			name="description"
+			content="Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana."
+		/>
+
+		<meta
+			name="keywords"
+			content="auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija"
+		/>
 	</head>
 
 	<body class="min-h-screen bg-bg-default text-text-primary">
@@ -34,10 +48,10 @@ import "../styles/global.css"
 
 	document.documentElement.setAttribute("lang", languageCode)
 
-	if (currentTheme === "dark") {
-		document.documentElement.classList.add("dark")
-	} else {
+	if (currentTheme === "light") {
 		document.documentElement.classList.remove("dark")
+	} else {
+		document.documentElement.classList.add("dark")
 	}
 </script>
 

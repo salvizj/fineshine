@@ -21,8 +21,11 @@ const protectionAndExtras = tObj(
 const completePackages = tObj("prices.packages") as PackagesContainer
 ---
 
-<section class="max-w-screen-lg w-full mx-auto px-4 py-8">
-	<h2 class="text-3xl font-bold mb-6">{t("prices.price_title")}</h2>
+<section
+	class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8"
+	id="pakalpojumi"
+>
+	<h2 class="mb-6">{t("prices.services_and_prices_title")}</h2>
 	<PriceSection priceSection={interiorAndBody} />
 	<PriceSection priceSection={polishing} />
 	<PriceSection priceSection={protectionAndExtras} />

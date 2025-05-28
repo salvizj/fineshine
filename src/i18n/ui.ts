@@ -9,12 +9,13 @@ export const defaultLanguageCode = "lv"
 export const ui = {
 	en: {
 		nav: {
-			socials: "Socials",
-			contacts: "Contacts",
-			location: "Location",
-			services: "Services",
-			auto_detailings: "Car detailing",
+			kontakti: "Contacts",
+			pakalpojumi: "Services",
+			atrašanās_vieta: "Location",
+			sociālie_tīkli: "Socials",
+			auto_detailings: "Auto detailing",
 		},
+
 		footer: {
 			socials: "Socials",
 			contacts: "Contacts",
@@ -22,6 +23,7 @@ export const ui = {
 			services: "Services",
 			other_links: "Other links",
 			cookie_policy: "Cookie Policy",
+			auto_detaling: "Auto detailing",
 		},
 		hero: {
 			title: "Professional Car Detailing Services",
@@ -75,7 +77,7 @@ export const ui = {
 			},
 		},
 		prices: {
-			price_title: "Prices",
+			services_and_prices_title: "Services and Prices",
 			interior_and_body: {
 				title: "Interior and body:",
 				services: [
@@ -251,12 +253,13 @@ export const ui = {
 	},
 	lv: {
 		nav: {
-			socials: "Sociālie tīkli",
-			contacts: "Kontakti",
-			location: "Atrašanās vieta",
-			services: "Pakalpojumi",
+			kontakti: "Kontakti",
+			pakalpojumi: "Pakalpojumi",
+			atrašanās_vieta: "Atrašanās vieta",
+			sociālie_tīkli: "Sociālie tīkli",
 			auto_detailings: "Auto detailings",
 		},
+
 		footer: {
 			socials: "Sociālie tīkli",
 			contacts: "Kontakti",
@@ -264,6 +267,7 @@ export const ui = {
 			services: "Pakalpojumi",
 			other_links: "Citas saites",
 			cookie_policy: "Sīkdatņu politika",
+			auto_detaling: "Auto detailings",
 		},
 		hero: {
 			title: "Profesionālas automašīnu detalizēšanas pakalpojumi",
@@ -394,7 +398,7 @@ export const ui = {
 			},
 		},
 		prices: {
-			price_title: "Cenas",
+			services_and_prices_title: "Pakalpojumi un cenas",
 			interior_and_body: {
 				title: "Salons un virsbūve:",
 				services: [
@@ -567,12 +571,13 @@ export const ui = {
 	},
 	ru: {
 		nav: {
-			socials: "Социальные сети",
-			contacts: "Контакты",
-			location: "Местоположение",
-			services: "Услуги",
+			kontakti: "Контакты",
+			pakalpojumi: "Услуги",
+			atrašanās_vieta: "Местоположение",
+			sociālie_tīkli: "Социальные сети",
 			auto_detailings: "Детейлинг автомобиля",
 		},
+
 		footer: {
 			socials: "Социальные сети",
 			contacts: "Контакты",
@@ -580,6 +585,7 @@ export const ui = {
 			services: "Услуги",
 			other_links: "Другие ссылки",
 			cookie_policy: "Политика файлов cookie",
+			auto_detailing: "Детейлинг автомобиля",
 		},
 		hero: {
 			title: "Профессиональные услуги по детализированной уборке автомобилей",
@@ -634,7 +640,7 @@ export const ui = {
 			},
 		},
 		prices: {
-			price_title: "Цены",
+			services_and_prices_title: "Услуги и цены",
 			interior_and_body: {
 				title: "Салон и кузов:",
 				services: [

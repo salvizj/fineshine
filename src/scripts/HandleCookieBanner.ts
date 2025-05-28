@@ -15,14 +15,12 @@ export default function HandleCookieBanner() {
 			document.cookie = `${name}=${value};${expires};path=/`
 		}
 
-		const languageCode = getCookie("lang") || "lv"
 		const dismissed = getCookie("cookieBannerDismissed")
 
 		if (dismissed === "true") return
 
 		const banner = document.querySelector("#cookie-banner")
 		const bannerBtn = document.querySelector("#cookie-banner-btn")
-		const readMoreBtn = document.querySelector("#cookie-read-more-btn")
 
 		if (banner && bannerBtn) {
 			banner.classList.remove("hidden")
@@ -31,12 +29,6 @@ export default function HandleCookieBanner() {
 				setCookie("cookieBannerDismissed", "true", 365)
 				banner.classList.add("hidden")
 			})
-
-			if (readMoreBtn) {
-				readMoreBtn.addEventListener("click", () => {
-					window.location.href = `/${languageCode}/cookie-policy`
-				})
-			}
 		}
 	})
 }
