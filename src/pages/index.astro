@@ -1,3 +1,31 @@
 ---
+import { defaultLanguageCode } from "~/i18n/ui"
+import Layout from "~/layouts/Layout.astro"
 
+const metaData = {
+	lv: {
+		title: "fineshine auto detalizācijas Studija",
+		description:
+			"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
+		keywords:
+			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija",
+	},
+}
+const meta = metaData[defaultLanguageCode]
+const redirectUrl = `/${defaultLanguageCode}/`
+const redirectScript = `window.location.replace(${JSON.stringify(redirectUrl)});`
 ---
+
+<Layout
+	languageCode={defaultLanguageCode}
+	title={meta.title}
+	description={meta.description}
+	keywords={meta.keywords}
+>
+	<head slot="head">
+		<meta http-equiv="refresh" content={`0; url=${redirectUrl}`} />
+	</head>
+	<script is:inline set:html={redirectScript} />
+
+	<p>Redirecting to your preferred language page...</p>
+</Layout>
