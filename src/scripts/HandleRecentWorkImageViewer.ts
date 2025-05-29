@@ -1,14 +1,14 @@
 export function HandleRecentWorkImageViewer(): void {
 	const modal = document.getElementById("modal")
 	const modalImg = document.getElementById("modal-img")
-	const imageRow = document.getElementById("image-row")
+	const imageGrid = document.getElementById("image-grid")
 
-	if (!(modal && modalImg instanceof HTMLImageElement && imageRow)) {
+	if (!(modal && modalImg instanceof HTMLImageElement && imageGrid)) {
 		console.warn("Modal image viewer: invalid element(s) provided")
 		return
 	}
 
-	imageRow.addEventListener("click", (event: MouseEvent) => {
+	imageGrid.addEventListener("click", (event: MouseEvent) => {
 		const target = event.target
 
 		if (target instanceof HTMLElement) {
