@@ -1,3 +1,34 @@
+import leatherImage from "../assets/ceramic_coating_for_leather.jpg"
+import bitumenIronImage from "../assets/bitumen_iron_particles.jpg"
+import grapheneImage from "../assets/graphene_ceramics.jpg"
+import convertibleRoofImage from "../assets/convertible_roof_cleaning.jpg"
+import leatherPaintingImage from "../assets/leather_painting.jpg"
+import discCeramicsImage from "../assets/ceramics_for_discs.jpg"
+import plasticCeramicsImage from "../assets/ceramics_for_plastic.jpg"
+import chemicalCleaning1Image from "../assets/chemical_cleaning_1.jpg"
+import chemicalCleaning2Image from "../assets/chemical_cleaning_2.jpg"
+import chemicalCleaning3Image from "../assets/chemical_cleaning_3.jpg"
+import headlightPolishingImage from "../assets/headlight_sanding_and_polishing.jpg"
+import nanoGlassCoatingImage from "../assets/nano_coating_for_glass.jpg"
+import ozonationImage from "../assets/ozonation.jpg"
+import polishingImage from "../assets/polishing.jpg"
+import preSalePrepImage from "../assets/pre_sale_preparation.jpg"
+import interiorCleaningImage from "../assets/interior_cleaning_vacuuming_washing.jpg"
+import interiorPolishingImage from "../assets/interior_detail_polishing.jpg"
+import waxImage from "../assets/wax.jpg"
+import bodyWashImage from "../assets/body_wash.jpg"
+import fullPackageImage from "../assets/full_package.jpg"
+import whoAmIImage from "../assets/who_am_i_really_and_what_is_my_purpose.jpg"
+import completed1Image from "../assets/completed_task_1.jpg"
+import completed2Image from "../assets/completed_task_2.jpg"
+import completed3Image from "../assets/completed_task_3.jpg"
+import completed4Image from "../assets/completed_task_4.jpg"
+import completed5Image from "../assets/completed_task_5.jpg"
+import completed6Image from "../assets/completed_task_6.jpg"
+import completed7Image from "../assets/completed_task_7.jpg"
+import completed8Image from "../assets/completed_task_8.jpg"
+import completed9Image from "../assets/completed_task_9.jpg"
+
 export const languageOptions = {
 	en: "en",
 	lv: "lv",
@@ -9,11 +40,12 @@ export const defaultLanguageCode = "lv"
 export const ui = {
 	en: {
 		nav: {
-			kontakti: "Contacts",
-			pakalpojumi: "Services",
-			atrašanās_vieta: "Location",
-			sociālie_tīkli: "Socials",
-			auto_detailings: "Auto detailing",
+			contacts: "Contacts",
+			services: "Services",
+			location: "Location",
+			socials: "Socials",
+			auto_detailing: "Auto Detailing",
+			pricing: "pricing",
 		},
 
 		footer: {
@@ -76,8 +108,86 @@ export const ui = {
 					"No personal data or IP addresses are collected or stored.",
 			},
 		},
+		auto_detailing: {
+			detailing: {
+				what_is_detailing_title: "What exactly is detailing?",
+				description_1:
+					"Auto detailing, which literally means 'detailing', is a thorough revision and treatment process of a vehicle both externally and internally. It involves cleaning, necessary corrections, and protecting the results of the work. Every centimeter and detail will be perfected, and the car will look as close to new as possible regardless of its previous condition or year of manufacture.",
+				description_2:
+					"Auto detailing is divided into two categories – exterior (maintenance of the outer finish) and interior (maintenance of the inner finish). Thanks to the entire process, you can easily prepare your car for sale, exhibition, or just for yourself, as well as protect the vehicle from premature aging without losing resale potential.",
+			},
+			exterior: {
+				exterior_title: "Exterior",
+				description:
+					"Exterior detailing – maximum improvement, restoration, and protection of the visual appearance of the body with an individual approach to each vehicle considering the client’s wishes and desired final result.",
+				steps: {
+					washing:
+						"Thorough washing of the car. Body, tires, rims, windows, wheel arches, and all other hard-to-reach places. Complete cleaning of the body from environmental contaminants (bitumen, iron particles, and all other harmful surface dirt).",
+					polishing:
+						"One-stage, two-stage, or advanced body polishing for the best possible result, as well as headlight sanding and polishing if necessary.",
+					protection:
+						"The car is coated with a protective layer according to client’s wishes and needs. Wax protective coating (lasting up to 3 months), or graphene ceramic protective coating (lasting up to 2 years with proper care). Ceramic coating for headlights (protecting them from fading, yellowing, and other environmental effects for up to 1 year), and anti-rain coating for your windshield and mirrors (for safer and more comfortable driving in adverse weather).",
+				},
+			},
+			interior: {
+				interior_title: "Interior",
+				description:
+					"Interior detailing is not just cleaning and maintenance of the inner finish but comprehensive care for every detail of your car, from the dashboard to the darkest corner of your trunk.",
+				steps: {
+					deep_cleaning:
+						"Complete detailed cleaning of the cabin, extracting maximum sand, dust, stains, hair, and other dirt either with disassembled or intact interior using professional equipment and chemicals.",
+					bacteria_removal:
+						"Maximum reduction of bacteria, odors, and allergen-causing factors.",
+					protective_coatings:
+						"Application of protective and other coatings to necessary interior parts of the car.",
+					restoration:
+						"Making the environment as close to the feel of a new car as possible.",
+				},
+				client_approach:
+					"Client wishes and needs are understood and the entire work list is carried out accordingly, striving for the best possible result. Each car gets an individual approach.",
+			},
+			advantages: {
+				title: "Advantages",
+				benefits: {
+					improved_appearance: {
+						title: "Improved Appearance",
+						description:
+							"One of the most notable advantages is the improvement in your vehicle’s appearance. Through thorough cleaning, washing, polishing, and applying protective coatings, your car will look as close to new as possible. Additionally, it will be protected from various environmental factors. Investing in vehicle cleaning protects the body from weathering and extends its lifespan.",
+					},
+					increased_resale_value: {
+						title: "Increased Resale Value",
+						description:
+							"Regular car cleaning can significantly increase your vehicle’s resale value. When it’s time to sell or trade the car, potential buyers are more likely to be attracted to a well-maintained vehicle. A clean and well-cared-for car stands out much faster than a worn one, and buyers are often willing to pay significantly more for a vehicle in excellent condition. Investing in cleaning means you enjoy a pristine environment and minimize value loss when the time comes to part with the car.",
+					},
+					health_and_hygiene: {
+						title: "Health and Hygiene",
+						description:
+							"Your vehicle’s cabin is a space where you spend a significant amount of time, so it’s important to keep it clean and pleasant. Cleaning focuses on surfaces including seats, carpets, and ventilation systems, with deep cleaning and disinfection. This helps eliminate bacteria, allergens, and unpleasant odors that accumulate over time. Cleaning and ozone treatment, if necessary, create a more comfortable and healthier environment for you and your passengers, reducing the risk of allergies, respiratory issues, and unpleasant smells.",
+					},
+					increased_driving_safety: {
+						title: "Increased Driving Safety",
+						description:
+							"Detailing services such as headlight polishing and windshield treatment greatly improve visibility, especially when driving at night or in adverse weather. Cloudy or foggy headlights reduce the efficiency of the vehicle’s lighting system, impairing the ability to see the road. Therefore, it is advisable to eliminate all risks when possible for your safety and the safety of others.",
+					},
+				},
+			},
+			body_condition: {
+				What_affects_the_condition_of_the_bodywork:
+					"What affects the condition of the bodywork?",
+				factors: [
+					"All types of automatic car washes with brushes (e.g. Circle K and others) – although they seem like a good option for daily car care, in reality, they cause opposite long-term effects.",
+					"Bird droppings on the car body (quickly damage the paint, especially in direct sunlight).",
+					"Various impacts from trees, branches, or other objects on the body.",
+					"Not thoroughly washed body – cleaning with a cloth or foam brush on a dirty body.",
+					"Bitumen, iron particles.",
+					"Snow removal with hard, bristled brushes on the body.",
+					"Salt and other reagents.",
+				],
+			},
+		},
+
 		prices: {
-			services_and_prices_title: "Services and Prices",
+			title: "Prices",
 			interior_and_body: {
 				title: "Interior and body:",
 				services: [
@@ -124,12 +234,12 @@ export const ui = {
 					},
 					{
 						title: "Leather coloring",
-						description: "elastic component is added to the color",
+						description: "elastic component is added to the color.",
 						price: "price on site",
 					},
 					{
 						title: "Plastic coloring",
-						description: "elastic component is added to the color",
+						description: "elastic component is added to the color.",
 						price: "price on site",
 					},
 				],
@@ -155,7 +265,7 @@ export const ui = {
 					},
 					{
 						title: "Headlight grinding / polishing",
-						description: "with coating",
+						description: "with coating.",
 						price: "from 50€",
 					},
 				],
@@ -165,7 +275,7 @@ export const ui = {
 				services: [
 					{
 						title: "Nano coating for front car glass",
-						description: "effective up to 1 year",
+						description: "durability up to 1 year.",
 						price: "70€",
 					},
 					{
@@ -182,7 +292,7 @@ export const ui = {
 					},
 					{
 						title: "Graphene ceramic coating",
-						description: "effective up to 2 years",
+						description: "durability up to 2 years.",
 						price: "180–220€",
 					},
 					{
@@ -208,7 +318,7 @@ export const ui = {
 						},
 						{
 							title: "Glass treatment with water-repellent protective coating",
-							description: "valid up to 1 year",
+							description: "durability up to 1 year.",
 						},
 						{
 							title: "Headlight grinding/polishing and ceramic coating application",
@@ -218,7 +328,7 @@ export const ui = {
 						},
 						{
 							title: "Graphene protective coating application on car body",
-							description: "durability up to 2 years",
+							description: "durability up to 2 years.",
 						},
 					],
 					price: "From €950",
@@ -229,11 +339,10 @@ export const ui = {
 					services: [
 						{
 							title: "Interior chemical cleaning with protective coatings for seats",
-							description: "",
 						},
 						{
 							title: "Glass treatment with water-repellent protective coating",
-							description: "valid up to 1 year",
+							description: "durability up to 1 year.",
 						},
 						{
 							title: "Headlight grinding/polishing and ceramic coating application",
@@ -243,21 +352,126 @@ export const ui = {
 						},
 						{
 							title: "Graphene protective coating application on car body",
-							description: "durability up to 2 years",
+							description: "durability up to 2 years.",
 						},
 					],
 					price: "From €750",
 				},
 			},
 		},
+		services: {
+			title: "Services",
+			list: [
+				{
+					title: "Leather Ceramic Coating",
+					image: leatherImage,
+					description:
+						"All leather lovers understand how important leather preservation and protection methods are. Leather ceramic coating provides easy maintenance and keeps leather products in impeccable condition and shape despite continuous use. So, is ceramic coating worth it for your leather car seats? Yes! Its high dust-repellent properties help keep your leather surfaces more durable and cleaner.",
+				},
+				{
+					title: "Bitumen and Iron Particle Removal",
+					image: bitumenIronImage,
+					description:
+						"Using professional cleaning agents, we remove bitumen and iron particles from the car body that have accumulated over time due to various environmental factors. These particles not only worsen the car’s appearance and body condition, but cannot be simply washed off with regular car washing. They must be removed before polishing and applying protective coatings.",
+				},
+				{
+					title: "Graphene Ceramic Protective Coating",
+					image: grapheneImage,
+					description:
+						"Graphene is known for its exceptional durability. When applied as a coating, it forms a protective layer highly resistant to scratches, UV rays, and harsh weather conditions. This means your car’s paint remains flawless for a long time. It has excellent hydrophobic properties, effectively repelling water. This creates the famous 'water beading' effect where water rolls off the car surface, carrying dirt and contaminants away. Graphene coatings give your car’s paint a deep, mirror-like shine. The enhanced gloss provides a luxurious look and highlights your car.",
+				},
+				{
+					title: "Convertible Roof Cleaning and Nano Coating",
+					image: convertibleRoofImage,
+					description:
+						"Highly hydrophobic, stain-resistant, fast-drying, does not affect the fabric’s tactile properties, and is UV resistant.",
+				},
+				{
+					title: "Leather Restoration and Painting",
+					image: leatherPaintingImage,
+					description:
+						"The seat or any other interior part is restored as close as possible to the original condition. Elastic component paint is used.",
+				},
+				{
+					title: "Ceramic Coating for Wheels",
+					image: discCeramicsImage,
+					description:
+						"Scratch resistance, hydrophobic effect – repels water, oil, dust – requiring less time for cleaning. Resistant to brake dust adhesion. Improves gloss. Helps prevent damage from UV radiation or high temperatures. Can be applied to all types of wheels.",
+				},
+				{
+					title: "Ceramic Coating for Plastics",
+					image: plasticCeramicsImage,
+					description:
+						"A sealant based on silicon-carbon technology designed for refreshing and protecting unpainted exterior plastic parts such as trim strips and bumpers. Also suitable for tire care and protects against UV-induced fading.",
+				},
+				{
+					title: "Interior Chemical Cleaning",
+					image: chemicalCleaning1Image,
+					description:
+						"With or without full interior disassembly. Complete interior chemical cleaning to make your car’s interior look as close to new as possible. Special equipment and agents are used for professional results, performing deep cleaning and eliminating maximum odors, dirt, hair, and all other harmful bacteria while protecting the interior itself. The result is an interior in the best possible condition—clean, fresh, and pleasantly scented.",
+				},
+				{
+					title: "Headlight Sanding/Polishing",
+					image: headlightPolishingImage,
+					description:
+						"Improved road safety – bright, focused headlights provide faster reaction time, reducing the risk of collisions. Cost-effective compared to replacement – headlight replacement can be expensive. Restoration offers a more affordable solution while achieving similar results. Improved vehicle aesthetics – crystal-clear headlights give your car a more attractive look. When your headlights look new, it increases your car’s resale value.",
+				},
+				{
+					title: "Glass Protective Coating (Anti-Rain)",
+					image: nanoGlassCoatingImage,
+					description:
+						"Anyone who struggles to see at night while driving knows that rain combined with oncoming headlights can be annoying (and dangerous). Using innovative Aquapel technology, a long-lasting rain repellent can be applied to the windshield that reduces glare and improves visibility while driving. Aquapel creates a non-stick surface on the car windshield. This chemical bond protects against rain, snow, and ice; you will see water bead off the windshield! Aquapel also helps clean debris, insects, dirt, and oil from the windshield, providing protection for up to one year.",
+				},
+				{
+					title: "Ozonation",
+					image: ozonationImage,
+					description:
+						"Ozone treatment eliminates odors at the molecular level by oxidizing odor-causing compounds and providing long-lasting freshness. It also disinfects by neutralizing bacteria, mold, and allergens.",
+				},
+				{
+					title: "Polishing",
+					image: polishingImage,
+					sub_services: [
+						{
+							sub_title: "Single-Stage Car Polishing",
+							description:
+								"Using special techniques and products, we ensure the best possible result. Surface dullness is removed and the car’s shine is restored. Typically used for new cars, as even brand-new cars from the showroom should be polished to a perfect condition before applying a protective coating because during transport and handling the body may have minor scratches and defects. After that, applying wax or ceramic protection is recommended.",
+						},
+						{
+							sub_title: "Two-Stage Car Polishing",
+							description:
+								"Using special techniques and products, we ensure the best possible result. The car’s shine is restored and small scratches and defects on the body are removed along with holograms. A distinct mirror effect is achieved. Afterwards, applying wax or ceramic protection is recommended.",
+						},
+						{
+							sub_title: "Three-Stage Deep Car Polishing",
+							description:
+								"Suitable for cars with pronounced swirl marks, scratches, and other paint defects. It involves using three different polishing products and pad combinations. Removes up to 70% of all body defects. Anything deeper than the clear coat unfortunately cannot be polished out. However, on the overall surface, this will be barely noticeable as the car will look as good as possible. A distinct mirror effect is achieved. Afterwards, applying wax or ceramic protection is recommended.",
+						},
+					],
+				},
+				{
+					title: "Pre-Sale Preparation",
+					image: preSalePrepImage,
+					description:
+						"The scope of work depends on the client’s wishes, goals, the real condition of the car, wear and dirt level.",
+				},
+				{
+					title: "Car Wash and Interior Vacuuming",
+					image: bodyWashImage,
+					description:
+						"We provide professional interior cleaning using specialized equipment and products. The interior, dashboard, seats are cleaned thoroughly, vacuumed, windows washed, and the car is washed.",
+				},
+			],
+		},
 	},
 	lv: {
 		nav: {
-			kontakti: "Kontakti",
-			pakalpojumi: "Pakalpojumi",
-			atrašanās_vieta: "Atrašanās vieta",
-			sociālie_tīkli: "Sociālie tīkli",
-			auto_detailings: "Auto detailings",
+			contacts: "Kontakti",
+			services: "Pakalpojumi",
+			location: "Atrašanās vieta",
+			socials: "Sociālie tīkli",
+			auto_detailing: "Auto detailings",
+			pricing: "Cenas",
 		},
 
 		footer: {
@@ -398,7 +612,7 @@ export const ui = {
 			},
 		},
 		prices: {
-			services_and_prices_title: "Pakalpojumi un cenas",
+			title: "Cenas",
 			interior_and_body: {
 				title: "Salons un virsbūve:",
 				services: [
@@ -442,12 +656,12 @@ export const ui = {
 					},
 					{
 						title: "Ādas krāsošana",
-						description: "krāsai klāt ir elastīgais komponents",
+						description: "krāsai klāt ir elastīgais komponents.",
 						price: "cena klātienē",
 					},
 					{
 						title: "Plastmasas krāsošana",
-						description: "krāsai klāt ir elastīgais komponents",
+						description: "krāsai klāt ir elastīgais komponents.",
 						price: "cena klātienē",
 					},
 				],
@@ -473,7 +687,7 @@ export const ui = {
 					},
 					{
 						title: "Lukturu slīpēšana / pulēšana",
-						description: "ar pārklājumu",
+						description: "ar pārklājumu.",
 						price: "no 50€",
 					},
 				],
@@ -483,7 +697,7 @@ export const ui = {
 				services: [
 					{
 						title: "Nano pārklājums priekšējam auto. stiklam",
-						description: "darbība līdz 1 gadam",
+						description: "noturība līdz 1 gadam.",
 						price: "70€",
 					},
 					{
@@ -500,7 +714,7 @@ export const ui = {
 					},
 					{
 						title: "Grafēna keramiskais pārklājums",
-						description: "darbības laiks līdz 2 gadiem",
+						description: "noturība līdz 2 gadiem.",
 						price: "180–220€",
 					},
 					{
@@ -526,7 +740,7 @@ export const ui = {
 						},
 						{
 							title: "Stiklu apstrāde ar ūdeni atgrūdošu aizsargpārklājumu",
-							description: "not. līdz 1g.",
+							description: "noturība līdz 1 gadam.",
 						},
 						{
 							title: "Lukturu slīpēšana/pulēšana un keramikas uzklāšana",
@@ -536,7 +750,7 @@ export const ui = {
 						},
 						{
 							title: "Grafēna aizsargpārklājuma uzklāšana uz auto virsbūves",
-							description: "noturība līdz 2g.",
+							description: "noturība līdz 2 gadiem.",
 						},
 					],
 					price: "No 950€",
@@ -547,11 +761,10 @@ export const ui = {
 					services: [
 						{
 							title: "Salona ķīmiskā tīrīšana ar aizsargpārklājumiem priekš sēdekļiem",
-							description: "",
 						},
 						{
 							title: "Stiklu apstrāde ar ūdens atgrūdošu aizsargpārklājumu",
-							description: "not. līdz 1g.",
+							description: "noturība līdz 1 gadam.",
 						},
 						{
 							title: "Lukturu slīpēšana/pulēšana un keramikas uzklāšana",
@@ -561,21 +774,126 @@ export const ui = {
 						},
 						{
 							title: "Grafēna aizsargpārklājuma uzklāšana uz auto virsbūves",
-							description: "noturība līdz 2g.",
+							description: "noturība līdz 2 gadiem.",
 						},
 					],
 					price: "No 750€",
 				},
 			},
 		},
+		services: {
+			title: "Pakalpojumi",
+			list: [
+				{
+					title: "Keramika ādai",
+					image: leatherImage,
+					description:
+						"Visi ādas mīļotāji saprot, cik svarīgas ir ādas saglabāšanas un aizsardzības metodes. Ādas keramikas pārklājums nodrošina vieglu kopšanu un saglabā ādas izstrādājumus nevainojamā stāvoklī un formā, neskatoties uz nepārtrauktu lietošanu. Tātad, vai keramikas pārklājums jūsu ādas automašīnas sēdekļiem ir tā vērts? Jā! Tā augstās putekļu atgrūšanas īpašības palīdz saglabāt jūsu ādas virsmas izturīgākas un tīrākas.",
+				},
+				{
+					title: "Bituma un dzelzs daļiņu noņemšana",
+					image: bitumenIronImage,
+					description:
+						"Izmantojot profesionālus tīrīšanas līdzekļus ņemam nost bituma un dzelzs daļiņas no auto virsbūves, kas laika gaitā ir radušies no dažādiem vides faktoriem. Šīs daļiņas ne tikai pasliktina auto izskatu un virsbūves stāvokli, bet arī nav iespējams vienkārši nomazgāt nost no virsbūves ar parastu auto mazgāšanu. Pirms auto virsbūves pulēšanas un aizsargpārklājuma obligāti ir jānoņem.",
+				},
+				{
+					title: "Grafēna keramiskais aizsargpārklājums",
+					image: grapheneImage,
+					description:
+						'Grafēns ir pazīstams ar savu izcilo izturību. Uzklājot to kā pārklājumu, tas veido aizsargslāni, kas ir ļoti izturīgs pret skrāpējumiem, UV stariem un skarbajiem laikapstākļiem. Tas nozīmē, ka jūsu automašīnas krāsa ilgstoši saglabājas nevainojamā stāvoklī. piemīt izcilas hidrofobas īpašības, kas nozīmē, ka tie efektīvi atgrūž ūdeni. Tas rada slaveno "ūdens pērlīšu" efektu, kur ūdens noripo no automašīnas virsmas, aizvadot netīrumus un piesārņotājus. Grafēna pārklājumi nodrošina jūsu automašīnas krāsai dziļu, spoguļspīdumu. Uzlabotais spīdums piešķir greznu izskatu un izceļ jūsu automašīnu.',
+				},
+				{
+					title: "Kabrioleta jumta attīrīšana un pārklāšana ar nano pārklājumu",
+					image: convertibleRoofImage,
+					description:
+						"Īpaši hidrofobs, traipu izturīgs, ātri žūstošs, neietekmē auduma taktiālās īpašības, kā arī UV izturīgs.",
+				},
+				{
+					title: "Ādas restaurācija un krāsošana",
+					image: leatherPaintingImage,
+					description:
+						"Sēdeklis vai jebkura cita salona detaļa tiek atgriesta maksimāli tuvu orģinālam stāvoklim. Tiek izmantota krāsa ar elastīgo komponentu.",
+				},
+				{
+					title: "Keramika diskiem",
+					image: discCeramicsImage,
+					description:
+						"Izturība pret skrāpējumiem, hidrofobs efekts – atgrūž ūdeni, eļļu, putekļus – tīrīšanai nepieciešams mazāk laika. Izturīgs pret bremžu putekļu pielipšanu. Uzlabo spīdumu. Palīdz novērst bojājumus UV starojumā vai augstas temperatūras dēļ. Var uzklāt uz visa veida diskiem.",
+				},
+				{
+					title: "Keramika plastmasai",
+					image: plasticCeramicsImage,
+					description:
+						"Uz silīcija-oglekļa tehnoloģijas bāzes veidots hermētiķis, kas paredzēts nekrāsotu ārējo plastmasas detaļu, piemēram, apdares līstu un bamperu, atsvaidzināšanai un aizsardzībai. Tas ir piemērots arī riepu kopšanai un aizsargā pret UV starojuma izraisītu izbalēšanu.",
+				},
+				{
+					title: "Salona ķīmiskā tīrīšana",
+					image: chemicalCleaning1Image,
+					description:
+						"Ar pilnu salona izjaukšanu, vai bez. Pilna salona ķīmiskā tīrīšana, lai jūtu auto interjers izskatītos maksimāli tuvu jaunam. Tiek izmantotas speciālas iekārtas un līdzekļi profesionālam rezultātam veicot padziļinātu tīrīšanu un apkarotu maksimāli daudz smakas, netīrumus, spalvas un visas citas nelabvēlīgās baktērijas tai pat laikā saudzējot interjeru kā tādu. Rezultātā salons būs maksimāli vislabākajā iespējamajā stāvoklī. Tīrs, svaigs un ar labu aromātu.",
+				},
+				{
+					title: "Lukturu slīpēšana/pulēšana",
+					image: headlightPolishingImage,
+					description:
+						"Uzlabota ceļu satiksmes drošība – spilgti, fokusēti priekšējie lukturi nodrošina ātrāku reakcijas laiku, samazinot sadursmju iespējamību. Izmaksu efektivitāte salīdzinājumā ar nomaiņu – priekšējo lukturu nomaiņa var būt dārga. Restaurācija piedāvā pieejamāku risinājumu, vienlaikus sasniedzot līdzīgus rezultātus. Uzlabota transportlīdzekļa estētika – kristāldzidri priekšējie lukturi piešķirs jūsu automašīnai pievilcīgāku izskatu. Kad jūsu priekšējie lukturi izskatās kā jauni, tas palielinās jūsu automašīnas tālākpārdošanas vērtību.",
+				},
+				{
+					title: "Stiklu aizsargpārklājums, jeb anti lietus",
+					image: nanoGlassCoatingImage,
+					description:
+						"Ikvienam, kam naktī ir grūtības redzēt pie stūres, lietus un pretimbraucošo lukturu gaismas var būt kaitinoša (un bīstama) kombinācija. Taču, izmantojot Aquapel inovatīvo tehnoloģiju, uz vējstikla var uzklāt ilgstošu lietus atgrūšanas līdzekli, kas samazinās atspīdumu un uzlabos redzamību braukšanas laikā. Aquapel uz automašīnas vējstikla izveido nepielīpošu virsmu. Šī ķīmiskā saite ar stiklu pasargā to no lietus, sniega un ledus; jūs redzēsiet, kā ūdens pilienveidīgi norip no vējstikla! Aquapel arī palīdz notīrīt no automašīnas stikla gružus, kukaiņus, netīrumus un eļļu, vienlaikus nodrošinot vējstikla aizsardzību līdz pat vienam gadam.",
+				},
+				{
+					title: "Ozonēšana",
+					image: ozonationImage,
+					description:
+						"Ozona apstrāde molekulārā līmenī likvidē smakas, oksidējot smakas izraisošus savienojumus un nodrošinot ilgstošu svaigumu. Tāpat dezinficē, neitralizējot baktērijas, pelējumu un alergēnus.",
+				},
+				{
+					title: "Pulēšana",
+					image: polishingImage,
+					sub_services: [
+						{
+							sub_title: "Auto pulēšana vienā pakāpē",
+							description:
+								"Izmaintojot speciālu tehniku un līdzekļus nodrošināsim jums vislabāko iespējamo rezultātu. Tiek noņemts virsmas matējums un atjaunots automašīnas spīdums. Parasti tiek pielietots jauniem auto, jo arī tie kaut arī ir pilnībā jauni, no salona, pirms aizsargpārklājuma uzklāšanas ir jānopulē līdz tiešām perfektam stāvoklim, jo visādu faktoru un pārvešanas brīdī virsbūve pavisam noteikti ir tikusi pie kādām švīkām un defektiem. Pēc tam vēlams ir uzklāt vaska vai keramikas aizsargpārklājumu.",
+						},
+						{
+							sub_title: "Auto pulēšana divās pakāpēs",
+							description:
+								"Izmaintojot speciālu tehniku un līdzekļus nodrošināsim jums vislabāko iespējamo rezultātu. Automašīnai ne tikai tiek atjaunots tās spīdums, bet arī likvidēs nelielus skrāpējumus un defektus, kas ir radušies uz virsbūves kā arī noņems hologrammu. Konkrēts spoguļa efekts. Pēc tam vēlams ir uzklāt vaska vai keramikas aizsargpārklājumu.",
+						},
+						{
+							sub_title: "Auto padziļinātā pulēšana trīs pakāpēs",
+							description:
+								"Ir piemērots automašīnām ar izteiktām virpuļveida švīkām, skrambām un citiem krāsas defektiem, un tas ietver 3 dažādu pulēšanas līdzekļu un padu kombināciju izmantošanu. Noņem līdz pat 70% no visas virsbūves defektiem. Viss kas ir dziļāks par lakas kārtu diemžēl ārā nepulējās. Bet uz kopējā fona to vispār būs ļoti grūti ieraudzīt, jo auto izskatīsies tik labi cik vien tas ir iespējams. Konkrēts spoguļa efekts. Pēc tam vēlams ir uzklāt vaska vai keramikas aizsargpārklājumu.",
+						},
+					],
+				},
+				{
+					title: "Pirmspārdošanas sagatavošana",
+					image: preSalePrepImage,
+					description:
+						"Veicamais darbu saraksts ir atkarīgs no klienta vēlmēm, mērķiem, paša reālā auto stāvokļa, nolietujuma, kā arī netīrības pakāpes.",
+				},
+				{
+					title: "Auto mazgāšana, salona izsūknēšana",
+					image: bodyWashImage,
+					description:
+						"Nodrošinam profesionālu salona tīrīšanu, izmantojot specializētas iekārtas un līdzekļus. Viegli iztīrīts salons, panelis, sēdekļi, izsūknēšana ar putekļusūcēju, logu tīrīšana, un auto nomazgāšana.",
+				},
+			],
+		},
 	},
 	ru: {
 		nav: {
-			kontakti: "Контакты",
-			pakalpojumi: "Услуги",
-			atrašanās_vieta: "Местоположение",
-			sociālie_tīkli: "Социальные сети",
-			auto_detailings: "Детейлинг автомобиля",
+			contacts: "Контакты",
+			services: "Услуги",
+			location: "Местоположение",
+			socials: "Социальные сети",
+			auto_detailing: "Детейлинг автомобиля",
+			pricing: "Цены",
 		},
 
 		footer: {
@@ -639,8 +957,86 @@ export const ui = {
 					"Личные данные или IP-адреса не собираются и не хранятся.",
 			},
 		},
+		auto_detailing: {
+			detailing: {
+				what_is_detailing_title: "Что такое детейлинг?",
+				description_1:
+					"Авто детейлинг, что в переводе означает «детализация», — это тщательный процесс ревизии и обработки автомобиля снаружи и внутри, включающий чистку, необходимую коррекцию элементов и защиту результата работы. Каждый сантиметр и деталь будут усовершенствованы, и автомобиль будет выглядеть максимально близко к новому, независимо от предыдущего состояния и года выпуска.",
+				description_2:
+					"Авто детейлинг делится на две категории – экстерьер (уход за внешней отделкой) и интерьер (уход за внутренней отделкой). Благодаря этому процессу вы легко подготовите автомобиль к продаже, выставке или просто для себя, а также защитите машину от преждевременного старения, не потеряв при этом возможности перепродажи.",
+			},
+			exterior: {
+				exterior_title: "Экстерьер",
+				description:
+					"Детейлинг экстерьера – максимальное улучшение, восстановление и защита внешнего вида кузова с индивидуальным подходом к каждому автомобилю с учётом пожеланий клиента и желаемого конечного результата.",
+				steps: {
+					washing:
+						"Тщательная мойка автомобиля. Кузов, шины, диски, стекла, арки и все труднодоступные места. Полная очистка кузова от загрязнений окружающей среды (битум, железные частицы и другие вредные загрязнения поверхности).",
+					polishing:
+						"Одноступенчатая, двухступенчатая или углублённая полировка кузова для максимального результата, а также шлифовка и полировка фар по необходимости.",
+					protection:
+						"Автомобиль покрывается защитным слоем в зависимости от пожеланий и необходимости клиента. Защитный слой воска (срок действия до 3 месяцев), или графеновый керамический защитный слой (при правильном уходе до 2 лет). Керамическое покрытие для фар (защищает их от выцветания, пожелтения и других воздействий окружающей среды до 1 года), и антирефлексное покрытие для лобового стекла и зеркал (для более безопасного и комфортного вождения в неблагоприятных погодных условиях).",
+				},
+			},
+			interior: {
+				interior_title: "Интерьер",
+				description:
+					"Детейлинг интерьера – это не просто уход и чистка внутренней отделки, а всесторонний уход за каждой деталью вашего автомобиля, начиная с панели приборов и заканчивая самым тёмным углом багажника.",
+				steps: {
+					deep_cleaning:
+						"Полная детальная уборка салона с максимальным удалением песка, пыли, пятен, шерсти и других загрязнений, с разбором или без разборки салона, с использованием профессионального оборудования и химии.",
+					bacteria_removal:
+						"Максимальное удаление бактерий, запахов и аллергенов.",
+					protective_coatings:
+						"Нанесение защитных и других покрытий на необходимые детали интерьера автомобиля.",
+					restoration:
+						"Создание среды, максимально приближенной к ощущениям нового автомобиля.",
+				},
+				client_approach:
+					"Учитываются пожелания и потребности клиента, по которым выполняется весь перечень работ с целью достижения наилучшего результата. Для каждого автомобиля используется индивидуальный подход.",
+			},
+			advantages: {
+				title: "Преимущества",
+				benefits: {
+					improved_appearance: {
+						title: "Улучшенный внешний вид",
+						description:
+							"Одно из самых заметных преимуществ – улучшение внешнего вида вашего транспортного средства. Благодаря тщательной чистке, мойке, полировке и нанесению защитного покрытия ваш автомобиль будет выглядеть максимально новым. Кроме того, он будет защищён от различных воздействий окружающей среды. Инвестиции в чистку автомобиля защищают кузов от погодных условий и продлевают срок службы.",
+					},
+					increased_resale_value: {
+						title: "Повышенная стоимость перепродажи",
+						description:
+							"Регулярная чистка автомобиля может значительно повысить его стоимость при перепродаже. Когда придёт время продавать или менять автомобиль, потенциальных покупателей скорее привлечёт хорошо ухоженный автомобиль. Чистый и ухоженный автомобиль сразу бросается в глаза, и покупатели часто готовы платить значительно больше за автомобиль в отличном состоянии. Инвестируя в чистку, вы не только наслаждаетесь безупречной чистотой, но и минимизируете потерю стоимости при продаже.",
+					},
+					health_and_hygiene: {
+						title: "Здоровье и гигиена",
+						description:
+							"Салон вашего автомобиля — это пространство, где вы проводите значительное время, поэтому важно поддерживать его чистоту и комфорт. Чистка включает поверхности, такие как сиденья, ковры и вентиляционные системы, глубокую уборку и дезинфекцию. Это помогает устранить бактерии, аллергены и неприятные запахи, которые накапливаются со временем. Уборка и, при необходимости, озонирование создают более комфортную и здоровую среду для вас и ваших пассажиров, снижая риск аллергий, проблем с дыханием и неприятных запахов.",
+					},
+					increased_driving_safety: {
+						title: "Повышенная безопасность вождения",
+						description:
+							"Услуги детейлинга, такие как полировка фар и обработка лобового стекла, значительно улучшают видимость, особенно при вождении в ночное время или в неблагоприятных погодных условиях. Помутневшие или запотевшие фары снижают эффективность системы освещения автомобиля, ухудшая видимость дороги. Поэтому рекомендуется при необходимости устранять все риски для вашей безопасности и безопасности окружающих.",
+					},
+				},
+			},
+			body_condition: {
+				What_affects_the_condition_of_the_bodywork:
+					"Что влияет на состояние кузова?",
+				factors: [
+					"Все виды автоматических мойок с щётками (например, Circle K и др.) – хотя кажется, что это хороший вариант для повседневного ухода, на самом деле они вызывают противоположный эффект в долгосрочной перспективе.",
+					"Птичий помёт на кузове (быстро повреждает лакокрасочное покрытие, особенно под прямыми солнечными лучами).",
+					"Различные удары деревьев, веток или других предметов по кузову.",
+					"Не полностью вымытый кузов – очистка тряпкой или поролоновой щёткой по грязной поверхности.",
+					"Битум, железные частицы.",
+					"Удаление снега жёсткими щётками с щетиной по кузову.",
+					"Соль и другие реагенты.",
+				],
+			},
+		},
+
 		prices: {
-			services_and_prices_title: "Услуги и цены",
+			title: "цены",
 			interior_and_body: {
 				title: "Салон и кузов:",
 				services: [
@@ -687,12 +1083,12 @@ export const ui = {
 					},
 					{
 						title: "Покраска кожи",
-						description: "в краску добавлен эластичный компонент",
+						description: "в краску добавлен эластичный компонент.",
 						price: "цена на месте",
 					},
 					{
 						title: "Покраска пластика",
-						description: "в краску добавлен эластичный компонент",
+						description: "в краску добавлен эластичный компонент.",
 						price: "цена на месте",
 					},
 				],
@@ -728,7 +1124,7 @@ export const ui = {
 				services: [
 					{
 						title: "Нано покрытие переднего стекла автомобиля",
-						description: "действует до 1 года",
+						description: "действует до 1 года.",
 						price: "70€",
 					},
 					{
@@ -745,7 +1141,7 @@ export const ui = {
 					},
 					{
 						title: "Графеновое керамическое покрытие",
-						description: "действует до 2 лет",
+						description: "действует до 2 лет.",
 						price: "180–220€",
 					},
 					{
@@ -771,7 +1167,7 @@ export const ui = {
 						},
 						{
 							title: "Обработка стекол водоотталкивающим защитным покрытием",
-							description: "действует до 1 года",
+							description: "действует до 1 года.",
 						},
 						{
 							title: "Шлифовка/полировка фар и нанесение керамического покрытия",
@@ -781,7 +1177,7 @@ export const ui = {
 						},
 						{
 							title: "Нанесение графенового защитного покрытия на кузов автомобиля",
-							description: "стойкость до 2 лет",
+							description: "стойкость до 2 лет.",
 						},
 					],
 					price: "От 950€",
@@ -792,11 +1188,10 @@ export const ui = {
 					services: [
 						{
 							title: "Химчистка салона с защитными покрытиями для сидений",
-							description: "",
 						},
 						{
 							title: "Обработка стекол водоотталкивающим защитным покрытием",
-							description: "действует до 1 года",
+							description: "действует до 1 года.",
 						},
 						{
 							title: "Шлифовка/полировка фар и нанесение керамического покрытия",
@@ -806,12 +1201,117 @@ export const ui = {
 						},
 						{
 							title: "Нанесение графенового защитного покрытия на кузов автомобиля",
-							description: "стойкость до 2 лет",
+							description: "стойкость до 2 лет.",
 						},
 					],
 					price: "От 750€",
 				},
 			},
+		},
+		services: {
+			title: "Услуги",
+			list: [
+				{
+					title: "Керамика для кожи",
+					image: leatherImage,
+					description:
+						"Все любители кожи понимают, насколько важны методы сохранения и защиты кожи. Керамическое покрытие кожи обеспечивает легкий уход и сохраняет кожаные изделия в безупречном состоянии и форме несмотря на постоянное использование. Так стоит ли керамическое покрытие для ваших кожаных автомобильных сидений? Да! Его высокая пылеотталкивающая способность помогает сохранять кожаные поверхности более прочными и чистыми.",
+				},
+				{
+					title: "Удаление битума и железных частиц",
+					image: bitumenIronImage,
+					description:
+						"Используя профессиональные средства очистки, мы удаляем битум и железные частицы с кузова автомобиля, которые со временем появились из-за различных факторов окружающей среды. Эти частицы не только ухудшают внешний вид автомобиля и состояние кузова, но и их нельзя просто смыть обычной мойкой. Их необходимо удалить перед полировкой и нанесением защитного покрытия.",
+				},
+				{
+					title: "Графеновое керамическое защитное покрытие",
+					image: grapheneImage,
+					description:
+						"Графен известен своей исключительной прочностью. Нанесённый в виде покрытия, он образует защитный слой, который очень устойчив к царапинам, УФ-лучам и суровым погодным условиям. Это значит, что краска вашего автомобиля долгое время сохраняет безупречный вид. Обладает отличными гидрофобными свойствами, эффективно отталкивая воду. Создаётся знаменитый эффект 'водяных капель', когда вода скатывается с поверхности автомобиля, унося грязь и загрязнения. Графеновые покрытия придают краске глубокий зеркальный блеск. Усиленный блеск придаёт роскошный вид и выделяет ваш автомобиль.",
+				},
+				{
+					title: "Очистка и нанесение нанопокрытия на крышу кабриолета",
+					image: convertibleRoofImage,
+					description:
+						"Особо гидрофобное, устойчивое к пятнам, быстро сохнущее, не влияет на тактильные свойства ткани, а также устойчиво к УФ-лучам.",
+				},
+				{
+					title: "Восстановление и окраска кожи",
+					image: leatherPaintingImage,
+					description:
+						"Сиденье или любая другая деталь салона восстанавливается максимально близко к оригинальному состоянию. Используется краска с эластичным компонентом.",
+				},
+				{
+					title: "Керамика для дисков",
+					image: discCeramicsImage,
+					description:
+						"Устойчивость к царапинам, гидрофобный эффект – отталкивает воду, масло, пыль – требует меньше времени на чистку. Устойчив к прилипанию тормозной пыли. Улучшает блеск. Помогает предотвратить повреждения от УФ-излучения или высоких температур. Может наноситься на все виды дисков.",
+				},
+				{
+					title: "Керамика для пластика",
+					image: plasticCeramicsImage,
+					description:
+						"Герметик на основе кремний-углеродной технологии, предназначенный для освежения и защиты неокрашенных внешних пластиковых деталей, таких как декоративные молдинги и бамперы. Также подходит для ухода за шинами и защиты от выцветания, вызванного УФ-лучами.",
+				},
+				{
+					title: "Химчистка салона",
+					image: chemicalCleaning1Image,
+					description:
+						"С полной разборкой салона или без. Полная химчистка салона, чтобы интерьер автомобиля выглядел максимально близко к новому. Используются специальные аппараты и средства для профессионального результата, выполняется глубокая очистка и максимально устраняются запахи, грязь, шерсть и все другие вредные бактерии, при этом бережно защищая сам интерьер. В результате салон будет в наилучшем возможном состоянии. Чистый, свежий и с приятным ароматом.",
+				},
+				{
+					title: "Шлифовка/полировка фар",
+					image: headlightPolishingImage,
+					description:
+						"Повышение безопасности дорожного движения – яркие, сфокусированные фары обеспечивают более быстрое время реакции, снижая риск столкновений. Экономия средств по сравнению с заменой – замена фар может быть дорогой. Восстановление предлагает более доступное решение с аналогичным эффектом. Улучшение внешнего вида автомобиля – кристально чистые фары делают автомобиль более привлекательным. Когда фары выглядят как новые, это повышает стоимость перепродажи автомобиля.",
+				},
+				{
+					title: "Защитное покрытие стекол (антидождь)",
+					image: nanoGlassCoatingImage,
+					description:
+						"Каждый, кто сталкивается с плохой видимостью ночью из-за дождя и встречных фар, знает, как это раздражает (и опасно). С использованием инновационной технологии Aquapel наносится долговременный водоотталкивающий состав на лобовое стекло, который уменьшает блики и улучшает видимость при вождении. Aquapel создаёт неприлипающую поверхность на лобовом стекле автомобиля. Эта химическая связь защищает от дождя, снега и льда; вы увидите, как вода стекает с лобового стекла! Aquapel также помогает очистить стекло от мусора, насекомых, грязи и масла, обеспечивая защиту до одного года.",
+				},
+				{
+					title: "Озонирование",
+					image: ozonationImage,
+					description:
+						"Обработка озоном устраняет запахи на молекулярном уровне, окисляя соединения, вызывающие запахи, обеспечивая длительную свежесть. Также дезинфицирует, нейтрализуя бактерии, плесень и аллергены.",
+				},
+				{
+					title: "Полировка",
+					image: polishingImage,
+					sub_services: [
+						{
+							sub_title: "Одноступенчатая полировка автомобиля",
+							description:
+								"Используя специальные техники и средства, обеспечиваем лучший возможный результат. Устраняется тусклость поверхности, восстанавливается блеск автомобиля. Обычно используется для новых автомобилей, так как даже новые машины из салона следует отполировать до идеального состояния перед нанесением защитного покрытия, поскольку при транспортировке и обращении на кузове могут быть небольшие царапины и дефекты. После этого рекомендуется нанесение воска или керамической защиты.",
+						},
+						{
+							sub_title: "Двухступенчатая полировка автомобиля",
+							description:
+								"Используя специальные техники и средства, обеспечиваем лучший возможный результат. Восстанавливается блеск автомобиля, удаляются мелкие царапины и дефекты на кузове, а также голограммы. Добивается выраженный зеркальный эффект. После этого рекомендуется нанесение воска или керамической защиты.",
+						},
+						{
+							sub_title:
+								"Трёхступенчатая глубокая полировка автомобиля",
+							description:
+								"Подходит для автомобилей с выраженными завихрениями, царапинами и другими дефектами краски. В процессе используется три различных продукта для полировки и комбинации насадок. Удаляет до 70% всех дефектов кузова. Всё, что глубже верхнего слоя лака, к сожалению, полировкой не исправить. Однако на общей поверхности это будет почти незаметно, так как автомобиль будет выглядеть максимально хорошо. Добивается выраженный зеркальный эффект. После этого рекомендуется нанесение воска или керамической защиты.",
+						},
+					],
+				},
+				{
+					title: "Подготовка к продаже",
+					image: preSalePrepImage,
+					description:
+						"Объём работ зависит от пожеланий клиента, целей, реального состояния автомобиля, степени износа и загрязнения.",
+				},
+				{
+					title: "Мойка кузова и уборка салона пылесосом",
+					image: bodyWashImage,
+					description:
+						"Профессиональная уборка салона с использованием специализированного оборудования и средств. Интерьер, приборная панель, сиденья тщательно очищаются, пылесосятся, моются окна и сам автомобиль.",
+				},
+			],
 		},
 	},
 } as const

@@ -1,15 +1,20 @@
 ---
+import type { LanguageCode } from "~/i18n/utils"
+
 interface Props {
 	t: (key: string) => string
 	flexDirection?: string
+	languageCode: LanguageCode
 }
 
-const { t, flexDirection = "row" } = Astro.props as Props
+const { t, flexDirection = "row", languageCode } = Astro.props as Props
+const basePath = `/${languageCode}/`
 const links = [
-	"auto-detailings",
-	"#pakalpojumi",
-	"#atrašanās_vieta",
-	"#kontakti",
+	"auto-detailing",
+	"services",
+	"#pricing",
+	"#location",
+	"#contacts",
 ]
 ---
 
@@ -18,11 +23,12 @@ const links = [
 		links.map((link) => {
 			const key = link.startsWith("#") ? link.slice(1) : link
 			const keyTranslation = key.replaceAll("-", "_")
+			const href = link.startsWith("#") ? link : `${basePath}${link}`
 
 			return (
 				<li class="flex-shrink-0">
 					<a
-						href={link}
+						href={href}
 						class="group relative inline-block px-2 py-1  focus:outline-none focus:ring-2 focus:ring-hover-primary whitespace-nowrap text-text-primary"
 					>
 						<span class="relative z-10">

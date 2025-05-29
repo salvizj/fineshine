@@ -16,7 +16,7 @@ const { t, languageCode } = Astro.props as Props
 	<Logo />
 
 	<div class="hidden md:flex">
-		<NavLinks t={t} />
+		<NavLinks t={t} languageCode={languageCode} />
 	</div>
 
 	<div class="hidden md:flex flex-row gap-4 items-center">

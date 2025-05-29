@@ -1,9 +1,14 @@
 ---
+import Services from "~/components/services/Services.astro"
 import CookieBanner from "../../components/cookies/CookieBanner.astro"
 import Footer from "../../components/Footer/Footer.astro"
 import Header from "../../components/Header/Header.astro"
 import { languageOptions } from "../../i18n/ui"
-import { useTranslate, type LanguageCode } from "../../i18n/utils"
+import {
+	useTranslate,
+	useTranslateObject,
+	type LanguageCode,
+} from "../../i18n/utils"
 
 import Layout from "../../layouts/Layout.astro"
 
@@ -12,6 +17,8 @@ export function getStaticPaths() {
 }
 const languageCode = Astro.params.lang as LanguageCode
 const t = useTranslate(languageCode)
+const tObj: (key: string) => unknown = useTranslateObject(languageCode)
+
 const metaData = {
 	lv: {
 		title: "fineshine auto detalizācijas Studija",
@@ -45,7 +52,7 @@ const meta = metaData[languageCode]
 	keywords={meta.keywords}
 >
 	<Header t={t} languageCode={languageCode} />
-
+	<Services t={t} tObj={tObj} />
 	<Footer t={t} languageCode={languageCode} />
 	<CookieBanner t={t} languageCode={languageCode} />
 </Layout>

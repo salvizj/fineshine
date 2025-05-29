@@ -10,9 +10,13 @@ const { t, languageCode } = Astro.props as Props
 
 const phoneNumber = "+371 23370066"
 const address = "Līvzemes iela 22B, Salaspils, LV-2169, Latvija"
-const cookiePolicyLink = "sīkdatņu-politika"
-const autoDetailingLink = "auto-detailings"
-const serviceseLink = "#pakalpojumi"
+const cookiePolicyLink = "cookie-policy"
+const autoDetailingLink = "auto-detailing"
+const serviceseLink = "services"
+
+const cookiePolicyHref = `/${languageCode}/${cookiePolicyLink}`
+const autoDetailingHref = `/${languageCode}/${autoDetailingLink}`
+const servicesHref = `/${languageCode}/${serviceseLink}`
 ---
 
 <footer class="w-full bg-bg-default" aria-label="Site footer">
@@ -24,7 +28,7 @@ const serviceseLink = "#pakalpojumi"
 		>
 			{/* Location Section */}
 			<section
-				id="atrašanās_vieta"
+				id="location"
 				class="flex flex-col items-start text-left px-2 w-full md:w-64"
 			>
 				<h5 class="mb-2">
@@ -39,7 +43,7 @@ const serviceseLink = "#pakalpojumi"
 
 			{/* Contacts Section */}
 			<section
-				id="kontakti"
+				id="contacts"
 				class="flex flex-col items-start text-left px-2 w-full md:w-64"
 			>
 				<h5 class="mb-2">
@@ -76,22 +80,13 @@ const serviceseLink = "#pakalpojumi"
 				<h5 class="mb-2">
 					{t("footer.other_links")}
 				</h5>
-				<a
-					href={`/${languageCode}/${cookiePolicyLink}`}
-					class="hover:underline"
-				>
+				<a href={cookiePolicyHref} class="hover:underline">
 					{t("footer.cookie_policy")}
 				</a>
-				<a
-					href={`/${languageCode}/${autoDetailingLink}`}
-					class="hover:underline"
-				>
+				<a href={autoDetailingHref} class="hover:underline">
 					{t("footer.auto_detaling")}
 				</a>
-				<a
-					href={`/${languageCode}/${serviceseLink}`}
-					class="hover:underline"
-				>
+				<a href={servicesHref} class="hover:underline">
 					{t("footer.services")}
 				</a>
 			</section>

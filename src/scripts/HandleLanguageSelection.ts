@@ -12,13 +12,24 @@ export default function HandleLanguageSelection() {
 				const target = event.target
 				if (!(target instanceof HTMLElement)) return
 
-				const languageCode = target.dataset.langCode as LanguageCode
-				const redirectLink = link.getAttribute("href") || "/"
+				const selectedLang = target.dataset.langCode as LanguageCode
 
-				if (languageCode) {
-					setCookie("lang", languageCode)
-					window.location.href = redirectLink
+				const currentPath = window.location.pathname
+
+				const pathSegments = currentPath.split("/").filter(Boolean)
+
+				if (pathSegments.length === 0) {
+					setCookie("lang", selectedLang)
+					window.location.pathname = "/" + selectedLang + "/"
+					return
 				}
+
+				pathSegments[0] = selectedLang
+
+				const newPath = "/" + pathSegments.join("/") + "/"
+
+				setCookie("lang", selectedLang)
+				window.location.pathname = newPath
 			})
 		})
 	})

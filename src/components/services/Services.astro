@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets"
+import type { Service } from "~/utils/types"
+
+interface Props {
+	t: (key: string) => string
+	tObj: (key: string) => Object
+}
+
+const { t, tObj } = Astro.props as Props
+
+const serviceList = tObj("services.list") as Service[]
+---
+
+<section class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8" id="services">
+	<h2 class="mb-6">{t("services.title")}</h2>
+
+	{
+		serviceList && serviceList.length > 0 && (
+			<>
+				{serviceList.map((service, _) => (
+					<div class="mb-10 flex flex-col sm:flex-row gap-6">
+						{service.image && (
+							<Image
+								src={service.image}
+								alt={service.title}
+								width={320}
+								height={320}
+								layout="constrained"
+								class:list={[
+									"w-full",
+									"sm:w-80",
+									"h-auto",
+									"object-cover",
+									"rounded",
+									"sm:self-start",
+								]}
+							/>
+						)}
+
+						<div class="flex flex-col justify-start">
+							<h4 class="text-xl font-semibold mb-2">
+								{service.title}
+							</h4>
+							<p class="mb-4">{service.description}</p>
+
+							{service.sub_services?.length > 0 && (
+								<ul class="ml-4 list-disc">
+									{service.sub_services.map((sub, _) => (
+										<li class="mb-1">
+											<strong>{sub.sub_title}</strong> —{" "}
+											{sub.description}
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
+					</div>
+				))}
+			</>
+		)
+	}
+</section>
