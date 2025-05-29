@@ -1,17 +1,9 @@
 ---
 import { defaultLanguageCode } from "~/i18n/ui"
 import Layout from "~/layouts/Layout.astro"
+import { getMetaData } from "~/utils/metaData"
 
-const metaData = {
-	lv: {
-		title: "fineshine auto detalizācijas Studija",
-		description:
-			"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
-		keywords:
-			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija",
-	},
-}
-const meta = metaData[defaultLanguageCode]
+const meta = getMetaData(defaultLanguageCode)
 const redirectUrl = `/${defaultLanguageCode}/`
 const redirectScript = `window.location.replace(${JSON.stringify(redirectUrl)});`
 ---

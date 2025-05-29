@@ -4,35 +4,38 @@
 
 @theme {
 	--color-text-primary: #1e293b;
-	--color-text-secondary: #334155;
-	--color-text-tertiary: #475569;
+	--color-text-secondary: #475569;
+	--color-text-tertiary: #64748b;
 
-	--color-bg-default: #e1e8f0;
-	--color-bg-muted: #cfd8e7;
-	--color-bg-card: #f8fafc;
+	--color-bg-default: #f8fafc;
+	--color-bg-muted: #e2e8f0;
+	--color-bg-card: #ffffff;
 
-	--color-border-default: #6b7280;
-	--color-border-muted: #9ca3af;
+	--color-border-default: #94a3b8;
+	--color-border-muted: #cbd5e1;
 
-	--color-hover-primary: #00e4fd;
-	--color-hover-muted: #93c5fd;
+	--color-hover-primary: #2563eb;
+	--color-hover-muted: #60a5fa;
+
+	--color-accent: #2563eb;
 }
 
 @layer base {
 	@variant dark {
-		--color-text-primary: #e5e7eb;
-		--color-text-secondary: #9ca3af;
-		--color-text-tertiary: #6b7280;
+		--color-text-primary: #f3f4f6;
+		--color-text-secondary: #a1a8b3;
+		--color-text-tertiary: #7c859a;
 
 		--color-bg-default: #000000;
 		--color-bg-muted: #121212;
-		--color-bg-card: #1e293b;
+		--color-bg-card: #1f2937;
 
-		--color-border-default: #6b7280;
-		--color-border-muted: #9ca3af;
+		--color-border-default: #374151;
+		--color-border-muted: #4b5563;
 
-		--color-hover-primary: #079aec;
-		--color-hover-muted: #2fc4f8;
+		--color-hover-primary: #3b82f6;
+		--color-hover-muted: #60a5fa;
+		--color-accent: #2563eb;
 	}
 }
 
@@ -66,7 +69,7 @@
 	}
 
 	button {
-		@apply text-text-primary font-semibold hover:bg-hover-primary  py-2 px-4 rounded transition-colors duration-200 cursor-pointer;
+		@apply text-text-secondary font-semibold hover:bg-hover-primary  py-2 px-4 rounded transition-colors duration-200 cursor-pointer border border-border-default bg-bg-card;
 	}
 	p,
 	li,

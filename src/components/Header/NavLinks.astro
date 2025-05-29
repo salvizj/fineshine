@@ -18,7 +18,7 @@ const links = [
 ]
 ---
 
-<ul class={`flex flex-${flexDirection} gap-4 overflow-x-auto max-w-full`}>
+<ul class={`flex flex-${flexDirection} gap-4 max-w-full flex-wrap`}>
 	{
 		links.map((link) => {
 			const key = link.startsWith("#") ? link.slice(1) : link

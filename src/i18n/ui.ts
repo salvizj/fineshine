@@ -18,7 +18,6 @@ import interiorPolishingImage from "../assets/interior_detail_polishing.jpg"
 import waxImage from "../assets/wax.jpg"
 import bodyWashImage from "../assets/body_wash.jpg"
 import fullPackageImage from "../assets/full_package.jpg"
-import whoAmIImage from "../assets/who_am_i_really_and_what_is_my_purpose.jpg"
 
 export const languageOptions = {
 	en: "en",
@@ -47,10 +46,18 @@ export const ui = {
 			services: "Services",
 			other_links: "Other links",
 			cookie_policy: "Cookie policy",
-			auto_detaling: "Auto detailing",
+			auto_detailing: "Auto detailing",
 			recent_work: "Recent work",
 		},
-
+		hero: {
+			title: "Fineshine Auto Detailing Studio",
+			description:
+				"Certified auto detailing services in Latvia — interior deep cleaning, polishing, protective coatings, headlight restoration, leather refinishing, and ozonation.",
+			imageCaption:
+				"Studio owner with Zvizzer certification in professional polishing.",
+			cta: "View Services",
+			imageAlt: "Studio owner with Zvizzer certification",
+		},
 		location_header: "Our location",
 		recent_work: "Recent work",
 		cookie: {
@@ -466,8 +473,17 @@ export const ui = {
 			services: "Pakalpojumi",
 			other_links: "Citas saites",
 			cookie_policy: "Sīkdatņu politika",
-			auto_detaling: "Auto detailings",
+			auto_detailing: "Auto detailings",
 			recent_work: "Pēdējie darbi",
+		},
+		hero: {
+			title: "Fineshine Auto Detalizācijas Studija",
+			description:
+				"Sertificēti auto detailing pakalpojumi Latvijā — auto ķīmiskā tīrīšana, pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
+			imageCaption:
+				"Studijas īpašnieks ar Zvizzer sertifikātu profesionālajā pulēšanā.",
+			cta: "Skatīt pakalpojumus",
+			imageAlt: "Studijas īpašnieks ar Zvizzer sertifikātu",
 		},
 		location_header: "Mūsu atrašanās vieta",
 		recent_work: "Pēdējie darbi",
@@ -882,6 +898,15 @@ export const ui = {
 			cookie_policy: "Политика файлов cookie",
 			auto_detailing: "Детейлинг автомобиля",
 			recent_work: "Последние работы",
+		},
+		hero: {
+			title: "Авто Детейлинг Студия Fineshine",
+			description:
+				"Сертифицированные детейлинг-услуги в Латвии — химчистка салона, полировка кузова и фар, защитные покрытия, восстановление кожи и озонирование.",
+			imageCaption:
+				"Владелец студии с сертификатом Zvizzer по профессиональной полировке.",
+			cta: "Посмотреть услуги",
+			imageAlt: "Владелец студии с сертификатом Zvizzer",
 		},
 		recent_work: "Последние работы",
 		location_header: "Наше местоположение",

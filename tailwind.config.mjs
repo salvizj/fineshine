@@ -25,6 +25,7 @@ export default {
 					primary: "var(--color-hover-primary)",
 					muted: "var(--color-hover-muted)",
 				},
+				accent: "var(--color-span-accent)",
 			},
 		},
 	},
