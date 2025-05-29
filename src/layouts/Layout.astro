@@ -1,22 +1,16 @@
 ---
+import { defaultLanguageCode } from "~/i18n/ui"
 import "../styles/global.css"
+import type { LanguageCode } from "~/i18n/utils"
 interface LayoutProps {
-	languageCode?: string
+	languageCode?: LanguageCode
 	title?: string
 	description?: string
 	keywords?: string
 }
-
 const props = Astro.props as LayoutProps
-
-const languageCode = props.languageCode ?? "lv"
-const title = props.title ?? "fineshine auto detalizācijas Studija"
-const description =
-	props.description ??
-	"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana."
-const keywords =
-	props.keywords ??
-	"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija"
+const languageCode = props.languageCode ?? defaultLanguageCode
+const { title, description, keywords } = props
 ---
 
 <html class="dark" lang={languageCode}>

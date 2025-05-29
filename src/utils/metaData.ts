@@ -8,25 +8,25 @@ export type LanguageMeta = {
 
 const metaData: Record<LanguageCode, LanguageMeta> = {
 	lv: {
-		title: "fineshine auto detalizācijas Studija",
+		title: "Fineshine auto detailing studija",
 		description:
 			"Sertificēti auto detailing pakalpojumi Latvijā: ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
 		keywords:
-			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu pulēšana, ādas restaurācija, ozonēšana, auto salons, detailing Latvija",
+			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana, ozonēšana, auto salons, detailing Latvija",
 	},
 	en: {
-		title: "Fineshine Auto Detailing Studio",
+		title: "Fineshine auto detailing studio",
 		description:
 			"Certified auto detailing services in Latvia: chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, and ozone treatment.",
 		keywords:
-			"auto detailing, car cleaning, polishing, protective coatings, headlight polishing, leather restoration, ozone treatment, car interior, detailing Latvia",
+			"auto detailing, chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, ozone treatment, car interior, detailing Latvia",
 	},
 	ru: {
 		title: "Студия авто детайлинга Fineshine",
 		description:
 			"Сертифицированные услуги авто детайлинга в Латвии: химчистка, полировка, защитные покрытия, восстановление фар, окраска кожи и озонирование.",
 		keywords:
-			"авто детайлинг, химчистка авто, полировка авто, защитные покрытия, полировка фар, реставрация кожи, озонирование, салон авто, детайлинг Латвия",
+			"авто детайлинг, химчистка авто, полировка авто, защитные покрытия, восстановление фар, окраска кожи, озонирование, салон авто, детайлинг Латвия",
 	},
 }
 
