@@ -1,11 +1,14 @@
 ---
-
+import logoImage from "../../assets/logo_transparent_2.png"
+import Image from "astro/components/Image.astro"
 ---
 
 <a href="/" class="relative inline-block xl:mr-0 mr-12">
-	<img
-		src="/logo_transparent_2.png"
+	<Image
+		src={logoImage}
 		alt="logo"
 		class="w-24 xl:w-36 min-w-[6rem] max-w-full h-auto"
+		width={144}
+		height={144}
 	/>
 </a>

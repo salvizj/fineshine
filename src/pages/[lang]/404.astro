@@ -1,0 +1,23 @@
+---
+import { languageOptions } from "../../i18n/ui"
+import { useTranslate, type LanguageCode } from "../../i18n/utils"
+
+import Layout from "../../layouts/Layout.astro"
+import { getMetaData } from "~/utils/metaData"
+
+export function getStaticPaths() {
+	return Object.keys(languageOptions).map((lang) => ({ params: { lang } }))
+}
+const languageCode = Astro.params.lang as LanguageCode
+const t = useTranslate(languageCode)
+const meta = getMetaData(languageCode)
+---
+
+<Layout
+	languageCode={languageCode}
+	title={meta.title}
+	description={meta.description}
+	keywords={meta.keywords}
+>
+	<h1>{t("title_404")}</h1>
+</Layout>

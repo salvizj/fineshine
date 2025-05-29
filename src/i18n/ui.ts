@@ -29,6 +29,7 @@ export const defaultLanguageCode = "lv"
 
 export const ui = {
 	en: {
+		title_404: "Page Not Found",
 		nav: {
 			contacts: "Contacts",
 			services: "Services",
@@ -456,6 +457,7 @@ export const ui = {
 		},
 	},
 	lv: {
+		title_404: "Lapa nav atrasta",
 		nav: {
 			contacts: "Kontakti",
 			services: "Pakalpojumi",
@@ -879,6 +881,7 @@ export const ui = {
 		},
 	},
 	ru: {
+		title_404: "Страница не найдена",
 		nav: {
 			contacts: "Контакты",
 			services: "Услуги",
