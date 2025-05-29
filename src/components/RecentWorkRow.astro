@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets"
+
+import completed1Image from "../assets/completed_task_1.jpg"
+import completed2Image from "../assets/completed_task_2.jpg"
+import completed3Image from "../assets/completed_task_3.jpg"
+import completed4Image from "../assets/completed_task_4.jpg"
+import completed5Image from "../assets/completed_task_5.jpg"
+import completed6Image from "../assets/completed_task_6.jpg"
+import completed7Image from "../assets/completed_task_7.jpg"
+import completed8Image from "../assets/completed_task_8.jpg"
+import completed9Image from "../assets/completed_task_9.jpg"
+
+interface Props {
+	t: (key: string) => string
+}
+
+const { t } = Astro.props as Props
+
+const images: ImageMetadata[] = [
+	completed1Image,
+	completed2Image,
+	completed3Image,
+	completed4Image,
+	completed5Image,
+	completed6Image,
+	completed7Image,
+	completed8Image,
+	completed9Image,
+]
+---
+
+<section
+	class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8"
+	id="recent_work"
+>
+	<h2 class="py-4">{t("recent_work")}</h2>
+	<div
+		id="image-row"
+		class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 content-center items-center"
+	>
+		{
+			images.map((image, i) => (
+				<div
+					class="cursor-pointer shadow-md transform transition-transform duration-300 ease-in-out hover:scale-102 rounded max-w-xs overflow-hidden aspect-[4/3]"
+					data-src={image.src}
+				>
+					<Image
+						src={image}
+						alt={`${t("recent_work")} ${i + 1}`}
+						class="w-full h-full object-cover rounded"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			))
+		}
+	</div>
+
+	<div
+		id="modal"
+		class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 p-4"
+	>
+		<img
+			id="modal-img"
+			class="max-w-full max-h-[90vh] rounded shadow-lg sm:max-w-4xl"
+		/>
+	</div>
+
+	<script>
+		import { HandleRecentWorkImageViewer } from "~/scripts/HandleRecentWorkImageViewer"
+
+		HandleRecentWorkImageViewer()
+	</script>
+</section>

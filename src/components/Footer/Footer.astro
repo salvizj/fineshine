@@ -12,11 +12,13 @@ const phoneNumber = "+371 23370066"
 const address = "Līvzemes iela 22B, Salaspils, LV-2169, Latvija"
 const cookiePolicyLink = "cookie-policy"
 const autoDetailingLink = "auto-detailing"
-const serviceseLink = "services"
+const servicesLink = "services"
+const recentWorkLink = "#recent_work"
 
 const cookiePolicyHref = `/${languageCode}/${cookiePolicyLink}`
 const autoDetailingHref = `/${languageCode}/${autoDetailingLink}`
-const servicesHref = `/${languageCode}/${serviceseLink}`
+const servicesHref = `/${languageCode}/${servicesLink}`
+const recentWorkHref = `/${languageCode}/${recentWorkLink}`
 ---
 
 <footer class="w-full bg-bg-default" aria-label="Site footer">
@@ -88,6 +90,9 @@ const servicesHref = `/${languageCode}/${serviceseLink}`
 				</a>
 				<a href={servicesHref} class="hover:underline">
 					{t("footer.services")}
+				</a>
+				<a href={recentWorkHref} class="hover:underline">
+					{t("footer.recent_work")}
 				</a>
 			</section>
 

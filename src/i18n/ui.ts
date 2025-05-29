@@ -19,15 +19,6 @@ import waxImage from "../assets/wax.jpg"
 import bodyWashImage from "../assets/body_wash.jpg"
 import fullPackageImage from "../assets/full_package.jpg"
 import whoAmIImage from "../assets/who_am_i_really_and_what_is_my_purpose.jpg"
-import completed1Image from "../assets/completed_task_1.jpg"
-import completed2Image from "../assets/completed_task_2.jpg"
-import completed3Image from "../assets/completed_task_3.jpg"
-import completed4Image from "../assets/completed_task_4.jpg"
-import completed5Image from "../assets/completed_task_5.jpg"
-import completed6Image from "../assets/completed_task_6.jpg"
-import completed7Image from "../assets/completed_task_7.jpg"
-import completed8Image from "../assets/completed_task_8.jpg"
-import completed9Image from "../assets/completed_task_9.jpg"
 
 export const languageOptions = {
 	en: "en",
@@ -44,8 +35,9 @@ export const ui = {
 			services: "Services",
 			location: "Location",
 			socials: "Socials",
-			auto_detailing: "Auto Detailing",
-			pricing: "pricing",
+			auto_detailing: "Auto detailing",
+			pricing: "Pricing",
+			recent_work: "Recent work",
 		},
 
 		footer: {
@@ -54,21 +46,13 @@ export const ui = {
 			location: "Location",
 			services: "Services",
 			other_links: "Other links",
-			cookie_policy: "Cookie Policy",
+			cookie_policy: "Cookie policy",
 			auto_detaling: "Auto detailing",
+			recent_work: "Recent work",
 		},
-		hero: {
-			title: "Professional Car Detailing Services",
-			subtitle:
-				"Make your car look brand new with our expert cleaning, waxing, and polishing services.",
-			description:
-				"Our experienced team uses top-quality products to restore your vehicle's shine and protect its finish.",
-		},
-		gallery_title: "Our Work",
-		gallery_image_alt: "Before and After",
-		pricing_title: "Services & Pricing",
 
-		location_header: "Our Location",
+		location_header: "Our location",
+		recent_work: "Recent work",
 		cookie: {
 			btn_description: "Got it",
 			description:
@@ -76,7 +60,7 @@ export const ui = {
 			read_more: "Read more",
 		},
 		cookie_policy: {
-			title: "Cookie Policy",
+			title: "Cookie policy",
 
 			what_are_cookies: {
 				title: "What are cookies?",
@@ -472,6 +456,7 @@ export const ui = {
 			socials: "Sociālie tīkli",
 			auto_detailing: "Auto detailings",
 			pricing: "Cenas",
+			recent_work: "Pēdējie darbi",
 		},
 
 		footer: {
@@ -482,19 +467,10 @@ export const ui = {
 			other_links: "Citas saites",
 			cookie_policy: "Sīkdatņu politika",
 			auto_detaling: "Auto detailings",
+			recent_work: "Pēdējie darbi",
 		},
-		hero: {
-			title: "Profesionālas automašīnu detalizēšanas pakalpojumi",
-			subtitle:
-				"Padariet savu automašīnu kā jaunu ar mūsu eksperta tīrīšanas, vaskošanas un pulēšanas pakalpojumiem.",
-			description:
-				"Mūsu pieredzējusī komanda izmanto augstākās kvalitātes produktus, lai atjaunotu jūsu transportlīdzekļa spīdumu un aizsargātu tā virsmu.",
-		},
-		gallery_title: "Mūsu darbi",
-		gallery_image_alt: "Pirms un pēc",
-		pricing_title: "Pakalpojumi un cenas",
-
 		location_header: "Mūsu atrašanās vieta",
+		recent_work: "Pēdējie darbi",
 		cookie: {
 			btn_description: "Sapratu",
 			description:
@@ -894,6 +870,7 @@ export const ui = {
 			socials: "Социальные сети",
 			auto_detailing: "Детейлинг автомобиля",
 			pricing: "Цены",
+			recent_work: "Последние работы",
 		},
 
 		footer: {
@@ -904,18 +881,9 @@ export const ui = {
 			other_links: "Другие ссылки",
 			cookie_policy: "Политика файлов cookie",
 			auto_detailing: "Детейлинг автомобиля",
+			recent_work: "Последние работы",
 		},
-		hero: {
-			title: "Профессиональные услуги по детализированной уборке автомобилей",
-			subtitle:
-				"Сделайте вашу машину как новую с помощью наших экспертов по чистке, восковой обработке и полировке.",
-			description:
-				"Наша опытная команда использует высококачественные продукты для восстановления блеска вашего автомобиля и защиты его поверхности.",
-		},
-		gallery_title: "Наши работы",
-		gallery_image_alt: "До и после",
-		pricing_title: "Услуги и цены",
-
+		recent_work: "Последние работы",
 		location_header: "Наше местоположение",
 		cookie: {
 			btn_description: "Понятно",
