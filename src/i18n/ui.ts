@@ -53,9 +53,9 @@ export const ui = {
 		hero: {
 			title: "Fineshine Auto Detailing Studio",
 			description:
-				"Certified auto detailing services in Latvia — interior deep cleaning, polishing, protective coatings, headlight restoration, leather refinishing, and ozonation.",
+				"Certified detailer services just outside Riga – in Salaspils — car chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, and ozonation.",
 			imageCaption:
-				"Studio owner with Zvizzer certification in professional polishing.",
+				"Studio executor, who works according to Zvizzer Thermo Technology polishing system.",
 			cta: "View Services",
 			imageAlt: "Studio owner with Zvizzer certification",
 		},
@@ -481,9 +481,9 @@ export const ui = {
 		hero: {
 			title: "Fineshine Auto Detailing Studija",
 			description:
-				"Sertificēti auto detailing pakalpojumi Latvijā — auto ķīmiskā tīrīšana, pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
+				"Sertificēta detailera pakalpojumi tepat ārpus Rīgas - Salaspilī — auto ķīmiskā tīrīšana, pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
 			imageCaption:
-				"Studijas īpašnieks ar Zvizzer sertifikātu profesionālajā pulēšanā.",
+				"Studijas realizētājs, kas darbojas pēc Zvizzer Thermo Technology pulēšanas sistēmas.",
 			cta: "Skatīt pakalpojumus",
 			imageAlt: "Studijas īpašnieks ar Zvizzer sertifikātu",
 		},
@@ -905,9 +905,9 @@ export const ui = {
 		hero: {
 			title: "Авто Детейлинг Студия Fineshine",
 			description:
-				"Сертифицированные детейлинг-услуги в Латвии — химчистка салона, полировка кузова и фар, защитные покрытия, восстановление кожи и озонирование.",
+				"Сертифицированные услуги детейлера недалеко от Риги — в Саласпилсе — химчистка автомобиля, полировка, защитные покрытия, реставрация фар, покраска кожи и озонирование.",
 			imageCaption:
-				"Владелец студии с сертификатом Zvizzer по профессиональной полировке.",
+				"Исполнитель студии, который работает по системе полировки Zvizzer Thermo Technology.",
 			cta: "Посмотреть услуги",
 			imageAlt: "Владелец студии с сертификатом Zvizzer",
 		},
