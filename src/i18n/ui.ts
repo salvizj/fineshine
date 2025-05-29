@@ -477,7 +477,7 @@ export const ui = {
 			recent_work: "Pēdējie darbi",
 		},
 		hero: {
-			title: "Fineshine Auto Detalizācijas Studija",
+			title: "Fineshine Auto Detaling Studija",
 			description:
 				"Sertificēti auto detailing pakalpojumi Latvijā — auto ķīmiskā tīrīšana, pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
 			imageCaption:
@@ -530,7 +530,7 @@ export const ui = {
 			detailing: {
 				what_is_detailing_title: "Kas tad īsti ir tas detailings?",
 				description_1:
-					"Auto detailing, kas tulkojumā no angļu valodas nozīmē 'detalizācija', – rūpīgas revīzijas un automobiļa apstrādes process no ārpuses un tā iekšpusē, kas sevī ietver tā tīrīšanu, nepieciešamo elementu korekciju un turpmākā darba rezultāta aizsardzību. Katrs centimetrs un katra detaļa tiks pilnveidota, un auto izskatīsies maksimāli tuvu jaunam, neskatoties uz auto iepriekšējo stāvokli vai izlaiduma gadu.",
+					"Auto detailing, kas tulkojumā no angļu valodas nozīmē 'detaling', – rūpīgas revīzijas un automobiļa apstrādes process no ārpuses un tā iekšpusē, kas sevī ietver tā tīrīšanu, nepieciešamo elementu korekciju un turpmākā darba rezultāta aizsardzību. Katrs centimetrs un katra detaļa tiks pilnveidota, un auto izskatīsies maksimāli tuvu jaunam, neskatoties uz auto iepriekšējo stāvokli vai izlaiduma gadu.",
 				description_2:
 					"Auto detailings dalās divās kategorijās – eksterjers (ārējās apdares apkope) un interjers (iekšējās apdares apkope), un pateicoties visam kopumam jūs viegli sagatavosiet savu automobili pārdošanai, izstādei vai vienkārši priekš sevis kā arī aizsargāsiet automašīnu no priekšlaicīgas novecošanas paralēli nezaudējot arī tālākpārdošanas iespējas.",
 			},
