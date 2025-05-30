@@ -6,18 +6,12 @@ import leatherPaintingImage from "../assets/leather_painting.jpg"
 import discCeramicsImage from "../assets/ceramics_for_discs.jpg"
 import plasticCeramicsImage from "../assets/ceramics_for_plastic.jpg"
 import chemicalCleaning1Image from "../assets/chemical_cleaning_1.jpg"
-import chemicalCleaning2Image from "../assets/chemical_cleaning_2.jpg"
-import chemicalCleaning3Image from "../assets/chemical_cleaning_3.jpg"
 import headlightPolishingImage from "../assets/headlight_sanding_and_polishing.jpg"
 import nanoGlassCoatingImage from "../assets/nano_coating_for_glass.jpg"
 import ozonationImage from "../assets/ozonation.jpg"
 import polishingImage from "../assets/polishing.jpg"
 import preSalePrepImage from "../assets/pre_sale_preparation.jpg"
-import interiorCleaningImage from "../assets/interior_cleaning_vacuuming_washing.jpg"
-import interiorPolishingImage from "../assets/interior_detail_polishing.jpg"
-import waxImage from "../assets/wax.jpg"
 import bodyWashImage from "../assets/body_wash.jpg"
-import fullPackageImage from "../assets/full_package.jpg"
 
 export const languageOptions = {
 	en: "en",
@@ -195,23 +189,23 @@ export const ui = {
 					{
 						title: "Detailed car body wash",
 						description:
-							"bitumen, iron particles, rims, arches, etc.",
+							"Bitumen, iron particles, rims, arches, etc.",
 						price: "90€",
 					},
 					{
 						title: "Pet hair",
-						description: "extra",
+						description: "Extra.",
 						price: "15–30€",
 					},
 					{
 						title: "One seat cleaning",
-						description: "except",
+						description: "Removing it.",
 						price: "30€",
 					},
 					{
 						title: "Interior chemical cleaning",
 						description:
-							"the entire interior is maximally disassembled, sand is blown out with a tornado air flow, then the interior is cleaned with alkaline chemicals, which is then neutralized with acid eliminating allergen risk. Bonus: the car is washed",
+							"The entire interior trim is disassembled as much as possible to ensure thorough cleaning. Dust and sand are blown out using Tornador air flow, after which the interior is treated with an alkaline chemical that is later neutralized with acid, reducing the risk of allergens. Additionally, the car is also washed.",
 						price: "from 160–220€",
 					},
 					{
@@ -221,17 +215,17 @@ export const ui = {
 					{
 						title: "Interior ozonation",
 						description:
-							"Cleaning of the interior and ventilation from bacteria, mold, and unpleasant odors, e.g., spills, smoking, etc. Highly recommended after winter and for people with allergies",
+							"Cleaning of the interior and ventilation system from bacteria, mold, and unpleasant odors — for example, after spills or smoking. Especially recommended after winter and for people with allergies.",
 						price: "50€",
 					},
 					{
 						title: "Leather coloring",
-						description: "elastic component is added to the color.",
+						description: "Elastic component is added to the color.",
 						price: "price on site",
 					},
 					{
 						title: "Plastic coloring",
-						description: "elastic component is added to the color.",
+						description: "Elastic component is added to the color.",
 						price: "price on site",
 					},
 				],
@@ -257,7 +251,7 @@ export const ui = {
 					},
 					{
 						title: "Headlight grinding / polishing",
-						description: "with coating.",
+						description: "With coating.",
 						price: "from 50€",
 					},
 				],
@@ -267,7 +261,7 @@ export const ui = {
 				services: [
 					{
 						title: "Nano coating for front car glass",
-						description: "durability up to 1 year.",
+						description: "Durability up to 1 year.",
 						price: "70€",
 					},
 					{
@@ -284,7 +278,7 @@ export const ui = {
 					},
 					{
 						title: "Graphene ceramic coating",
-						description: "durability up to 2 years.",
+						description: "Durability up to 2 years.",
 						price: "180–220€",
 					},
 					{
@@ -310,7 +304,7 @@ export const ui = {
 						},
 						{
 							title: "Glass treatment with water-repellent protective coating",
-							description: "durability up to 1 year.",
+							description: "Durability up to 1 year.",
 						},
 						{
 							title: "Headlight grinding/polishing and ceramic coating application",
@@ -320,7 +314,7 @@ export const ui = {
 						},
 						{
 							title: "Graphene protective coating application on car body",
-							description: "durability up to 2 years.",
+							description: "Durability up to 2 years.",
 						},
 					],
 					price: "From €950",
@@ -334,7 +328,7 @@ export const ui = {
 						},
 						{
 							title: "Glass treatment with water-repellent protective coating",
-							description: "durability up to 1 year.",
+							description: "Durability up to 1 year.",
 						},
 						{
 							title: "Headlight grinding/polishing and ceramic coating application",
@@ -344,7 +338,7 @@ export const ui = {
 						},
 						{
 							title: "Graphene protective coating application on car body",
-							description: "durability up to 2 years.",
+							description: "Durability up to 2 years.",
 						},
 					],
 					price: "From €750",
@@ -587,7 +581,7 @@ export const ui = {
 					increased_driving_safety: {
 						title: "Paaugstināta braukšanas drošība",
 						description:
-							"Detailinga pakalpojumi, piemēram, lukturu pulēšana un vējstikla apstrāde ievērojami uzlabo redzamību, īpaši braucot tumšajās nakts stundās vai nelabvēlīgos laikapstākļos. Apmākušies vai miglaini priekšējie lukturi var samazināt transportlīdzekļa apgaismojuma sistēmas efektivitāti, pasliktinot spēju redzēt ceļu. Tāpēc ieteikums no manis būtu tomēr pēc nepieciešamības un iespējām novērst visus riskus gan savai, gan citu drošībai! ",
+							"Detailinga pakalpojumi, piemēram, lukturu pulēšana un vējstikla apstrāde ievērojami uzlabo redzamību, īpaši braucot tumšajās nakts stundās vai nelabvēlīgos laikapstākļos. Apmākušies vai miglaini priekšējie lukturi var samazināt transportlīdzekļa apgaismojuma sistēmas efektivitāti, pasliktinot spēju redzēt ceļu. Tāpēc ieteikums no manis būtu tomēr pēc nepieciešamības un iespējām novērst visus riskus gan savai, gan citu drošībai!",
 					},
 				},
 			},
@@ -619,23 +613,23 @@ export const ui = {
 					{
 						title: "Detalizēta auto. virsbūves mazgāšana",
 						description:
-							"bitums, dzelzs daļiņas, diski, arkas, utt.",
+							"Bitums, dzelzs daļiņas, diski, arkas, utt.",
 						price: "90€",
 					},
 					{
 						title: "Dzīvnieka spalvas",
-						description: "extra",
+						description: "Papildus.",
 						price: "15–30€",
 					},
 					{
 						title: "Viena beņķa tīrīšana",
-						description: "izņemot",
+						description: "To izņemot.",
 						price: "30€",
 					},
 					{
 						title: "Salona ķīmiskā tīrīšana",
 						description:
-							"viss salons tiek maksimāli izjaukts, ar tornadora gaisa plūsmu tiek sista ārā smilts, pēc tam ar sārmveida ķīmiju tiek tīrīts salons, kurš pēc tam arī tiek neitralizēts ar skābi novēršot alergēna risku. Bonusā tiek nomazgāta mašīna",
+							"Visa salona apdare tiek maksimāli izjaukta, lai nodrošinātu rūpīgu tīrīšanu. Ar Tornador gaisa plūsmu tiek izsisti putekļi un smilts, pēc tam salons tiek apstrādāts ar sārmainu ķīmiju, kas vēlāk tiek neitralizēta ar skābi, samazinot alergēnu risku. Papildus tam tiek nomazgāta arī automašīna.",
 						price: "no 160–220€",
 					},
 					{
@@ -645,17 +639,17 @@ export const ui = {
 					{
 						title: "Salona ozonēšana",
 						description:
-							"Salona un ventilācijas un salona attīrīšana no baktērijām, pelējuma, un nepatīkamām smakām, piemēram, ja ir bijis kas izliets, ir smēķēts, utt. Īpaši ieteicams pēc ziemas un cilvēkiem ar alerģijām",
+							"Salona un ventilācijas sistēmas attīrīšana no baktērijām, pelējuma un nepatīkamām smakām — piemēram, pēc šķidrumu izlīšanas vai smēķēšanas. Īpaši ieteicama pēc ziemas, kā arī cilvēkiem ar alerģijām.",
 						price: "50€",
 					},
 					{
 						title: "Ādas krāsošana",
-						description: "krāsai klāt ir elastīgais komponents.",
+						description: "Krāsai klāt ir elastīgais komponents.",
 						price: "cena klātienē",
 					},
 					{
 						title: "Plastmasas krāsošana",
-						description: "krāsai klāt ir elastīgais komponents.",
+						description: "Krāsai klāt ir elastīgais komponents.",
 						price: "cena klātienē",
 					},
 				],
@@ -681,7 +675,7 @@ export const ui = {
 					},
 					{
 						title: "Lukturu slīpēšana / pulēšana",
-						description: "ar pārklājumu.",
+						description: "Ar pārklājumu.",
 						price: "no 50€",
 					},
 				],
@@ -691,7 +685,7 @@ export const ui = {
 				services: [
 					{
 						title: "Nano pārklājums priekšējam auto. stiklam",
-						description: "noturība līdz 1 gadam.",
+						description: "Noturība līdz 1 gadam.",
 						price: "70€",
 					},
 					{
@@ -708,7 +702,7 @@ export const ui = {
 					},
 					{
 						title: "Grafēna keramiskais pārklājums",
-						description: "noturība līdz 2 gadiem.",
+						description: "Noturība līdz 2 gadiem.",
 						price: "180–220€",
 					},
 					{
@@ -734,7 +728,7 @@ export const ui = {
 						},
 						{
 							title: "Stiklu apstrāde ar ūdeni atgrūdošu aizsargpārklājumu",
-							description: "noturība līdz 1 gadam.",
+							description: "Noturība līdz 1 gadam.",
 						},
 						{
 							title: "Lukturu slīpēšana/pulēšana un keramikas uzklāšana",
@@ -744,7 +738,7 @@ export const ui = {
 						},
 						{
 							title: "Grafēna aizsargpārklājuma uzklāšana uz auto virsbūves",
-							description: "noturība līdz 2 gadiem.",
+							description: "Noturība līdz 2 gadiem.",
 						},
 					],
 					price: "No 950€",
@@ -758,7 +752,7 @@ export const ui = {
 						},
 						{
 							title: "Stiklu apstrāde ar ūdens atgrūdošu aizsargpārklājumu",
-							description: "noturība līdz 1 gadam.",
+							description: "Noturība līdz 1 gadam.",
 						},
 						{
 							title: "Lukturu slīpēšana/pulēšana un keramikas uzklāšana",
@@ -768,7 +762,7 @@ export const ui = {
 						},
 						{
 							title: "Grafēna aizsargpārklājuma uzklāšana uz auto virsbūves",
-							description: "noturība līdz 2 gadiem.",
+							description: "Noturība līdz 2 gadiem.",
 						},
 					],
 					price: "No 750€",
@@ -1048,23 +1042,23 @@ export const ui = {
 					{
 						title: "Детальная мойка кузова автомобиля",
 						description:
-							"битум, железные частицы, диски, арки и т.д.",
+							"Битум, железные частицы, диски, арки и т.д.",
 						price: "90€",
 					},
 					{
 						title: "Животные волосы",
-						description: "дополнительно",
+						description: "Дополнительно.",
 						price: "15–30€",
 					},
 					{
 						title: "Чистка одного сиденья",
-						description: "кроме",
+						description: "Kроме.",
 						price: "30€",
 					},
 					{
 						title: "Химчистка салона",
 						description:
-							"весь салон максимально разбирается, песок выбивается воздушным потоком «торнадо», затем салон очищается щелочной химией, которая затем нейтрализуется кислотой, устраняя риск аллергии. В бонусе моется машина",
+							"Вся отделка салона максимально демонтируется для обеспечения тщательной очистки. Пыль и песок выдуваются с помощью воздушного потока Tornador, после чего салон обрабатывается щелочным химическим средством, которое затем нейтрализуется кислотой, снижая риск аллергенов. Дополнительно также проводится мойка автомобиля.",
 						price: "от 160–220€",
 					},
 					{
@@ -1074,17 +1068,17 @@ export const ui = {
 					{
 						title: "Озонирование салона",
 						description:
-							"Очистка салона и вентиляции от бактерий, плесени и неприятных запахов, например, если что-то проливалось, курили и т.д. Особенно рекомендуется после зимы и для людей с аллергией",
+							"Очистка салона и системы вентиляции от бактерий, плесени и неприятных запахов — например, после пролива жидкостей или курения. Особенно рекомендуется после зимы и людям, страдающим от аллергии",
 						price: "50€",
 					},
 					{
 						title: "Покраска кожи",
-						description: "в краску добавлен эластичный компонент.",
+						description: "B краску добавлен эластичный компонент.",
 						price: "цена на месте",
 					},
 					{
 						title: "Покраска пластика",
-						description: "в краску добавлен эластичный компонент.",
+						description: "B краску добавлен эластичный компонент.",
 						price: "цена на месте",
 					},
 				],
@@ -1110,7 +1104,7 @@ export const ui = {
 					},
 					{
 						title: "Шлифовка / полировка фар",
-						description: "с покрытием",
+						description: "C покрытием.",
 						price: "от 50€",
 					},
 				],
@@ -1120,7 +1114,7 @@ export const ui = {
 				services: [
 					{
 						title: "Нано покрытие переднего стекла автомобиля",
-						description: "действует до 1 года.",
+						description: "Действует до 1 года.",
 						price: "70€",
 					},
 					{
@@ -1137,7 +1131,7 @@ export const ui = {
 					},
 					{
 						title: "Графеновое керамическое покрытие",
-						description: "действует до 2 лет.",
+						description: "Действует до 2 лет.",
 						price: "180–220€",
 					},
 					{
@@ -1163,7 +1157,7 @@ export const ui = {
 						},
 						{
 							title: "Обработка стекол водоотталкивающим защитным покрытием",
-							description: "действует до 1 года.",
+							description: "Действует до 1 года.",
 						},
 						{
 							title: "Шлифовка/полировка фар и нанесение керамического покрытия",
@@ -1173,7 +1167,7 @@ export const ui = {
 						},
 						{
 							title: "Нанесение графенового защитного покрытия на кузов автомобиля",
-							description: "стойкость до 2 лет.",
+							description: "Cтойкость до 2 лет.",
 						},
 					],
 					price: "От 950€",
@@ -1187,7 +1181,7 @@ export const ui = {
 						},
 						{
 							title: "Обработка стекол водоотталкивающим защитным покрытием",
-							description: "действует до 1 года.",
+							description: "Действует до 1 года.",
 						},
 						{
 							title: "Шлифовка/полировка фар и нанесение керамического покрытия",
@@ -1197,7 +1191,7 @@ export const ui = {
 						},
 						{
 							title: "Нанесение графенового защитного покрытия на кузов автомобиля",
-							description: "стойкость до 2 лет.",
+							description: "Cтойкость до 2 лет.",
 						},
 					],
 					price: "От 750€",
