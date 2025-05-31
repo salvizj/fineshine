@@ -98,9 +98,9 @@ export const ui = {
 			detailing: {
 				what_is_detailing_title: "What exactly is detailing?",
 				description_1:
-					"Auto detailing, which literally means 'detailing', is a thorough revision and treatment process of a vehicle both externally and internally. It involves cleaning, necessary corrections, and protecting the results of the work. Every centimeter and detail will be perfected, and the car will look as close to new as possible regardless of its previous condition or year of manufacture.",
+					"Auto detailing (from English – 'automotive detailed processing') is a meticulous process of cleaning, restoring, and protecting a vehicle’s exterior and interior. It includes deep cleaning, correction of necessary elements, and the application of special products to preserve the achieved result. Every centimeter and detail is refined, making the car appear as close to new as possible – regardless of its previous condition or year of manufacture.",
 				description_2:
-					"Auto detailing is divided into two categories – exterior (maintenance of the outer finish) and interior (maintenance of the inner finish). Thanks to the entire process, you can easily prepare your car for sale, exhibition, or just for yourself, as well as protect the vehicle from premature aging without losing resale potential.",
+					"Auto detailing is divided into two main categories – exterior (exterior finish) and interior (interior finish) care. Thanks to this comprehensive approach, you will be able to prepare your vehicle for sale, exhibition, or simply for personal use. Furthermore, it helps to protect the car from premature wear and preserves its value for resale..",
 			},
 			exterior: {
 				exterior_title: "Exterior",
@@ -526,9 +526,9 @@ export const ui = {
 			detailing: {
 				what_is_detailing_title: "Kas tad īsti ir tas detailings?",
 				description_1:
-					"Auto detailing, kas tulkojumā no angļu valodas nozīmē 'detailing', – rūpīgas revīzijas un automobiļa apstrādes process no ārpuses un tā iekšpusē, kas sevī ietver tā tīrīšanu, nepieciešamo elementu korekciju un turpmākā darba rezultāta aizsardzību. Katrs centimetrs un katra detaļa tiks pilnveidota, un auto izskatīsies maksimāli tuvu jaunam, neskatoties uz auto iepriekšējo stāvokli vai izlaiduma gadu.",
+					"Auto detailing (no angļu valodas – 'auto detalizēta apstrāde') ir rūpīgs automobiļa ārējās un iekšējās daļas tīrīšanas, atjaunošanas un aizsardzības process. Tas ietver dziļu tīrīšanu, nepieciešamo elementu korekciju un speciālu līdzekļu uzklāšanu, lai saglabātu iegūto rezultātu. Katrs centimetrs un detaļa tiek pilnveidoti, padarot auto iespējami tuvu jaunam izskatam – neatkarīgi no tā iepriekšējā stāvokļa vai izgatavošanas gada.",
 				description_2:
-					"Auto detailings dalās divās kategorijās – eksterjers (ārējās apdares apkope) un interjers (iekšējās apdares apkope), un pateicoties visam kopumam jūs viegli sagatavosiet savu automobili pārdošanai, izstādei vai vienkārši priekš sevis kā arī aizsargāsiet automašīnu no priekšlaicīgas novecošanas paralēli nezaudējot arī tālākpārdošanas iespējas.",
+					"Auto detailings iedalās divās galvenajās kategorijās – eksterjera (ārējās apdares) un interjera (iekšējās apdares) kopšanā. Pateicoties šai visaptverošajai pieejai, jūs varēsiet sagatavot savu automobili pārdošanai, izstādei vai vienkārši personīgai lietošanai. Turklāt tas palīdz aizsargāt auto no priekšlaicīgas nolietošanās un saglabā tā vērtību arī tālākpārdošanai.",
 			},
 			exterior: {
 				exterior_title: "Eksterjers",
@@ -951,9 +951,9 @@ export const ui = {
 			detailing: {
 				what_is_detailing_title: "Что такое детейлинг?",
 				description_1:
-					"Авто детейлинг, что в переводе означает «детализация», — это тщательный процесс ревизии и обработки автомобиля снаружи и внутри, включающий чистку, необходимую коррекцию элементов и защиту результата работы. Каждый сантиметр и деталь будут усовершенствованы, и автомобиль будет выглядеть максимально близко к новому, независимо от предыдущего состояния и года выпуска.",
+					"Автодетейлинг (от английского – 'детализированная обработка автомобиля') — это тщательный процесс очистки, восстановления и защиты внешних и внутренних частей автомобиля. Он включает в себя глубокую чистку, корректировку необходимых элементов и нанесение специальных средств для сохранения достигнутого результата. Каждый сантиметр и каждая деталь доводятся до совершенства, придавая автомобилю максимально приближенный к новому вид — независимо от его предыдущего состояния или года выпуска.",
 				description_2:
-					"Авто детейлинг делится на две категории – экстерьер (уход за внешней отделкой) и интерьер (уход за внутренней отделкой). Благодаря этому процессу вы легко подготовите автомобиль к продаже, выставке или просто для себя, а также защитите машину от преждевременного старения, не потеряв при этом возможности перепродажи.",
+					"Автодетейлинг делится на две основные категории – уход за экстерьером (внешней отделкой) и интерьером (внутренней отделкой). Благодаря такому комплексному подходу вы сможете подготовить свой автомобиль к продаже, выставке или просто для личного пользования. Кроме того, это помогает защитить автомобиль от преждевременного износа и сохранить его стоимость для последующей продажи.",
 			},
 			exterior: {
 				exterior_title: "Экстерьер",
