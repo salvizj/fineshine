@@ -8,25 +8,25 @@ export type LanguageMeta = {
 
 const metaData: Record<LanguageCode, LanguageMeta> = {
 	lv: {
-		title: "Fineshine auto detailing studija",
+		title: "Fineshine Auto Detailing Salaspilī – Kvalitatīva Auto Kopšana, Pulēšana un Aizsardzība",
 		description:
-			"Sertificēta detailera pakalpojumi tepat ārpus Rīgas - Salaspilī — auto ķīmiskā tīrīšana, pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana un ozonēšana.",
+			"Fineshine ir sertificēta auto detailešanas studija Salaspilī, netālu no Rīgas. Piedāvājam profesionālu auto ķīmisko tīrīšanu, virsbūves pulēšanu un ilgstošus aizsargpārklājumus. Atjaunojam lukturus, krāsojam ādu un veicam salona ozonēšanu. Uzticiet sava auto izskatu un aizsardzību pieredzējušiem profesionāļiem!",
 		keywords:
-			"auto detailing, auto ķīmiskā tīrīšana, auto pulēšana, aizsargpārklājumi, lukturu restaurācija, ādas krāsošana, ozonēšana, auto salons, detailing tepat ārpus Rīgas Salaspilī.",
+			"auto detailing Salaspilī, auto ķīmiskā tīrīšana, auto salona tīrīšana, virsbūves pulēšana, auto virsbūves aizsargpārklājumi, keramiskais pārklājums auto, lukturu restaurācija, auto ādas krāsošana, salona ozonēšana, profesionāla auto kopšana, auto apstrāde Rīga, auto detailešana Salaspils, mašīnas spodrināšana, auto dizains",
 	},
 	en: {
-		title: "Fineshine auto detailing studio",
+		title: "Fineshine Auto Detailing Salaspils – Quality Car Care, Polishing & Protection",
 		description:
-			"Certified detailer services just outside Riga – in Salaspils — car chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, and ozonation.",
+			"Fineshine is a certified car detailing studio in Salaspils, near Riga. We offer professional car chemical cleaning, body polishing, and long-lasting protective coatings. We restore headlights, dye leather, and perform interior ozone treatment. Entrust your car's appearance and protection to experienced professionals!",
 		keywords:
-			"auto detailing, chemical cleaning, polishing, protective coatings, headlight restoration, leather coloring, ozone treatment, car interior, detailing outside Riga in Salaspils",
+			"auto detailing Salaspils, car chemical cleaning, car interior cleaning, car body polishing, car body protective coatings, ceramic coating car, headlight restoration, car leather dyeing, interior ozone treatment, professional car care, car treatment Riga, car detailing Salaspils, car buffing, car aesthetics",
 	},
 	ru: {
-		title: "Студия авто детайлинга Fineshine",
+		title: "Fineshine Авто Детейлинг Саласпилс – Качественный Уход, Полировка и Защита Авто",
 		description:
-			"Сертифицированные услуги детейлера недалеко от Риги — в Саласпилсе — химчистка автомобиля, полировка, защитные покрытия, реставрация фар, покраска кожи и озонирование.",
+			"Fineshine – это сертифицированная студия авто детейлинга в Саласпилсе, недалеко от Риги. Мы предлагаем профессиональную химчистку автомобиля, полировку кузова и долговечные защитные покрытия. Восстанавливаем фары, красим кожу и проводим озонирование салона. Доверьте внешний вид и защиту вашего автомобиля опытным профессионалам!",
 		keywords:
-			"авто детайлинг, химчистка авто, полировка авто, защитные покрытия, восстановление фар, окраска кожи, озонирование, салон авто, детайлинг, недалеко от Риги  в Саласпилсе",
+			"авто детейлинг Саласпилс, химчистка автомобиля, химчистка салона авто, полировка кузова, защитные покрытия кузова, керамическое покрытие авто, восстановление фар, покраска кожи авто, озонирование салона, профессиональный уход за авто, обработка авто Рига, детейлинг Саласпилс, полировка машины, авто дизайн",
 	},
 }
 
