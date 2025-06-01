@@ -7,10 +7,11 @@ interface LayoutProps {
 	title?: string
 	description?: string
 	keywords?: string
+	noIndex?: boolean
 }
 const props = Astro.props as LayoutProps
 const languageCode = props.languageCode ?? defaultLanguageCode
-const { title, description, keywords } = props
+const { title, description, keywords, noIndex } = props
 ---
 
 <html class="dark" lang={languageCode}>
@@ -24,6 +25,8 @@ const { title, description, keywords } = props
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
 		<title>{title}</title>
+
+		{noIndex && <meta name="robots" content="noindex" />}
 		<slot name="head" />
 	</head>
 
