@@ -14,29 +14,29 @@
 
   <!-- Services -->
   <url>
-    <loc>https://fineshine.lv/lv/services</loc>
+    <loc>https://fineshine.lv/lv/services/</loc>
     <lastmod>2025-06-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/services" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/services" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/services/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/services/" />
   </url>
 
   <!-- Auto Detailing -->
   <url>
-    <loc>https://fineshine.lv/lv/auto-detailing</loc>
+    <loc>https://fineshine.lv/lv/auto-detailing/</loc>
     <lastmod>2025-06-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/auto-detailing" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/auto-detailing" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/auto-detailing" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/auto-detailing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/auto-detailing/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/auto-detailing/" />
   </url>
 
   <!-- Cookie Policy -->
   <url>
-    <loc>https://fineshine.lv/lv/cookie-policy</loc>
+    <loc>https://fineshine.lv/lv/cookie-policy/</loc>
     <lastmod>2025-06-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/cookie-policy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/cookie-policy" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/cookie-policy/" />
   </url>
 
 </urlset>
