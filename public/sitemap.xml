@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Homepage -->
   <url>
     <loc>https://fineshine.lv/</loc>
+    <lastmod>2025-06-01</lastmod>
     <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/" />
@@ -13,6 +15,7 @@
   <!-- Services -->
   <url>
     <loc>https://fineshine.lv/lv/services</loc>
+    <lastmod>2025-06-01</lastmod>
     <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/services" />
     <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/services" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/services" />
@@ -21,6 +24,7 @@
   <!-- Auto Detailing -->
   <url>
     <loc>https://fineshine.lv/lv/auto-detailing</loc>
+    <lastmod>2025-06-01</lastmod>
     <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/auto-detailing" />
     <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/auto-detailing" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/auto-detailing" />
@@ -29,6 +33,7 @@
   <!-- Cookie Policy -->
   <url>
     <loc>https://fineshine.lv/lv/cookie-policy</loc>
+    <lastmod>2025-06-01</lastmod>
     <xhtml:link rel="alternate" hreflang="lv" href="https://fineshine.lv/lv/cookie-policy" />
     <xhtml:link rel="alternate" hreflang="en" href="https://fineshine.lv/en/cookie-policy" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://fineshine.lv/ru/cookie-policy" />
