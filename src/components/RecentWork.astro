@@ -51,9 +51,9 @@ const images: ImageMetadata[] = [
 						class="w-full h-full object-cover rounded"
 						loading={i < 4 ? "eager" : "lazy"}
 						decoding={i < 4 ? "sync" : "async"}
-						quality={75}
-						width={400}
-						height={300}
+						quality={i < 4 ? 85 : 75}
+						width={800}
+						height={600}
 						format="webp"
 						sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
 					/>
@@ -66,13 +66,38 @@ const images: ImageMetadata[] = [
 		id="modal"
 		class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 p-4"
 	>
-		<img
-			id="modal-img"
-			alt="modal-img"
-			class="max-w-full max-h-[90vh] rounded shadow-lg sm:max-w-4xl"
-			loading="eager"
-			decoding="sync"
-		/>
+		<div
+			class="relative w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-[80vw]"
+		>
+			<img
+				id="modal-img"
+				alt="modal-img"
+				class="w-full h-auto max-h-[85vh] rounded shadow-lg object-contain"
+				loading="eager"
+				decoding="sync"
+				width="1200"
+				height="900"
+			/>
+			<button
+				id="modal-close"
+				class="absolute top-2 right-2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors duration-200 z-10"
+				aria-label="Close image"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6 text-gray-900"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
 	</div>
 
 	<script>
