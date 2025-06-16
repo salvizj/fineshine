@@ -49,12 +49,13 @@ const images: ImageMetadata[] = [
 						src={image}
 						alt={`${t("recent_work")} ${i + 1}`}
 						class="w-full h-full object-cover rounded"
-						loading="lazy"
-						decoding="async"
-						quality={60}
+						loading={i < 4 ? "eager" : "lazy"}
+						decoding={i < 4 ? "sync" : "async"}
+						quality={75}
 						width={400}
 						height={300}
-						sizes="(max-width: 640px) 100vw, 33vw"
+						format="webp"
+						sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
 					/>
 				</div>
 			))
@@ -69,6 +70,8 @@ const images: ImageMetadata[] = [
 			id="modal-img"
 			alt="modal-img"
 			class="max-w-full max-h-[90vh] rounded shadow-lg sm:max-w-4xl"
+			loading="eager"
+			decoding="sync"
 		/>
 	</div>
 
