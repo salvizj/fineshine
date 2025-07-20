@@ -2,7 +2,6 @@ import leatherImage from "../assets/ceramic_coating_for_leather.jpg"
 import bitumenIronImage from "../assets/bitumen_iron_particles.jpg"
 import grapheneImage from "../assets/graphene_ceramics.jpg"
 import convertibleRoofImage from "../assets/convertible_roof_cleaning.jpg"
-import leatherPaintingImage from "../assets/leather_painting.jpg"
 import discCeramicsImage from "../assets/ceramics_for_discs.jpg"
 import plasticCeramicsImage from "../assets/ceramics_for_plastic.jpg"
 import chemicalCleaning1Image from "../assets/chemical_cleaning_1.jpg"
@@ -218,16 +217,6 @@ export const ui = {
 							"Cleaning of the interior and ventilation system from bacteria, mold, and unpleasant odors — for example, after spills or smoking. Especially recommended after winter and for people with allergies.",
 						price: "50€",
 					},
-					{
-						title: "Leather coloring",
-						description: "Elastic component is added to the color.",
-						price: "price on site",
-					},
-					{
-						title: "Plastic coloring",
-						description: "Elastic component is added to the color.",
-						price: "price on site",
-					},
 				],
 			},
 			polishing: {
@@ -372,12 +361,7 @@ export const ui = {
 					description:
 						"Highly hydrophobic, stain-resistant, fast-drying, does not affect the fabric’s tactile properties, and is UV resistant.",
 				},
-				{
-					title: "Leather Restoration and Painting",
-					image: leatherPaintingImage,
-					description:
-						"The seat or any other interior part is restored as close as possible to the original condition. Elastic component paint is used.",
-				},
+
 				{
 					title: "Ceramic Coating for Wheels",
 					image: discCeramicsImage,
@@ -642,16 +626,6 @@ export const ui = {
 							"Salona un ventilācijas sistēmas attīrīšana no baktērijām, pelējuma un nepatīkamām smakām — piemēram, pēc šķidrumu izlīšanas vai smēķēšanas. Īpaši ieteicama pēc ziemas, kā arī cilvēkiem ar alerģijām.",
 						price: "50€",
 					},
-					{
-						title: "Ādas krāsošana",
-						description: "Krāsai klāt ir elastīgais komponents.",
-						price: "cena klātienē",
-					},
-					{
-						title: "Plastmasas krāsošana",
-						description: "Krāsai klāt ir elastīgais komponents.",
-						price: "cena klātienē",
-					},
 				],
 			},
 			polishing: {
@@ -796,12 +770,7 @@ export const ui = {
 					description:
 						"Īpaši hidrofobs, traipu izturīgs, ātri žūstošs, neietekmē auduma taktiālās īpašības, kā arī UV izturīgs.",
 				},
-				{
-					title: "Ādas restaurācija un krāsošana",
-					image: leatherPaintingImage,
-					description:
-						"Sēdeklis vai jebkura cita salona detaļa tiek atgriesta maksimāli tuvu orģinālam stāvoklim. Tiek izmantota krāsa ar elastīgo komponentu.",
-				},
+
 				{
 					title: "Keramika diskiem",
 					image: discCeramicsImage,
@@ -1071,16 +1040,6 @@ export const ui = {
 							"Очистка салона и системы вентиляции от бактерий, плесени и неприятных запахов — например, после пролива жидкостей или курения. Особенно рекомендуется после зимы и людям, страдающим от аллергии",
 						price: "50€",
 					},
-					{
-						title: "Покраска кожи",
-						description: "B краску добавлен эластичный компонент.",
-						price: "цена на месте",
-					},
-					{
-						title: "Покраска пластика",
-						description: "B краску добавлен эластичный компонент.",
-						price: "цена на месте",
-					},
 				],
 			},
 			polishing: {
@@ -1225,12 +1184,7 @@ export const ui = {
 					description:
 						"Особо гидрофобное, устойчивое к пятнам, быстро сохнущее, не влияет на тактильные свойства ткани, а также устойчиво к УФ-лучам.",
 				},
-				{
-					title: "Восстановление и окраска кожи",
-					image: leatherPaintingImage,
-					description:
-						"Сиденье или любая другая деталь салона восстанавливается максимально близко к оригинальному состоянию. Используется краска с эластичным компонентом.",
-				},
+
 				{
 					title: "Керамика для дисков",
 					image: discCeramicsImage,

@@ -55,4 +55,6 @@ export function HandleRecentWorkImageViewer(): void {
 	modalImg.addEventListener("click", (event: Event) => {
 		event.stopPropagation()
 	})
+
+	modalClose.addEventListener("click", closeModal)
 }
