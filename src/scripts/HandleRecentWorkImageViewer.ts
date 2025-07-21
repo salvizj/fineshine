@@ -1,24 +1,13 @@
 export function HandleRecentWorkImageViewer(): void {
-	const modal = document.getElementById("modal")
-	const modalImg = document.getElementById("modal-img")
+	const modal = document.getElementById("modal") as HTMLElement | null
+	const modalImg = document.getElementById(
+		"modal-img"
+	) as HTMLImageElement | null
 	const modalClose = document.getElementById("modal-close")
 	const imageGrid = document.getElementById("image-grid")
 
-	if (
-		!(
-			modal &&
-			modalImg instanceof HTMLImageElement &&
-			modalClose &&
-			imageGrid
-		)
-	) {
-		console.warn("Modal image viewer: invalid element(s) provided")
+	if (!modal || !modalImg || !modalClose || !imageGrid) {
 		return
-	}
-
-	const closeModal = () => {
-		modal.classList.add("opacity-0", "pointer-events-none")
-		modalImg.src = ""
 	}
 
 	const openModal = (src: string) => {
@@ -26,34 +15,14 @@ export function HandleRecentWorkImageViewer(): void {
 		modal.classList.remove("opacity-0", "pointer-events-none")
 	}
 
-	imageGrid.addEventListener("click", (event: MouseEvent) => {
-		const target = event.target
+	const closeModal = () => {
+		modal.classList.add("opacity-0", "pointer-events-none")
+		modalImg.src = ""
+	}
 
-		if (target instanceof HTMLElement) {
-			let element: HTMLElement | null = target
-
-			if (element.tagName === "IMG") {
-				element = element.parentElement
-			}
-
-			if (element?.dataset?.src) {
-				openModal(element.dataset.src)
-			}
-		}
-	})
-
-	modalClose.addEventListener("click", closeModal)
-
-	// Close on escape key
-	document.addEventListener("keydown", (event: KeyboardEvent) => {
-		if (event.key === "Escape" && !modal.classList.contains("opacity-0")) {
-			closeModal()
-		}
-	})
-
-	// Prevent clicks on the image from closing the modal
-	modalImg.addEventListener("click", (event: Event) => {
-		event.stopPropagation()
+	imageGrid.addEventListener("click", (e) => {
+		const el = (e.target as HTMLElement).closest<HTMLElement>("[data-src]")
+		if (el?.dataset.src) openModal(el.dataset.src)
 	})
 
 	modalClose.addEventListener("click", closeModal)

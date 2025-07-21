@@ -27,11 +27,9 @@ export function useTranslateObject(languageCode: LanguageCode) {
 	return function tObj(key: string): unknown {
 		const keys = key.split(".")
 
-		// Use fallback language if ui[languageCode] is missing
 		let result: unknown = ui[languageCode] ?? ui[defaultLanguageCode]
 
 		for (const k of keys) {
-			// Check that result is an object and has own property k
 			if (
 				result !== null &&
 				typeof result === "object" &&
@@ -39,7 +37,6 @@ export function useTranslateObject(languageCode: LanguageCode) {
 			) {
 				result = (result as Record<string, unknown>)[k]
 			} else {
-				// Return undefined if key path is invalid
 				return undefined
 			}
 		}
