@@ -1,4 +1,4 @@
-import { defaultLanguageCode, languageOptions } from "../i18n/ui"
+import { defaultLanguageCode, languageOptions } from "../locales"
 import { getCookie } from "../utils/cookie"
 
 export function HandleRedirectToPreferredLanguage(): void {

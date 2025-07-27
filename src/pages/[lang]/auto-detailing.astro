@@ -7,10 +7,10 @@ import DetailingBenefits from "../../components/info/DetailingBenefits.astro"
 import DetailingExterior from "../../components/info/DetailingExterior.astro"
 import DetailingInterior from "../../components/info/DetailingInterior.astro"
 import WhatIsDetailing from "../../components/info/WhatIsDetailing.astro"
-import { languageOptions } from "../../i18n/ui"
+import { languageOptions } from "../../locales"
 
 import Layout from "../../layouts/Layout.astro"
-import { useTranslate, type LanguageCode } from "~/i18n/utils"
+import { useTranslate, type LanguageCode } from "~/utils/translationHooks"
 import { getMetaData } from "~/utils/metaData"
 
 export function getStaticPaths() {

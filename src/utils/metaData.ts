@@ -1,4 +1,4 @@
-import type { LanguageCode } from "~/i18n/utils"
+import type { LanguageCode } from "~/utils/translationHooks"
 
 export type LanguageMeta = {
 	title: string

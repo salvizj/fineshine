@@ -1,12 +1,19 @@
-import { ui, defaultLanguageCode, languageOptions } from "./ui"
+import {
+	defaultLanguageCode,
+	languageOptions,
+	languageTranslations,
+} from "../locales"
 
 export type LanguageCode = keyof typeof languageOptions
-export type TranslateKeys = keyof (typeof ui)[typeof defaultLanguageCode]
+export type TranslateKeys =
+	keyof (typeof languageTranslations)[typeof defaultLanguageCode]
 
 export function useTranslate(languageCode: LanguageCode) {
 	return function t(key: string): string {
 		const keys = key.split(".")
-		let result: unknown = ui[languageCode] ?? ui[defaultLanguageCode]
+		let result: unknown =
+			languageTranslations[languageCode] ??
+			languageTranslations[defaultLanguageCode]
 
 		for (const k of keys) {
 			if (
@@ -27,7 +34,9 @@ export function useTranslateObject(languageCode: LanguageCode) {
 	return function tObj(key: string): unknown {
 		const keys = key.split(".")
 
-		let result: unknown = ui[languageCode] ?? ui[defaultLanguageCode]
+		let result: unknown =
+			languageTranslations[languageCode] ??
+			languageTranslations[defaultLanguageCode]
 
 		for (const k of keys) {
 			if (

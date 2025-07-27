@@ -1,4 +1,4 @@
-import type { LanguageCode } from "../i18n/utils.js"
+import type { LanguageCode } from "../utils/translationHooks.js"
 import { setCookie } from "../utils/cookie.js"
 
 export default function HandleLanguageSelection() {
