@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import shopOwnersImage from "../assets/shop_owner.jpg"
 import type { LanguageCode } from "~/utils/translationHooks"
+import CarScene from "./CarScene.astro"
 
 interface Props {
 	t: (key: string) => string
@@ -16,6 +17,7 @@ const serviceHref = `/${languageCode}/services`
 <section
 	class="max-w-screen-xl w-full mx-auto px-8 sm:px-4 py-8 flex flex-col md:flex-row items-center gap-8 min-h-screen"
 >
+	<CarScene />
 	<div class="flex-1 text-left">
 		<h1
 			class="mb-4 relative inline-block
@@ -26,8 +28,7 @@ const serviceHref = `/${languageCode}/services`
 		bg-clip-text text-transparent"
 		>
 			{t("hero.title")}
-			<span
-				class="absolute left-0 bottom-0 w-24 md:w-36 h-1 bg-accent rounded"
+			<span class="absolute left-0 bottom-0 w-24 md:w-36 h-1 bg-accent rounded"
 			></span>
 		</h1>
 
@@ -45,10 +46,10 @@ const serviceHref = `/${languageCode}/services`
 		<Image
 			src={shopOwnersImage}
 			alt={t("hero.imageAlt")}
-			class="w-full max-w-[24rem] rounded-2xl shadow-lg"
+			class="w-full max-w-[18rem] rounded-2xl shadow-lg"
 			quality={70}
-			width={400}
-			height={600}
+			width={200}
+			height={300}
 			priority
 			loading="eager"
 			fetchpriority="high"
